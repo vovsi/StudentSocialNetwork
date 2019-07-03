@@ -1,0 +1,32 @@
+#smilesList span {
+    cursor: pointer;
+}
+
+#smilesBtn {
+    display: block;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+#smilesBtn:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+@media screen and (max-width: 770px) {
+    iframe[name=video] {
+        width: 200px;
+        height: 100px;
+    }
+}
+
+@media screen and (min-width: 1015px) {
+    iframe[name=video] {
+        width: 520px;
+        height: 300px;
+    }
+}
+
+.show-poll-voted {
+    cursor: pointer;
+}

@@ -1,0 +1,14 @@
+#smilesList span {
+    cursor: pointer;
+}
+
+#smilesBtn {
+    display: block;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+#smilesBtn:hover {
+    cursor: pointer;
+    opacity: 1;
+}

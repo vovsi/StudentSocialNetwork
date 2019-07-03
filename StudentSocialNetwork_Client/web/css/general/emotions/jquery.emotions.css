@@ -1,0 +1,375 @@
+.emotions {
+    width: 20px;
+    height: 20px;
+    background: url("blank.gif") no-repeat center center;
+    display: inline-block;
+    vertical-align: sub;
+}
+
+.emo-angry {
+    background: url("icons/angry.png");
+}
+
+.emo-anguished {
+    background: url("icons/anguished.png");
+}
+
+.emo-astonished {
+    background: url("icons/astonished.png");
+}
+
+.emo-blush {
+    background: url("icons/blush.png");
+}
+
+.emo-blushing_face_with_hand_over_mouth {
+    background: url("icons/blushing_face_with_hand_over_mouth.png");
+}
+
+.emo-cold_sweat {
+    background: url("icons/cold_sweat.png");
+}
+
+.emo-confounded {
+    background: url("icons/confounded.png");
+}
+
+.emo-confused {
+    background: url("icons/confused.png");
+}
+
+.emo-cowboy_face {
+    background: url("icons/cowboy_face.png");
+}
+
+.emo-cry {
+    background: url("icons/cry.png");
+}
+
+.emo-cursing {
+    background: url("icons/cursing.png");
+}
+
+.emo-disappointed {
+    background: url("icons/disappointed.png");
+}
+
+.emo-disappointed_relieved {
+    background: url("icons/disappointed_relieved.png");
+}
+
+.emo-dizzy_face {
+    background: url("icons/dizzy_face.png");
+}
+
+.emo-drooling_face {
+    background: url("icons/drooling_face.png");
+}
+
+.emo-exploding_head {
+    background: url("icons/exploding_head.png");
+}
+
+.emo-expressionless {
+    background: url("icons/expressionless.png");
+}
+
+.emo-face_with_a_zipper_mouth {
+    background: url("icons/face_with_a_zipper_mouth.png");
+}
+
+.emo-face_with_head_bandage {
+    background: url("icons/face_with_head_bandage.png");
+}
+
+.emo-face_with_monocle {
+    background: url("icons/face_with_monocle.png");
+}
+
+.emo-face_with_open_mouth_vomiting {
+    background: url("icons/face_with_open_mouth_vomiting.png");
+}
+
+.emo-face_with_raised_eyebrow {
+    background: url("icons/face_with_raised_eyebrow.png");
+}
+
+.emo-face_with_rolling_eyes {
+    background: url("icons/face_with_rolling_eyes.png");
+}
+
+.emo-face_with_starry_eyes {
+    background: url("icons/face_with_starry_eyes.png");
+}
+
+.emo-face_with_thermometer {
+    background: url("icons/face_with_thermometer.png");
+}
+
+.emo-fearful {
+    background: url("icons/fearful.png");
+}
+
+.emo-flushed {
+    background: url("icons/flushed.png");
+}
+
+.emo-frowning {
+    background: url("icons/frowning.png");
+}
+
+.emo-frowning_face {
+    background: url("icons/frowning_face.png");
+}
+
+.emo-goofy_face {
+    background: url("icons/goofy_face.png");
+}
+
+.emo-grimacing {
+    background: url("icons/grimacing.png");
+}
+
+.emo-grin {
+    background: url("icons/grin.png");
+}
+
+.emo-grinning {
+    background: url("icons/grinning.png");
+}
+
+.emo-happy_face_with_hugging_hands {
+    background: url("icons/happy_face_with_hugging_hands.png");
+}
+
+.emo-heart_eyes {
+    background: url("icons/heart_eyes.png");
+}
+
+.emo-hot_face {
+    background: url("icons/hot_face.png");
+}
+
+.emo-hushed {
+    background: url("icons/hushed.png");
+}
+
+.emo-imp {
+    background: url("icons/imp.png");
+}
+
+.emo-in_love_face {
+    background: url("icons/in_love_face.png");
+}
+
+.emo-innocent {
+    background: url("icons/innocent.png");
+}
+
+.emo-joy {
+    background: url("icons/joy.png");
+}
+
+.emo-kissing {
+    background: url("icons/kissing.png");
+}
+
+.emo-kissing_closed_eyes {
+    background: url("icons/kissing_closed_eyes.png");
+}
+
+.emo-kissing_heart {
+    background: url("icons/kissing_heart.png");
+}
+
+.emo-kissing_smiling_eyes {
+    background: url("icons/kissing_smiling_eyes.png");
+}
+
+.emo-laughing {
+    background: url("icons/laughing.png");
+}
+
+.emo-lying_face {
+    background: url("icons/lying_face.png");
+}
+
+.emo-mask {
+    background: url("icons/mask.png");
+}
+
+.emo-money_mouth_face {
+    background: url("icons/money_mouth_face.png");
+}
+
+.emo-nauseated_face {
+    background: url("icons/nauseated_face.png");
+}
+
+.emo-nerdy_face {
+    background: url("icons/nerdy_face.png");
+}
+
+.emo-neutral_face {
+    background: url("icons/neutral_face.png");
+}
+
+.emo-no_mouth {
+    background: url("icons/no_mouth.png");
+}
+
+.emo-open_mouth {
+    background: url("icons/open_mouth.png");
+}
+
+.emo-party_face {
+    background: url("icons/party_face.png");
+}
+
+.emo-pensive {
+    background: url("icons/pensive.png");
+}
+
+.emo-persevere {
+    background: url("icons/persevere.png");
+}
+
+.emo-pleading_face {
+    background: url("icons/pleading_face.png");
+}
+
+.emo-rage {
+    background: url("icons/rage.png");
+}
+
+.emo-relaxed {
+    background: url("icons/relaxed.png");
+}
+
+.emo-relieved {
+    background: url("icons/relieved.png");
+}
+
+.emo-rofl {
+    background: url("icons/rofl.png");
+}
+
+.emo-sarcasm {
+    background: url("icons/sarcasm.png");
+}
+
+.emo-scream {
+    background: url("icons/scream.png");
+}
+
+.emo-shushing_face {
+    background: url("icons/shushing_face.png");
+}
+
+.emo-skull {
+    background: url("icons/skull.png");
+}
+
+.emo-sleeping {
+    background: url("icons/sleeping.png");
+}
+
+.emo-sleepy {
+    background: url("icons/sleepy.png");
+}
+
+.emo-slightly_frowning_face {
+    background: url("icons/slightly_frowning_face.png");
+}
+
+.emo-slightly_happy {
+    background: url("icons/slightly_happy.png");
+}
+
+.emo-smile {
+    background: url("icons/smile.png");
+}
+
+.emo-smiley {
+    background: url("icons/smiley.png");
+}
+
+.emo-smiling_imp {
+    background: url("icons/smiling_imp.png");
+}
+
+.emo-smirk {
+    background: url("icons/smirk.png");
+}
+
+.emo-sneezing_face {
+    background: url("icons/sneezing_face.png");
+}
+
+.emo-sob {
+    background: url("icons/sob.png");
+}
+
+.emo-stuck_out_tongue {
+    background: url("icons/stuck_out_tongue.png");
+}
+
+.emo-stuck_out_tongue_closed_eyes {
+    background: url("icons/stuck_out_tongue_closed_eyes.png");
+}
+
+.emo-stuck_out_tongue_winking_eye {
+    background: url("icons/stuck_out_tongue_winking_eye.png");
+}
+
+.emo-sunglasses {
+    background: url("icons/sunglasses.png");
+}
+
+.emo-sweat {
+    background: url("icons/sweat.png");
+}
+
+.emo-sweat_smile {
+    background: url("icons/sweat_smile.png");
+}
+
+.emo-thinking_face {
+    background: url("icons/thinking_face.png");
+}
+
+.emo-tired_face {
+    background: url("icons/tired_face.png");
+}
+
+.emo-triumph {
+    background: url("icons/triumph.png");
+}
+
+.emo-unamused {
+    background: url("icons/unamused.png");
+}
+
+.emo-weary {
+    background: url("icons/weary.png");
+}
+
+.emo-wink {
+    background: url("icons/wink.png");
+}
+
+.emo-woozy_face {
+    background: url("icons/woozy_face.png");
+}
+
+.emo-worried {
+    background: url("icons/worried.png");
+}
+
+.emo-yum {
+    background: url("icons/yum.png");
+}
+
+.emo-cold_face {
+    background: url("icons/cold_face.png");
+}

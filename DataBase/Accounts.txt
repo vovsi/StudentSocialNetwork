@@ -1,0 +1,30 @@
+Описание: данные аккаунтов в базе данных.
+
+E-mail			   Password
+
+[Admins] 
+admin@mail.ru  		| 123admin123
+user13@mail.ru 		| ArWXZXtUhK
+user20@mail.ru 		| pSVOh3I5T2
+admin-main@mail.ru 	| 123admin123
+
+
+[Users]
+user1@mail.ru  		| skmoHIYICk
+user2@mail.ru  		| kkuuByc9Eu
+user3@mail.ru  		| ohc9OYIp6I
+user4@mail.ru  		| 59NF6CmF4m
+user5@mail.ru  		| qzgLeSh6yb
+user6@mail.ru  		| nWLiSlJYSu
+user7@mail.ru  		| 8hYRkvKbVz
+user8@mail.ru  		| npL3Ie5kc5
+user9@mail.ru  		| Ux1OPwNUzo
+user10@mail.ru 		| LQOO1QejxW
+user11@mail.ru 		| KN848EFMvs
+user12@mail.ru 		| goeOa6pkAW
+user14@mail.ru 		| tScYoZ4S9G
+user15@mail.ru 		| rITP0lJQNN
+user16@mail.ru 		| xyWAEne9pD
+user17@mail.ru 		| XV97pHZCDA
+user18@mail.ru 		| bLBVaqADLs
+user19@mail.ru 		| dcWjCEC4ia
