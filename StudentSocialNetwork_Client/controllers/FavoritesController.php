@@ -36,11 +36,9 @@ class FavoritesController extends \yii\web\Controller
                 for ($i = 0; $i < count($dataResp['favorites']); $i++) {
                     $dataResp['favorites'][$i]['photo_path'] = 'data:image/jpeg;base64,' . base64_encode(file_get_contents($dataResp['favorites'][$i]['photo_path']));
                 }
+				$data['favorites'] = $dataResp['favorites'];
+				$data['is_there_more_favorites'] = $dataResp['is_there_more_favorites'];
             }
-
-            $data['favorites'] = $dataResp['favorites'];
-            $data['is_there_more_favorites'] = $dataResp['is_there_more_favorites'];
-
         } else {
             $_SESSION['errors'] = ['' => 'Необходима авторизация.'];
         }
