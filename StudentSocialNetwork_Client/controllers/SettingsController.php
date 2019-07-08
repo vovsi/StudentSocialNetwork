@@ -19,7 +19,7 @@ class SettingsController extends \yii\web\Controller
 
             if (!empty($authData['auth_data'])) {
                 // --- Получение данных приватности
-                $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/settings/getdataprivacy");
+                $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/settings/getdataprivacy?ip=".$_SERVER['REMOTE_ADDR']);
                 curl_setopt($ch, CURLOPT_POST, 0);
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -41,7 +41,8 @@ class SettingsController extends \yii\web\Controller
 
 
                 // --- Получение чёрного списка
-                $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/settings/getdatablacklist?limit=10&offset=0");
+                $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/settings/getdatablacklist?limit=10&offset=0&ip="
+                    .$_SERVER['REMOTE_ADDR']);
                 curl_setopt($ch, CURLOPT_POST, 0);
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -66,7 +67,7 @@ class SettingsController extends \yii\web\Controller
                 }
 
                 // --- Получение profile data
-                $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/settings/getdataprofile");
+                $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/settings/getdataprofile?ip=".$_SERVER['REMOTE_ADDR']);
                 curl_setopt($ch, CURLOPT_POST, 0);
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -127,7 +128,8 @@ class SettingsController extends \yii\web\Controller
                                     $aboutMe = htmlspecialchars(Yii::$app->request->post()['about_me']);
                                     $dateBirthday = htmlspecialchars(Yii::$app->request->post()['date_birthday']);
 
-                                    $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/settings/saveprofile");
+                                    $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/settings/saveprofile?ip="
+                                        .$_SERVER['REMOTE_ADDR']);
                                     curl_setopt($ch, CURLOPT_POST, 1);
                                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                                     curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -201,7 +203,7 @@ class SettingsController extends \yii\web\Controller
                             $writePost = 'nobody';
                         }
 
-                        $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/settings/saveprivacy");
+                        $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/settings/saveprivacy?ip=".$_SERVER['REMOTE_ADDR']);
                         curl_setopt($ch, CURLOPT_POST, 1);
                         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                         curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -256,7 +258,8 @@ class SettingsController extends \yii\web\Controller
                                 $oldPasswordHash = $_COOKIE['password'];
                                 $newPassword = Yii::$app->request->post()['new_password'];
 
-                                $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/settings/changepassword");
+                                $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/settings/changepassword?ip="
+                                    .$_SERVER['REMOTE_ADDR']);
                                 curl_setopt($ch, CURLOPT_POST, 1);
                                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                                 curl_setopt($ch, CURLOPT_HTTPHEADER, array(

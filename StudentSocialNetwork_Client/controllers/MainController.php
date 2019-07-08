@@ -13,7 +13,7 @@ class MainController extends \yii\web\Controller
         $data = array();
         if (isset($_COOKIE['email']) && isset($_COOKIE['password'])) {
             // Проверяем авторизацию
-            $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/main/checkauth");
+            $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/main/checkauth?ip=".$_SERVER['REMOTE_ADDR']);
             curl_setopt($ch, CURLOPT_POST, 1);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -28,7 +28,8 @@ class MainController extends \yii\web\Controller
             if (isset($_GET['id'])) {
                 if (!empty($_GET['id'])) {
                     // Получаем данные профиля
-                    $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/main/getprofiletouser?id=" . $_GET['id']);
+                    $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/main/getprofiletouser?id=" . $_GET['id']
+                        ."&ip=".$_SERVER['REMOTE_ADDR']);
                     curl_setopt($ch, CURLOPT_POST, 1);
                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                     curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -48,7 +49,8 @@ class MainController extends \yii\web\Controller
                     $dataProfile['profile']['photo_path'] = 'data:image/jpeg;base64,' . base64_encode(file_get_contents($dataProfile['profile']['photo_path']));
 
                     // Получаем первые 10 записей профиля
-                    $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/main/getposts?id=" . $_GET['id'] . "&limit=10&offset=0");
+                    $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/main/getposts?id=" . $_GET['id']
+                        . "&limit=10&offset=0&ip=".$_SERVER['REMOTE_ADDR']);
                     curl_setopt($ch, CURLOPT_POST, 1);
                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                     curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -57,6 +59,7 @@ class MainController extends \yii\web\Controller
                     $response = curl_exec($ch);
                     $dataPosts = json_decode($response, true);
                     curl_close($ch);
+
                     $dataProfile['posts'] = $dataPosts['posts'];
                     $dataProfile['is_there_more_posts'] = $dataPosts['is_there_more_posts'];
                     if (isset($dataPosts['errors'])) {
@@ -91,7 +94,8 @@ class MainController extends \yii\web\Controller
             curl_setopt($ch, CURLOPT_POSTFIELDS, //тут переменные которые будут переданы методом POST
                 array(
                     'email' => Yii::$app->request->post()['email'],
-                    'password' => Yii::$app->request->post()['password']
+                    'password' => Yii::$app->request->post()['password'],
+                    'ip' => $_SERVER['REMOTE_ADDR']
                 ));
             $response = curl_exec($ch);
             $data = json_decode($response, true);
@@ -267,7 +271,7 @@ class MainController extends \yii\web\Controller
                             $base64Encode = 'data:image/' . $type . ';base64,' . $hexString;
                             unlink($_FILES["update_photo"]["name"]);
 
-                            $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/main/updatephoto");
+                            $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/main/updatephoto?ip=".$_SERVER['REMOTE_ADDR']);
                             curl_setopt($ch, CURLOPT_POST, 1);
                             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                             curl_setopt($ch, CURLOPT_HTTPHEADER, array(

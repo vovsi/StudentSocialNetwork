@@ -17,7 +17,8 @@ class NewsController extends \yii\web\Controller
             $data = $authData;
             $this->view->params['data'] = $authData;
 
-            $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/news/getnews?limit=10&offset=0");
+            $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/news/getnews?limit=10&offset=0&ip="
+                .$_SERVER['REMOTE_ADDR']);
             curl_setopt($ch, CURLOPT_POST, 1);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -156,7 +157,8 @@ class NewsController extends \yii\web\Controller
                                 $pollAnswers = implode('~@g', Yii::$app->request->post()['answerChoice']);
                                 $pollAnon = (isset(Yii::$app->request->post()['addPollAnon'])) ? 'true' : 'false';
 
-                                $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/news/add");
+                                $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/news/add?ip="
+                                    .$_SERVER['REMOTE_ADDR']);
                                 curl_setopt($ch, CURLOPT_POST, 1);
                                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                                 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -223,7 +225,7 @@ class NewsController extends \yii\web\Controller
             if ($authData['auth_data']['role'] == "admin") {
                 if (isset($_GET['id'])) {
                     if (!empty($_GET['id'])) {
-                        $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/news/remove");
+                        $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/news/remove?ip=".$_SERVER['REMOTE_ADDR']);
                         curl_setopt($ch, CURLOPT_POST, 1);
                         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                         curl_setopt($ch, CURLOPT_HTTPHEADER, array(

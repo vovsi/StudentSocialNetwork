@@ -46,6 +46,7 @@ class MainController extends ActiveController
     {
         $email = Yii::$app->request->post('email');
         $password = Yii::$app->request->post('password');
+        $ip = Yii::$app->request->post('ip');
 
         $errors = array();
         if (!empty($email) && !empty($password)) {
@@ -55,8 +56,8 @@ class MainController extends ActiveController
             if ($res != null) {
                 if (!$db->checkBlockAccount($res['id'])) {
                     // Привязываем ip к аккаунту (если ещё не привязан)
-                    if (!$db->checkIpExists($res['id'], $_SERVER['REMOTE_ADDR'])) {
-                        $db->addIpToAccount($res['id'], $_SERVER['REMOTE_ADDR']);
+                    if (!$db->checkIpExists($res['id'], $ip)) {
+                        $db->addIpToAccount($res['id'], $ip);
                     }
 
                     // Записать данные авторизации (если они есть)
@@ -553,7 +554,7 @@ class MainController extends ActiveController
         return ['errors' => $errors];
     }
 
-    // Получить Base64 строку из url на изображение !!! ДОБАВИТЬ В ДОКУМЕНТАЦИЮ
+    // Получить Base64 строку из url на изображение
     public function actionGetbase64fromurlimage($url)
     {
         $res = "";

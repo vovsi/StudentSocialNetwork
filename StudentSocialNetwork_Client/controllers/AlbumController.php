@@ -19,7 +19,8 @@ class AlbumController extends \yii\web\Controller
                 $this->view->params['data'] = $authData;
 
                 if (!empty($_GET['id'])) {
-                    $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/album/getalbum?id=" . $_GET['id'] . "&limit=100&offset=0");
+                    $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/album/getalbum?id="
+                        . $_GET['id'] . "&limit=100&offset=0&ip=".$_SERVER['REMOTE_ADDR']);
                     curl_setopt($ch, CURLOPT_POST, 1);
                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                     curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -92,7 +93,7 @@ class AlbumController extends \yii\web\Controller
                         unlink($_FILES["photo"]["name"]);
 
 
-                        $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/album/add");
+                        $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/album/add?ip=".$_SERVER['REMOTE_ADDR']);
                         curl_setopt($ch, CURLOPT_POST, 1);
                         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                         curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -146,7 +147,7 @@ class AlbumController extends \yii\web\Controller
             $this->view->params['data'] = $authData;
 
             if (isset($_GET['id'])) {
-                $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/album/remove");
+                $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/album/remove?ip=".$_SERVER['REMOTE_ADDR']);
                 curl_setopt($ch, CURLOPT_POST, 1);
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                 curl_setopt($ch, CURLOPT_HTTPHEADER, array(

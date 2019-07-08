@@ -1,5 +1,10 @@
 // Host server
-const HOST = "http://13.59.143.75"; //"http://socialnetworkforstudents.zzz.com.ua/web";
+const HOST = "http://localhost"; //"http://socialnetworkforstudents.zzz.com.ua/web";
+
+// Получить параметры для авторизации (повторные, при каждом запросе)
+function getAuthParams() {
+    return "email=" + getCookie('email') + "&password=" + getCookie('password');
+}
 
 // Получить файл из input в формате Base64
 function encodeImageFileToBase64(element) {
@@ -129,7 +134,7 @@ function addToFavorites(id) {
     $.ajax({
         crossDomain: true,
         async: true,
-        url: HOST + "/v1/favorites/add?email=" + getCookie('email') + "&password=" + getCookie('password'),
+        url: HOST + "/v1/favorites/add?" + getAuthParams(),
         dataType: "json",
         type: "POST",
         data: data,
@@ -163,7 +168,7 @@ function addToFavorites(id) {
 function removeFromFavorites(id) {
     var data = {id: id};
     $.ajax({
-        url: HOST + "/v1/favorites/remove?email=" + getCookie('email') + "&password=" + getCookie('password'),
+        url: HOST + "/v1/favorites/remove?" + getAuthParams(),
         dataType: "json",
         type: "POST",
         data: data,
@@ -197,7 +202,7 @@ function removeFromFavorites(id) {
 function addToBlackList(id) {
     var data = {id: id};
     $.ajax({
-        url: HOST + "/v1/main/addblacklist?email=" + getCookie('email') + "&password=" + getCookie('password'),
+        url: HOST + "/v1/main/addblacklist?" + getAuthParams(),
         dataType: "json",
         type: "POST",
         data: data,
@@ -231,7 +236,7 @@ function addToBlackList(id) {
 function removeFromBlackList(id) {
     var data = {id: id};
     $.ajax({
-        url: HOST + "/v1/main/removeblacklist?email=" + getCookie('email') + "&password=" + getCookie('password'),
+        url: HOST + "/v1/main/removeblacklist?" + getAuthParams(),
         dataType: "json",
         type: "POST",
         data: data,
@@ -278,7 +283,7 @@ function addPost(accountToId, message, fileBase64, videoLink, files, pollTheme, 
     };
 
     $.ajax({
-        url: HOST + "/v1/main/addpost?email=" + getCookie('email') + "&password=" + getCookie('password'),
+        url: HOST + "/v1/main/addpost?" + getAuthParams(),
         dataType: "json",
         type: "POST",
         data: data,
@@ -394,7 +399,7 @@ function onVoteInPost(postId, answerId) {
         answer_id: answerId
     };
     $.ajax({
-        url: HOST + "/v1/main/votepoll?email=" + getCookie('email') + "&password=" + getCookie('password'),
+        url: HOST + "/v1/main/votepoll?" + getAuthParams(),
         dataType: "json",
         type: "POST",
         data: data,
@@ -458,7 +463,7 @@ function onVoteInNews(newsId, answerId) {
         answer_id: answerId
     };
     $.ajax({
-        url: HOST + "/v1/news/votepoll?email=" + getCookie('email') + "&password=" + getCookie('password'),
+        url: HOST + "/v1/news/votepoll?" + getAuthParams(),
         dataType: "json",
         type: "POST",
         data: data,
@@ -528,7 +533,7 @@ function cancelVoteInPollPost(postId) {
         post_id: postId,
     };
     $.ajax({
-        url: HOST + "/v1/main/cancelvotepoll?email=" + getCookie('email') + "&password=" + getCookie('password'),
+        url: HOST + "/v1/main/cancelvotepoll?" + getAuthParams(),
         dataType: "json",
         type: "POST",
         data: data,
@@ -571,7 +576,7 @@ function cancelVoteInPollNews(newsId) {
         news_id: newsId,
     };
     $.ajax({
-        url: HOST + "/v1/news/cancelvotepoll?email=" + getCookie('email') + "&password=" + getCookie('password'),
+        url: HOST + "/v1/news/cancelvotepoll?" + getAuthParams(),
         dataType: "json",
         type: "POST",
         data: data,
@@ -618,7 +623,7 @@ function cancelVoteInPollNews(newsId) {
 // Отобразить список проголосовавших за вариант ответа в опросе
 function showPollOptionVoted(optionId) {
     $.ajax({
-        url: HOST + "/v1/main/getpollanswervoted?pollAnswerId=" + optionId + "&email=" + getCookie('email') + "&password=" + getCookie('password'),
+        url: HOST + "/v1/main/getpollanswervoted?pollAnswerId=" + optionId + "&" + getAuthParams(),
         dataType: "json",
         type: "GET",
         xhrFields: {
@@ -684,7 +689,7 @@ function createConversation(name, members, imageBase64) {
     };
 
     $.ajax({
-        url: HOST + "/v1/messages/createconversation?email=" + getCookie('email') + "&password=" + getCookie('password'),
+        url: HOST + "/v1/messages/createconversation?" + getAuthParams(),
         dataType: "json",
         type: "POST",
         data: data,
@@ -714,7 +719,7 @@ function createConversation(name, members, imageBase64) {
 function removePost(id) {
     var data = {idPost: id};
     $.ajax({
-        url: HOST + "/v1/main/removepost?email=" + getCookie('email') + "&password=" + getCookie('password'),
+        url: HOST + "/v1/main/removepost?" + getAuthParams(),
         dataType: "json",
         type: "POST",
         data: data,
@@ -747,7 +752,7 @@ function removePost(id) {
 function removeNews(id) {
     var data = {id: id};
     $.ajax({
-        url: HOST + "/v1/news/remove?email=" + getCookie('email') + "&password=" + getCookie('password'),
+        url: HOST + "/v1/news/remove?" + getAuthParams(),
         dataType: "json",
         type: "POST",
         data: data,
@@ -781,7 +786,7 @@ function removeNews(id) {
 function removePhotoFromAlbum(id) {
     var data = {id: id};
     $.ajax({
-        url: HOST + "/v1/album/remove?email=" + getCookie('email') + "&password=" + getCookie('password'),
+        url: HOST + "/v1/album/remove?" + getAuthParams(),
         dataType: "json",
         type: "POST",
         data: data,
@@ -815,7 +820,7 @@ function removePhotoFromAlbum(id) {
 function removeFile(filename, id) {
     var data = {fileName: filename};
     $.ajax({
-        url: HOST + "/v1/files/remove?email=" + getCookie('email') + "&password=" + getCookie('password'),
+        url: HOST + "/v1/files/remove?" + getAuthParams(),
         dataType: "json",
         type: "POST",
         data: data,
@@ -847,7 +852,7 @@ function removeFile(filename, id) {
 function getFileOfUser(userId, fileId) {
     var res;
     $.ajax({
-        url: HOST + "/v1/files/getfile?idUser=" + userId + "&id=" + fileId + "&email=" + getCookie('email') + "&password=" + getCookie('password'),
+        url: HOST + "/v1/files/getfile?idUser=" + userId + "&id=" + fileId + "&" + getAuthParams(),
         dataType: "json",
         async: false,
         type: "GET",
@@ -885,7 +890,7 @@ function sendMessageToDialog(accountToId, message, imageBase64, files, videoYT) 
     };
 
     $.ajax({
-        url: HOST + "/v1/messages/sendtodialog?email=" + getCookie('email') + "&password=" + getCookie('password'),
+        url: HOST + "/v1/messages/sendtodialog?" + getAuthParams(),
         dataType: "json",
         type: "POST",
         data: data,
@@ -979,7 +984,7 @@ function sendMessageToConversation(conversationId, message, imageBase64, files, 
     };
 
     $.ajax({
-        url: HOST + "/v1/messages/sendtoconversation?email=" + getCookie('email') + "&password=" + getCookie('password'),
+        url: HOST + "/v1/messages/sendtoconversation?" + getAuthParams(),
         dataType: "json",
         type: "POST",
         data: data,
@@ -1062,7 +1067,7 @@ function sendMessageToConversation(conversationId, message, imageBase64, files, 
 // Загрузить доп. кол-во записей на страницу (пагинация)
 function getPosts(accountToId, limit, offset, myId) {
     $.ajax({
-        url: HOST + "/v1/main/getposts?id=" + accountToId + "&limit=" + limit + "&offset=" + offset + "&email=" + getCookie('email') + "&password=" + getCookie('password'),
+        url: HOST + "/v1/main/getposts?id=" + accountToId + "&limit=" + limit + "&offset=" + offset + "&" + getAuthParams(),
         dataType: "json",
         type: "GET",
         xhrFields: {
@@ -1224,7 +1229,7 @@ function getPosts(accountToId, limit, offset, myId) {
 function showFullOneNews(id, myId) {
     $.ajax({
         async: true,
-        url: HOST + "/v1/news/getonenews?id=" + id + "&email=" + getCookie('email') + "&password=" + getCookie('password'),
+        url: HOST + "/v1/news/getonenews?id=" + id + "&" + getAuthParams(),
         dataType: "json",
         type: "GET",
         xhrFields: {
@@ -1369,7 +1374,7 @@ function showFullOneNews(id, myId) {
 // Загрузить доп. кол-во новостей на страницу (пагинация)
 function getNews(limit, offset) {
     $.ajax({
-        url: HOST + "/v1/news/getnews?limit=" + limit + "&offset=" + offset + "&email=" + getCookie('email') + "&password=" + getCookie('password'),
+        url: HOST + "/v1/news/getnews?limit=" + limit + "&offset=" + offset + "&" + getAuthParams(),
         dataType: "json",
         type: "GET",
         xhrFields: {
@@ -1456,7 +1461,7 @@ function getNews(limit, offset) {
 // Загрузить доп. кол-во диалогов (пагинация)
 function getDialogs(limit, offset) {
     $.ajax({
-        url: HOST + "/v1/messages/getdialogs?limit=" + limit + "&offset=" + offset + "&email=" + getCookie('email') + "&password=" + getCookie('password'),
+        url: HOST + "/v1/messages/getdialogs?limit=" + limit + "&offset=" + offset + "&" + getAuthParams(),
         dataType: "json",
         type: "GET",
         xhrFields: {
@@ -1550,7 +1555,7 @@ function getDialogs(limit, offset) {
 // Загрузить доп. кол-во бесед (пагинация)
 function getConversations(limit, offset) {
     $.ajax({
-        url: HOST + "/v1/messages/getconversations?limit=" + limit + "&offset=" + offset + "&email=" + getCookie('email') + "&password=" + getCookie('password'),
+        url: HOST + "/v1/messages/getconversations?limit=" + limit + "&offset=" + offset + "&" + getAuthParams(),
         dataType: "json",
         type: "GET",
         xhrFields: {
@@ -1635,7 +1640,7 @@ function getConversations(limit, offset) {
 // Загрузить доп. кол-во сообщений в диалог (пагинация)
 function getMessagesFromDialog(idDialog, limit, offset) {
     $.ajax({
-        url: HOST + "/v1/messages/getdialog?id=" + idDialog + "&limit=" + limit + "&offset=" + offset + "&email=" + getCookie('email') + "&password=" + getCookie('password'),
+        url: HOST + "/v1/messages/getdialog?id=" + idDialog + "&limit=" + limit + "&offset=" + offset + "&" + getAuthParams(),
         dataType: "json",
         type: "GET",
         xhrFields: {
@@ -1736,7 +1741,8 @@ function getMessagesFromDialog(idDialog, limit, offset) {
 // Загрузить доп. кол-во сообщений в беседу (пагинация)
 function getMessagesFromConversation(myId, idConversation, limit, offset) {
     $.ajax({
-        url: HOST + "/v1/messages/getconversation?id=" + idConversation + "&limit=" + limit + "&offset=" + offset + "&email=" + getCookie('email') + "&password=" + getCookie('password'),
+        url: HOST + "/v1/messages/getconversation?id=" + idConversation + "&limit=" + limit + "&offset=" + offset
+        + "&" + getAuthParams(),
         dataType: "json",
         type: "GET",
         xhrFields: {
@@ -1839,7 +1845,7 @@ function getMessagesFromConversation(myId, idConversation, limit, offset) {
 function getFilesOfUser() {
     var res;
     $.ajax({
-        url: HOST + "/v1/files/getfiles?email=" + getCookie('email') + "&password=" + getCookie('password'),
+        url: HOST + "/v1/files/getfiles?" + getAuthParams(),
         dataType: "json",
         async: false,
         type: "GET",
@@ -1866,7 +1872,7 @@ function getFilesOfUser() {
 // Загрузить доп. кол-во фото в альбом (пагинация)
 function getPhotos(idUser, limit, offset) {
     $.ajax({
-        url: HOST + "/v1/album/getalbum?id=" + idUser + "&limit=" + limit + "&offset=" + offset + "&email=" + getCookie('email') + "&password=" + getCookie('password'),
+        url: HOST + "/v1/album/getalbum?id=" + idUser + "&limit=" + limit + "&offset=" + offset + "&" + getAuthParams(),
         dataType: "json",
         type: "GET",
         xhrFields: {
@@ -1910,7 +1916,7 @@ function getPhotos(idUser, limit, offset) {
 function getFavoritesOfUser(limit, offset) {
     var res;
     $.ajax({
-        url: HOST + "/v1/favorites/getmyfavorites?limit=" + limit + "&offset=" + offset + "&email=" + getCookie('email') + "&password=" + getCookie('password'),
+        url: HOST + "/v1/favorites/getmyfavorites?limit=" + limit + "&offset=" + offset + "&" + getAuthParams(),
         dataType: "json",
         async: false,
         type: "GET",
@@ -1937,7 +1943,7 @@ function getFavoritesOfUser(limit, offset) {
 function getMembersOfConversation(conversationId) {
     var res;
     $.ajax({
-        url: HOST + "/v1/messages/getmembersofconversation?id="+conversationId+"&email=" + getCookie('email') + "&password=" + getCookie('password'),
+        url: HOST + "/v1/messages/getmembersofconversation?id="+conversationId+"&" + getAuthParams(),
         dataType: "json",
         async: false,
         type: "GET",
@@ -1968,7 +1974,7 @@ function changeMembersConversation(conversationId, members) {
     };
 
     $.ajax({
-        url: HOST + "/v1/messages/changemembersconversation?email=" + getCookie('email') + "&password=" + getCookie('password'),
+        url: HOST + "/v1/messages/changemembersconversation?" + getAuthParams(),
         dataType: "json",
         type: "POST",
         data: data,
@@ -1997,7 +2003,7 @@ function changeMembersConversation(conversationId, members) {
 // Загрузить доп. кол-во избранных пользователей (пагинация)
 function getFavorites(limit, offset) {
     $.ajax({
-        url: HOST + "/v1/favorites/getmyfavorites?limit=" + limit + "&offset=" + offset + "&email=" + getCookie('email') + "&password=" + getCookie('password'),
+        url: HOST + "/v1/favorites/getmyfavorites?limit=" + limit + "&offset=" + offset + "&" + getAuthParams(),
         dataType: "json",
         type: "GET",
         xhrFields: {
@@ -2063,7 +2069,7 @@ function getFavorites(limit, offset) {
 // Загрузить доп. кол-во пользователей из чёрного списка (пагинация)
 function getBlackList(limit, offset) {
     $.ajax({
-        url: HOST + "/v1/settings/getdatablacklist?limit=" + limit + "&offset=" + offset + "&email=" + getCookie('email') + "&password=" + getCookie('password'),
+        url: HOST + "/v1/settings/getdatablacklist?limit=" + limit + "&offset=" + offset + "&" + getAuthParams(),
         dataType: "json",
         type: "GET",
         xhrFields: {
@@ -2135,7 +2141,7 @@ function getSearchUsers(query, limit, offset) {
         offset: offset
     };
     $.ajax({
-        url: HOST + "/v1/search/users?email=" + getCookie('email') + "&password=" + getCookie('password'),
+        url: HOST + "/v1/search/users?" + getAuthParams(),
         dataType: "json",
         type: "POST",
         data: data,
@@ -2201,7 +2207,7 @@ function getEvents() {
     var dataReq = null;
     $.ajax({
         async: false,
-        url: HOST + "/v1/news/getevents?email=" + getCookie('email') + "&password=" + getCookie('password'),
+        url: HOST + "/v1/news/getevents?" + getAuthParams(),
         dataType: "json",
         type: "GET",
         xhrFields: {
@@ -2231,7 +2237,7 @@ function getEvents() {
 function addEventToListEvents(idNews) {
     $.ajax({
         async: true,
-        url: HOST + "/v1/news/getonenews?id=" + idNews + "&email=" + getCookie('email') + "&password=" + getCookie('password'),
+        url: HOST + "/v1/news/getonenews?id=" + idNews + "&" + getAuthParams(),
         dataType: "json",
         type: "GET",
         xhrFields: {
@@ -2279,7 +2285,7 @@ function refreshNotViewedGroupMsgs() {
     if ($('#count_not_viewed_group_msgs').length > 0) {
         $.ajax({
             async: true,
-            url: HOST + "/v1/main/getcountnotviewedgroupmsgs?email=" + getCookie('email') + "&password=" + getCookie('password'),
+            url: HOST + "/v1/main/getcountnotviewedgroupmsgs?" + getAuthParams(),
             dataType: "json",
             type: "GET",
             /*headers: {
@@ -2369,7 +2375,7 @@ function getNotViewedMessagesFromDialog(idDialog) {
     if ($('#count_not_viewed_group_msgs').length > 0) {
         $.ajax({
             async: true,
-            url: HOST + "/v1/messages/getnewmessagesfromdialog?id=" + idDialog + "&email=" + getCookie('email') + "&password=" + getCookie('password'),
+            url: HOST + "/v1/messages/getnewmessagesfromdialog?id=" + idDialog + "&" + getAuthParams(),
             dataType: "json",
             type: "GET",
             xhrFields: {
@@ -2454,7 +2460,7 @@ function getNotViewedMessagesFromConversation(myId, idConversation) {
     if ($('#count_not_viewed_group_msgs').length > 0) {
         $.ajax({
             async: true,
-            url: HOST + "/v1/messages/getnewmessagesfromconversation?id=" + idConversation + "&email=" + getCookie('email') + "&password=" + getCookie('password'),
+            url: HOST + "/v1/messages/getnewmessagesfromconversation?id=" + idConversation + "&" + getAuthParams(),
             dataType: "json",
             type: "GET",
             xhrFields: {
@@ -2573,7 +2579,7 @@ function sqlToJsDate(sqlDate) {
 function removeConversation(conversationId) {
     var data = {id: conversationId};
     $.ajax({
-        url: HOST + "/v1/messages/removeconversation?email=" + getCookie('email') + "&password=" + getCookie('password'),
+        url: HOST + "/v1/messages/removeconversation?" + getAuthParams(),
         dataType: "json",
         type: "POST",
         data: data,
@@ -2611,7 +2617,7 @@ function renameConversation(conversationId, newName) {
         name: newName
     };
     $.ajax({
-        url: HOST + "/v1/messages/renameconversation?email=" + getCookie('email') + "&password=" + getCookie('password'),
+        url: HOST + "/v1/messages/renameconversation?" + getAuthParams(),
         dataType: "json",
         type: "POST",
         data: data,
@@ -2645,7 +2651,7 @@ function refreshPhotoConversation(conversationId, photoBase64) {
         photoBase64: photoBase64
     };
     $.ajax({
-        url: HOST + "/v1/messages/refreshphotoconversation?email=" + getCookie('email') + "&password=" + getCookie('password'),
+        url: HOST + "/v1/messages/refreshphotoconversation?" + getAuthParams(),
         dataType: "json",
         type: "POST",
         data: data,
@@ -2676,7 +2682,7 @@ function refreshPhotoConversation(conversationId, photoBase64) {
 function leaveFromConversation(conversationId) {
     var data = {id: conversationId};
     $.ajax({
-        url: HOST + "/v1/messages/leaveconversation?email=" + getCookie('email') + "&password=" + getCookie('password'),
+        url: HOST + "/v1/messages/leaveconversation?" + getAuthParams(),
         dataType: "json",
         type: "POST",
         data: data,

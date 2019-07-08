@@ -18,7 +18,7 @@ class SearchController extends \yii\web\Controller
             $this->view->params['data'] = $authData;
 
             if (isset(Yii::$app->request->post()['query_text'])) {
-                $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/search/users");
+                $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/search/users?ip=".$_SERVER['REMOTE_ADDR']);
                 curl_setopt($ch, CURLOPT_POST, 1);
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                 curl_setopt($ch, CURLOPT_HTTPHEADER, array(

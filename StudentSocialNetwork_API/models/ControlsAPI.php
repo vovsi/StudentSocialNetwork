@@ -5,12 +5,12 @@ namespace app\models;
 class ControlsAPI extends \yii\db\ActiveRecord
 {
     // rest api utilities
-    public const HOST = "http://13.59.143.75/"; //"http://socialnetworkforstudents.zzz.com.ua/";
+    public const HOST = "http://localhost/"; //"http://socialnetworkforstudents.zzz.com.ua/";
 
     public static function checkAuth()
     {
         $db = new DBHelper();
-        // Записать данные авторизации из куки (если они есть)
+        // Записать данные авторизации из куки (если они есть) иначе из get запроса
         $email = "";
         $pass = "";
         if (isset($_COOKIE['email']) && isset($_COOKIE['password'])) {
@@ -24,12 +24,24 @@ class ControlsAPI extends \yii\db\ActiveRecord
         }
         $res = $db->auth($email, $pass);
 
+        //$resultArray['auth_data'] = $db->checkHashPasswords($email, $res['password_hash']);
         $resultArray = null;
-        // Если ip пользователя привязан к аккаунту, то получаем его данные
-        $resultArray['auth_data'] = $db->checkHashPasswords($email, $res['password_hash']);
-        /*if ($db->checkIpExists($res['id'], $_SERVER['REMOTE_ADDR'])) {
-            $resultArray['auth_data'] = $db->checkHashPasswords($email, $res['password_hash']);
-        }*/
+        $ipUser = null;
+        // Если ip указан в get запросе, то берем оттуда, инчае напрямую из запроса
+        if(isset($_GET['ip'])) {
+            $ipUser = $_GET['ip'];
+        }else{
+            // При старте на хостинге заменить верхнюю строку на следующую:
+            // }else if($_SERVER['REMOTE_ADDR'] != $_SERVER['SERVER_ADDR']){
+            $ipUser = $_SERVER['REMOTE_ADDR'];
+        }
+        if(!empty($ipUser)) {
+            // Если ip пользователя привязан к аккаунту, то получаем его данные
+            if ($db->checkIpExists($res['id'], $ipUser)) {
+                $resultArray['auth_data'] = $db->checkHashPasswords($email, $res['password_hash']);
+            }
+        }
+
 
         // Проверить что пользователь авторизирован
         if (!empty($resultArray['auth_data'])) {

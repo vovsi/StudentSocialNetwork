@@ -20,7 +20,7 @@ class AdminpanelController extends \yii\web\Controller
             if (!empty($authData['auth_data'])) {
                 if ($authData['auth_data'] != null && $authData['auth_data']['role'] == 'admin') {
                     // --- Получение списка групп
-                    $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/adminpanel/getgroups");
+                    $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/adminpanel/getgroups?ip=".$_SERVER['REMOTE_ADDR']);
                     curl_setopt($ch, CURLOPT_POST, 0);
                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                     curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -41,7 +41,7 @@ class AdminpanelController extends \yii\web\Controller
                     }
 
                     // --- Получение списка админов
-                    $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/adminpanel/getadmins");
+                    $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/adminpanel/getadmins?ip=".$_SERVER['REMOTE_ADDR']);
                     curl_setopt($ch, CURLOPT_POST, 0);
                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                     curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -95,7 +95,7 @@ class AdminpanelController extends \yii\web\Controller
                                 if (iconv_strlen(Yii::$app->request->post()['first_name']) < 100 && iconv_strlen(Yii::$app->request->post()['last_name']) < 100 &&
                                     iconv_strlen(Yii::$app->request->post()['patronymic']) < 100) {
 
-                                    $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/adminpanel/registrationaccount");
+                                    $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/adminpanel/registrationaccount?ip=".$_SERVER['REMOTE_ADDR']);
                                     curl_setopt($ch, CURLOPT_POST, 1);
                                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                                     curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -165,7 +165,7 @@ class AdminpanelController extends \yii\web\Controller
                         if (Yii::$app->request->post()['actionBlock'] == "Заблокировать") {
                             if (Yii::$app->request->post()['email'] != $authData['auth_data']['email']) {
                                 if (!empty(Yii::$app->request->post()['email'])) {
-                                    $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/adminpanel/blockaccount");
+                                    $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/adminpanel/blockaccount?ip=".$_SERVER['REMOTE_ADDR']);
                                     curl_setopt($ch, CURLOPT_POST, 1);
                                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                                     curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -198,7 +198,8 @@ class AdminpanelController extends \yii\web\Controller
                             if (Yii::$app->request->post()['actionBlock'] == "Разблокировать") {
                                 if (Yii::$app->request->post()['email'] != $authData['auth_data']['email']) {
                                     if (!empty(Yii::$app->request->post()['email'])) {
-                                        $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/adminpanel/unblockaccount");
+                                        $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/adminpanel/unblockaccount?ip="
+                                            .$_SERVER['REMOTE_ADDR']);
                                         curl_setopt($ch, CURLOPT_POST, 1);
                                         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                                         curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -259,7 +260,8 @@ class AdminpanelController extends \yii\web\Controller
                 if ($authData['auth_data'] != null && $authData['auth_data']['role'] == 'admin') {
                     if (isset(Yii::$app->request->post()['nameGroup'])) {
                         if (!empty(Yii::$app->request->post()['nameGroup'])) {
-                            $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/adminpanel/creategroup");
+                            $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/adminpanel/creategroup?ip="
+                                .$_SERVER['REMOTE_ADDR']);
                             curl_setopt($ch, CURLOPT_POST, 1);
                             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                             curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -312,7 +314,8 @@ class AdminpanelController extends \yii\web\Controller
                 if ($authData['auth_data'] != null && $authData['auth_data']['role'] == 'admin') {
                     if (isset(Yii::$app->request->post()['group']) && isset(Yii::$app->request->post()['newNameGroup'])) {
                         if (!empty(Yii::$app->request->post()['group']) && !empty(Yii::$app->request->post()['newNameGroup'])) {
-                            $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/adminpanel/renamegroup");
+                            $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/adminpanel/renamegroup?ip="
+                                .$_SERVER['REMOTE_ADDR']);
                             curl_setopt($ch, CURLOPT_POST, 1);
                             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                             curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -366,7 +369,8 @@ class AdminpanelController extends \yii\web\Controller
                 if ($authData['auth_data'] != null && $authData['auth_data']['role'] == 'admin') {
                     if (isset(Yii::$app->request->post()['idAccount']) && isset(Yii::$app->request->post()['group'])) {
                         if (!empty(Yii::$app->request->post()['idAccount']) && !empty(Yii::$app->request->post()['group'])) {
-                            $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/adminpanel/moveusertodiferentgroup");
+                            $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/adminpanel/moveusertodiferentgroup?ip="
+                                .$_SERVER['REMOTE_ADDR']);
                             curl_setopt($ch, CURLOPT_POST, 1);
                             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                             curl_setopt($ch, CURLOPT_HTTPHEADER, array(

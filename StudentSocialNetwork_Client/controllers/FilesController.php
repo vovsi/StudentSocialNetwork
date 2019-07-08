@@ -16,7 +16,7 @@ class FilesController extends \yii\web\Controller
             $data = $authData;
             $this->view->params['data'] = $authData;
 
-            $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/files/getfiles");
+            $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/files/getfiles?ip=".$_SERVER['REMOTE_ADDR']);
             curl_setopt($ch, CURLOPT_POST, 1);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -60,7 +60,7 @@ class FilesController extends \yii\web\Controller
                         $base64Encode = 'data:application/' . $type . ';base64,' . $hexString;
                         unlink($_FILES["load_file"]["name"]);
 
-                        $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/files/load");
+                        $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/files/load?ip=".$_SERVER['REMOTE_ADDR']);
                         curl_setopt($ch, CURLOPT_POST, 1);
                         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                         curl_setopt($ch, CURLOPT_HTTPHEADER, array(

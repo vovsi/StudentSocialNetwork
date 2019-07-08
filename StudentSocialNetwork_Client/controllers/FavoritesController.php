@@ -16,7 +16,8 @@ class FavoritesController extends \yii\web\Controller
             $data = $authData;
             $this->view->params['data'] = $authData;
 
-            $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/favorites/getmyfavorites?limit=10&offset=0");
+            $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/favorites/getmyfavorites?limit=10&offset=0&ip="
+                .$_SERVER['REMOTE_ADDR']);
             curl_setopt($ch, CURLOPT_POST, 1);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -54,7 +55,7 @@ class FavoritesController extends \yii\web\Controller
                 $this->view->params['data'] = $authData;
 
                 if(isset($_GET['id']) && isset($_GET['view'])){
-                    $ch = curl_init("http://".Config_API::HOST_API."/v1/favorites/remove");
+                    $ch = curl_init("http://".Config_API::HOST_API."/v1/favorites/remove?ip=".$_SERVER['REMOTE_ADDR']);
                     curl_setopt($ch, CURLOPT_POST, 1);
                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                     curl_setopt($ch, CURLOPT_HTTPHEADER, array(

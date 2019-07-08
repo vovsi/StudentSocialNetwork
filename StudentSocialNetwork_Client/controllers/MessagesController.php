@@ -19,7 +19,8 @@ class MessagesController extends \yii\web\Controller
                 $this->view->params['data'] = $authData;
 
                 // Получаем диалоги (10 шт.)
-                $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/messages/getdialogs?limit=10&offset=0");
+                $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/messages/getdialogs?limit=10&offset=0&ip="
+                    .$_SERVER['REMOTE_ADDR']);
                 curl_setopt($ch, CURLOPT_POST, 1);
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -47,7 +48,8 @@ class MessagesController extends \yii\web\Controller
                 $data['is_there_more_dialogs'] = $dataResp['is_there_more'];
 
                 // Получаем беседы (10 шт.)
-                $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/messages/getconversations?limit=10&offset=0");
+                $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/messages/getconversations?limit=10&offset=0&ip="
+                    .$_SERVER['REMOTE_ADDR']);
                 curl_setopt($ch, CURLOPT_POST, 1);
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -130,7 +132,8 @@ class MessagesController extends \yii\web\Controller
 
                         // Send...
                         if (!isset($_SESSION['errors']['file'])) {
-                            $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/messages/sendtodialog");
+                            $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/messages/sendtodialog?ip="
+                                .$_SERVER['REMOTE_ADDR']);
                             curl_setopt($ch, CURLOPT_POST, 1);
                             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                             curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -192,7 +195,8 @@ class MessagesController extends \yii\web\Controller
 
                 if (isset($_GET['id'])) {
                     if (!empty($_GET['id'])) {
-                        $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/messages/getdialog?id=" . $_GET['id'] . "&limit=10&offset=0");
+                        $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/messages/getdialog?id="
+                            . $_GET['id'] . "&limit=10&offset=0&ip=".$_SERVER['REMOTE_ADDR']);
                         curl_setopt($ch, CURLOPT_POST, 1);
                         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                         curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -246,7 +250,8 @@ class MessagesController extends \yii\web\Controller
 
                 if (isset($_GET['id'])) {
                     if (!empty($_GET['id'])) {
-                        $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/messages/getconversation?id=" . $_GET['id'] . "&limit=10&offset=0");
+                        $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/messages/getconversation?id="
+                            . $_GET['id'] . "&limit=10&offset=0&ip=".$_SERVER['REMOTE_ADDR']);
                         curl_setopt($ch, CURLOPT_POST, 1);
                         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                         curl_setopt($ch, CURLOPT_HTTPHEADER, array(
