@@ -228,7 +228,7 @@ class SettingsController extends ActiveController
                 $oldPasswordHash = Yii::$app->request->post()['old_password_hash'];
                 $newPassword = Yii::$app->request->post()['new_password'];
 
-                if (password_verify($oldPasswordHash, $data['auth_data']['password'])) {
+                if ($oldPasswordHash == $data['auth_data']['password_hash']) {
                     if (iconv_strlen($newPassword) < 100) {
                         if ($db->setNewPasswordToAccount($data['auth_data']['id'], $newPassword)) {
                             return ['status' => 'OK'];

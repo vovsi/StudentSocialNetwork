@@ -22,9 +22,9 @@ user9@mail.ru  		| Ux1OPwNUzo
 user10@mail.ru 		| LQOO1QejxW
 user11@mail.ru 		| KN848EFMvs
 user12@mail.ru 		| goeOa6pkAW
-user14@mail.ru 		| tScYoZ4S9G
-user15@mail.ru 		| rITP0lJQNN
-user16@mail.ru 		| xyWAEne9pD
-user17@mail.ru 		| XV97pHZCDA
-user18@mail.ru 		| bLBVaqADLs
-user19@mail.ru 		| dcWjCEC4ia
+user14@mail.ru 		| pass123
+user15@mail.ru 		| pass123
+user16@mail.ru 		| pass123
+user17@mail.ru 		| pass123
+user18@mail.ru 		| pass123
+user19@mail.ru 		| pass123

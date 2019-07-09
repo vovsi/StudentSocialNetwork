@@ -7,7 +7,7 @@ class ConfigDB
     const HOST = 'localhost';
     const PORT = '3306';
     const USER = 'root';
-    const PASS = 'root';
+    const PASS = '';
 
     public static function getConnectionString($database, $driver = 'mysql')
     {

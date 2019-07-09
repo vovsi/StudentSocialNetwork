@@ -14,7 +14,7 @@ if (isset($refresh)) {
 <title>Главная</title>
 
 <div class="jumbotron">
-    <h1 id="headerText" class="display-4">Добро пожаловать на сайт SocialNetwork!</h1>
+    <h1 id="headerText" class="display-4">Добро пожаловать в социальную сеть Step Network!</h1>
     <p class="lead">Данный сайт является социальной сетью для студентов университета.</p>
     <hr class="my-4">
     <p>Если у вас уже есть аккаунт, укажите данные в поле авторизации (входа). Если нет, то перейдите по <a

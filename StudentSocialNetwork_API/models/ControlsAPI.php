@@ -5,7 +5,7 @@ namespace app\models;
 class ControlsAPI extends \yii\db\ActiveRecord
 {
     // Rest api utilities
-    public const HOST = "http://localhost/"; // Example: "http://socialnetworkforstudents.zzz.com.ua/";
+    public const HOST = "http://18.223.123.52/"; // Example: "http://socialnetworkforstudents.zzz.com.ua/";
 
     public static function checkAuth()
     {

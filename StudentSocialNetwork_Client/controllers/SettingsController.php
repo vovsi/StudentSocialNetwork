@@ -252,11 +252,10 @@ class SettingsController extends \yii\web\Controller
             if (!empty($authData['auth_data'])) {
                 if (isset(Yii::$app->request->post()['old_password']) && isset(Yii::$app->request->post()['new_password'])) {
                     if (!empty(Yii::$app->request->post()['old_password']) && !empty(Yii::$app->request->post()['new_password'])) {
-                        if (password_verify(Yii::$app->request->post()['old_password'],
-                            $authData['auth_data']['password'])) {
+                        if (md5(md5(Yii::$app->request->post()['old_password'])) == $authData['auth_data']['password_hash']) {
                             if (iconv_strlen(Yii::$app->request->post()['new_password']) < 100) {
                                 $oldPasswordHash = $_COOKIE['password'];
-                                $newPassword = Yii::$app->request->post()['new_password'];
+                                $newPassword = md5(md5(Yii::$app->request->post()['new_password']));
 
                                 $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/settings/changepassword?ip="
                                     . $_SERVER['REMOTE_ADDR']);
@@ -266,7 +265,6 @@ class SettingsController extends \yii\web\Controller
                                     'Cookie: email=' . $_COOKIE['email'] . '; password=' . $_COOKIE['password'] . ''
                                 ));
                                 curl_setopt($ch, CURLOPT_POSTFIELDS,
-                                    //тут переменные которые будут переданы методом POST
                                     array(
                                         'old_password_hash' => $oldPasswordHash,
                                         'new_password' => $newPassword
@@ -280,7 +278,10 @@ class SettingsController extends \yii\web\Controller
                                 }
                                 if (isset($dataResult['status'])) {
                                     if ($dataResult['status'] == "OK") {
-                                        $_SESSION['about_action'][] = "Пароль успешно изменен. Авторизируйтесь повторно";
+                                        // Установить новые данные авторизации
+                                        setcookie('email', $authData['auth_data']['email'], 0, '/');
+                                        setcookie('password', $newPassword, 0, '/');
+                                        $_SESSION['about_action'][] = "Пароль успешно изменен.";
                                     }
                                 }
                             } else {

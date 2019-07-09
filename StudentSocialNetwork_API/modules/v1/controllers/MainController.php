@@ -51,7 +51,6 @@ class MainController extends ActiveController
         $errors = array();
         if (!empty($email) && !empty($password)) {
             $db = new DBHelper();
-            $password = md5(md5($password));
             $res = $db->auth($email, $password);
             if ($res != null) {
                 if (!$db->checkBlockAccount($res['id'])) {

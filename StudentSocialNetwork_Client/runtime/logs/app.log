@@ -1,0 +1,2896 @@
+2019-07-09 15:25:58 [72.35.247.136][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: news in C:\xampp\htdocs\StudentSocialNetwork_Client\controllers\NewsController.php:46
+Stack trace:
+#0 C:\xampp\htdocs\StudentSocialNetwork_Client\controllers\NewsController.php(46): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 46, Array)
+#1 [internal function]: app\controllers\NewsController->actionIndex()
+#2 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#5 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('news', Array)
+#6 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\xampp\htdocs\StudentSocialNetwork_Client\web\index.php(13): yii\base\Application->run()
+#8 {main}
+2019-07-09 15:25:58 [72.35.247.136][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'vhi2fc2g5gmrm5bfoc0b09gicd'
+    '_csrf' => '69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC\";}'
+    'email' => 'admin@mail.ru'
+    'password' => 'dde464252a875322659d412d3b5411e9'
+]
+
+$_SESSION = [
+    'errors' => null
+    'about_action' => null
+    'password_reg' => null
+    'email_reg' => null
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => '3.15.38.254'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=vhi2fc2g5gmrm5bfoc0b09gicd; _csrf=69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC%22%3B%7D; email=admin%40mail.ru; password=dde464252a875322659d412d3b5411e9'
+    'HTTP_REFERER' => 'http://3.15.38.254/6'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\Amazon\\cfn-bootstrap\\;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6 Server at 3.15.38.254 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6'
+    'SERVER_NAME' => '3.15.38.254'
+    'SERVER_ADDR' => '172.31.21.128'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '72.35.247.136'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web/index.php'
+    'REMOTE_PORT' => '45286'
+    'REDIRECT_URL' => '/news'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/news'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1562678758.017
+    'REQUEST_TIME' => 1562678758
+]
+2019-07-09 15:26:06 [72.35.247.136][-][-][error][yii\base\ErrorException:2] yii\base\ErrorException: extract() expects parameter 1 to be array, null given in C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\View.php:334
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'extract() expec...', 'C:\\xampp\\htdocs...', 334, Array)
+#1 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\View.php(334): extract(NULL, 0)
+#2 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', NULL)
+#3 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', NULL, Object(app\controllers\MainController))
+#4 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('index', NULL, Object(app\controllers\MainController))
+#5 C:\xampp\htdocs\StudentSocialNetwork_Client\controllers\MainController.php(118): yii\base\Controller->render('index', NULL)
+#6 [internal function]: app\controllers\MainController->actionIndex()
+#7 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#10 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('main/index', Array)
+#11 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\xampp\htdocs\StudentSocialNetwork_Client\web\index.php(13): yii\base\Application->run()
+#13 {main}
+2019-07-09 15:26:06 [72.35.247.136][-][-][info][application] $_GET = [
+    'controller' => ''
+    'action' => ''
+    'id' => ''
+    'a' => ''
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'vhi2fc2g5gmrm5bfoc0b09gicd'
+    '_csrf' => '69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC\";}'
+    'email' => 'admin@mail.ru'
+    'password' => 'dde464252a875322659d412d3b5411e9'
+]
+
+$_SESSION = [
+    'errors' => null
+    'about_action' => null
+    'password_reg' => null
+    'email_reg' => null
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => '3.15.38.254'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=vhi2fc2g5gmrm5bfoc0b09gicd; _csrf=69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC%22%3B%7D; email=admin%40mail.ru; password=dde464252a875322659d412d3b5411e9'
+    'HTTP_REFERER' => 'http://3.15.38.254/news'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\Amazon\\cfn-bootstrap\\;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6 Server at 3.15.38.254 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6'
+    'SERVER_NAME' => '3.15.38.254'
+    'SERVER_ADDR' => '172.31.21.128'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '72.35.247.136'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web/index.php'
+    'REMOTE_PORT' => '48460'
+    'REDIRECT_URL' => '/'
+    'REDIRECT_QUERY_STRING' => 'controller=&action=&id=&a='
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'controller=&action=&id=&a='
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1562678766.83
+    'REQUEST_TIME' => 1562678766
+]
+2019-07-09 15:26:09 [72.35.247.136][-][-][error][yii\base\ErrorException:2] yii\base\ErrorException: extract() expects parameter 1 to be array, null given in C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\View.php:334
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'extract() expec...', 'C:\\xampp\\htdocs...', 334, Array)
+#1 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\View.php(334): extract(NULL, 0)
+#2 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', NULL)
+#3 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', NULL, Object(app\controllers\MainController))
+#4 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('index', NULL, Object(app\controllers\MainController))
+#5 C:\xampp\htdocs\StudentSocialNetwork_Client\controllers\MainController.php(118): yii\base\Controller->render('index', NULL)
+#6 [internal function]: app\controllers\MainController->actionIndex()
+#7 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#10 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('main/index', Array)
+#11 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\xampp\htdocs\StudentSocialNetwork_Client\web\index.php(13): yii\base\Application->run()
+#13 {main}
+2019-07-09 15:26:08 [72.35.247.136][-][-][info][application] $_GET = [
+    'controller' => ''
+    'action' => ''
+    'id' => ''
+    'a' => ''
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'vhi2fc2g5gmrm5bfoc0b09gicd'
+    '_csrf' => '69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC\";}'
+    'email' => 'admin@mail.ru'
+    'password' => 'dde464252a875322659d412d3b5411e9'
+]
+
+$_SESSION = [
+    'errors' => null
+    'about_action' => null
+    'password_reg' => null
+    'email_reg' => null
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => '3.15.38.254'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=vhi2fc2g5gmrm5bfoc0b09gicd; _csrf=69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC%22%3B%7D; email=admin%40mail.ru; password=dde464252a875322659d412d3b5411e9'
+    'HTTP_REFERER' => 'http://3.15.38.254/'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\Amazon\\cfn-bootstrap\\;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6 Server at 3.15.38.254 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6'
+    'SERVER_NAME' => '3.15.38.254'
+    'SERVER_ADDR' => '172.31.21.128'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '72.35.247.136'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web/index.php'
+    'REMOTE_PORT' => '49256'
+    'REDIRECT_URL' => '/'
+    'REDIRECT_QUERY_STRING' => 'controller=&action=&id=&a='
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'controller=&action=&id=&a='
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1562678768.908
+    'REQUEST_TIME' => 1562678768
+]
+2019-07-09 15:26:23 [72.35.247.136][-][-][error][yii\base\ErrorException:2] yii\base\ErrorException: extract() expects parameter 1 to be array, null given in C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\View.php:334
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'extract() expec...', 'C:\\xampp\\htdocs...', 334, Array)
+#1 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\View.php(334): extract(NULL, 0)
+#2 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', NULL)
+#3 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', NULL, Object(app\controllers\MainController))
+#4 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('index', NULL, Object(app\controllers\MainController))
+#5 C:\xampp\htdocs\StudentSocialNetwork_Client\controllers\MainController.php(118): yii\base\Controller->render('index', NULL)
+#6 [internal function]: app\controllers\MainController->actionIndex()
+#7 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#10 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('main/index', Array)
+#11 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\xampp\htdocs\StudentSocialNetwork_Client\web\index.php(13): yii\base\Application->run()
+#13 {main}
+2019-07-09 15:26:23 [72.35.247.136][-][-][info][application] $_GET = [
+    'controller' => ''
+    'action' => ''
+    'id' => ''
+    'a' => ''
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'vhi2fc2g5gmrm5bfoc0b09gicd'
+    '_csrf' => '69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC\";}'
+    'email' => 'admin@mail.ru'
+    'password' => 'dde464252a875322659d412d3b5411e9'
+]
+
+$_SESSION = [
+    'errors' => null
+    'about_action' => null
+    'password_reg' => null
+    'email_reg' => null
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => '3.15.38.254'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_COOKIE' => 'PHPSESSID=vhi2fc2g5gmrm5bfoc0b09gicd; _csrf=69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC%22%3B%7D; email=admin%40mail.ru; password=dde464252a875322659d412d3b5411e9'
+    'HTTP_REFERER' => 'http://3.15.38.254/'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\Amazon\\cfn-bootstrap\\;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6 Server at 3.15.38.254 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6'
+    'SERVER_NAME' => '3.15.38.254'
+    'SERVER_ADDR' => '172.31.21.128'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '72.35.247.136'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web/index.php'
+    'REMOTE_PORT' => '55122'
+    'REDIRECT_URL' => '/'
+    'REDIRECT_QUERY_STRING' => 'controller=&action=&id=&a='
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'controller=&action=&id=&a='
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1562678783.238
+    'REQUEST_TIME' => 1562678783
+]
+2019-07-09 15:26:25 [72.35.247.136][-][-][error][yii\base\ErrorException:2] yii\base\ErrorException: extract() expects parameter 1 to be array, null given in C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\View.php:334
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'extract() expec...', 'C:\\xampp\\htdocs...', 334, Array)
+#1 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\View.php(334): extract(NULL, 0)
+#2 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', NULL)
+#3 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', NULL, Object(app\controllers\MainController))
+#4 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('index', NULL, Object(app\controllers\MainController))
+#5 C:\xampp\htdocs\StudentSocialNetwork_Client\controllers\MainController.php(118): yii\base\Controller->render('index', NULL)
+#6 [internal function]: app\controllers\MainController->actionIndex()
+#7 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#10 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('main/index', Array)
+#11 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\xampp\htdocs\StudentSocialNetwork_Client\web\index.php(13): yii\base\Application->run()
+#13 {main}
+2019-07-09 15:26:24 [72.35.247.136][-][-][info][application] $_GET = [
+    'controller' => ''
+    'action' => ''
+    'id' => ''
+    'a' => ''
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'vhi2fc2g5gmrm5bfoc0b09gicd'
+    '_csrf' => '69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC\";}'
+    'email' => 'admin@mail.ru'
+    'password' => 'dde464252a875322659d412d3b5411e9'
+]
+
+$_SESSION = [
+    'errors' => null
+    'about_action' => null
+    'password_reg' => null
+    'email_reg' => null
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => '3.15.38.254'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=vhi2fc2g5gmrm5bfoc0b09gicd; _csrf=69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC%22%3B%7D; email=admin%40mail.ru; password=dde464252a875322659d412d3b5411e9'
+    'HTTP_REFERER' => 'http://3.15.38.254/'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\Amazon\\cfn-bootstrap\\;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6 Server at 3.15.38.254 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6'
+    'SERVER_NAME' => '3.15.38.254'
+    'SERVER_ADDR' => '172.31.21.128'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '72.35.247.136'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web/index.php'
+    'REMOTE_PORT' => '56016'
+    'REDIRECT_URL' => '/'
+    'REDIRECT_QUERY_STRING' => 'controller=&action=&id=&a='
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'controller=&action=&id=&a='
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1562678784.972
+    'REQUEST_TIME' => 1562678784
+]
+2019-07-09 15:26:28 [72.35.247.136][-][-][error][yii\base\ErrorException:2] yii\base\ErrorException: extract() expects parameter 1 to be array, null given in C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\View.php:334
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'extract() expec...', 'C:\\xampp\\htdocs...', 334, Array)
+#1 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\View.php(334): extract(NULL, 0)
+#2 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', NULL)
+#3 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', NULL, Object(app\controllers\MainController))
+#4 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('index', NULL, Object(app\controllers\MainController))
+#5 C:\xampp\htdocs\StudentSocialNetwork_Client\controllers\MainController.php(118): yii\base\Controller->render('index', NULL)
+#6 [internal function]: app\controllers\MainController->actionIndex()
+#7 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#10 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('main/index', Array)
+#11 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\xampp\htdocs\StudentSocialNetwork_Client\web\index.php(13): yii\base\Application->run()
+#13 {main}
+2019-07-09 15:26:28 [72.35.247.136][-][-][info][application] $_GET = [
+    'controller' => ''
+    'action' => ''
+    'id' => ''
+    'a' => ''
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'vhi2fc2g5gmrm5bfoc0b09gicd'
+    '_csrf' => '69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC\";}'
+    'email' => 'admin@mail.ru'
+    'password' => 'dde464252a875322659d412d3b5411e9'
+]
+
+$_SESSION = [
+    'errors' => null
+    'about_action' => null
+    'password_reg' => null
+    'email_reg' => null
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => '3.15.38.254'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_COOKIE' => 'PHPSESSID=vhi2fc2g5gmrm5bfoc0b09gicd; _csrf=69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC%22%3B%7D; email=admin%40mail.ru; password=dde464252a875322659d412d3b5411e9'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\Amazon\\cfn-bootstrap\\;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6 Server at 3.15.38.254 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6'
+    'SERVER_NAME' => '3.15.38.254'
+    'SERVER_ADDR' => '172.31.21.128'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '72.35.247.136'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web/index.php'
+    'REMOTE_PORT' => '57194'
+    'REDIRECT_URL' => '/'
+    'REDIRECT_QUERY_STRING' => 'controller=&action=&id=&a='
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'controller=&action=&id=&a='
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1562678788.144
+    'REQUEST_TIME' => 1562678788
+]
+2019-07-09 15:27:09 [72.35.247.136][-][-][error][yii\base\ErrorException:2] yii\base\ErrorException: extract() expects parameter 1 to be array, null given in C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\View.php:334
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'extract() expec...', 'C:\\xampp\\htdocs...', 334, Array)
+#1 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\View.php(334): extract(NULL, 0)
+#2 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', NULL)
+#3 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', NULL, Object(app\controllers\MainController))
+#4 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('index', NULL, Object(app\controllers\MainController))
+#5 C:\xampp\htdocs\StudentSocialNetwork_Client\controllers\MainController.php(118): yii\base\Controller->render('index', NULL)
+#6 [internal function]: app\controllers\MainController->actionIndex()
+#7 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#10 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('main/index', Array)
+#11 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\xampp\htdocs\StudentSocialNetwork_Client\web\index.php(13): yii\base\Application->run()
+#13 {main}
+2019-07-09 15:27:09 [72.35.247.136][-][-][info][application] $_GET = [
+    'controller' => ''
+    'action' => ''
+    'id' => ''
+    'a' => ''
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'vhi2fc2g5gmrm5bfoc0b09gicd'
+    '_csrf' => '69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC\";}'
+    'email' => 'admin@mail.ru'
+    'password' => 'dde464252a875322659d412d3b5411e9'
+]
+
+$_SESSION = [
+    'errors' => null
+    'about_action' => null
+    'password_reg' => null
+    'email_reg' => null
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => '3.15.38.254'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_COOKIE' => 'PHPSESSID=vhi2fc2g5gmrm5bfoc0b09gicd; _csrf=69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC%22%3B%7D; email=admin%40mail.ru; password=dde464252a875322659d412d3b5411e9'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\Amazon\\cfn-bootstrap\\;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6 Server at 3.15.38.254 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6'
+    'SERVER_NAME' => '3.15.38.254'
+    'SERVER_ADDR' => '172.31.21.128'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '72.35.247.136'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web/index.php'
+    'REMOTE_PORT' => '44546'
+    'REDIRECT_URL' => '/'
+    'REDIRECT_QUERY_STRING' => 'controller=&action=&id=&a='
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'controller=&action=&id=&a='
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1562678829.661
+    'REQUEST_TIME' => 1562678829
+]
+2019-07-09 16:32:43 [198.167.223.52][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request ".svn/entries". in C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('.svn/entries', Array)
+#1 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\StudentSocialNetwork_Client\web\index.php(13): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\StudentSocialNetwork_Client\web\index.php(13): yii\base\Application->run()
+#2 {main}
+2019-07-09 16:32:43 [198.167.223.52][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SESSION = []
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => '3.15.38.254'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\Amazon\\cfn-bootstrap\\;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6 Server at 3.15.38.254 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6'
+    'SERVER_NAME' => '3.15.38.254'
+    'SERVER_ADDR' => '172.31.21.128'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '198.167.223.52'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web/index.php'
+    'REMOTE_PORT' => '38982'
+    'REDIRECT_URL' => '/.svn/entries'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/.svn/entries'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1562682763.39
+    'REQUEST_TIME' => 1562682763
+]
+2019-07-09 16:42:20 [188.163.46.192][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: password in C:\xampp\htdocs\StudentSocialNetwork_Client\controllers\SettingsController.php:256
+Stack trace:
+#0 C:\xampp\htdocs\StudentSocialNetwork_Client\controllers\SettingsController.php(256): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 256, Array)
+#1 [internal function]: app\controllers\SettingsController->actionSecurity()
+#2 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('security', Array)
+#5 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('settings/securi...', Array)
+#6 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\xampp\htdocs\StudentSocialNetwork_Client\web\index.php(13): yii\base\Application->run()
+#8 {main}
+2019-07-09 16:42:19 [188.163.46.192][-][-][info][application] $_GET = []
+
+$_POST = [
+    '_csrf' => 'ml9Hy3h2dIgTpj8C30X7pfqg_Agfs9-Zrr8YXobFKlnCNXD5EiYd2UPnXlS9F73Tjci_bkqAgPTc6WkQ3PVHGg=='
+    'old_password' => 'tScYoZ4S9G'
+    'new_password' => 'pass123'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'vhi2fc2g5gmrm5bfoc0b09gicd'
+    '_csrf' => '69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC\";}'
+    'email' => 'user14@mail.ru'
+    'password' => '73887f60894f9f31cc6657c9f0fa99df'
+]
+
+$_SESSION = [
+    'errors' => null
+    'about_action' => null
+    'password_reg' => null
+    'email_reg' => null
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => '3.15.38.254'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '143'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://3.15.38.254'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://3.15.38.254/settings'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=vhi2fc2g5gmrm5bfoc0b09gicd; _csrf=69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC%22%3B%7D; email=user14%40mail.ru; password=73887f60894f9f31cc6657c9f0fa99df'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\Amazon\\cfn-bootstrap\\;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6 Server at 3.15.38.254 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6'
+    'SERVER_NAME' => '3.15.38.254'
+    'SERVER_ADDR' => '172.31.21.128'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '188.163.46.192'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web/index.php'
+    'REMOTE_PORT' => '35105'
+    'REDIRECT_URL' => '/settings/security'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/settings/security'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1562683339.935
+    'REQUEST_TIME' => 1562683339
+]
+2019-07-09 16:42:41 [188.163.46.192][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: password in C:\xampp\htdocs\StudentSocialNetwork_Client\controllers\SettingsController.php:256
+Stack trace:
+#0 C:\xampp\htdocs\StudentSocialNetwork_Client\controllers\SettingsController.php(256): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 256, Array)
+#1 [internal function]: app\controllers\SettingsController->actionSecurity()
+#2 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('security', Array)
+#5 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('settings/securi...', Array)
+#6 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\xampp\htdocs\StudentSocialNetwork_Client\web\index.php(13): yii\base\Application->run()
+#8 {main}
+2019-07-09 16:42:41 [188.163.46.192][-][-][info][application] $_GET = []
+
+$_POST = [
+    '_csrf' => 'MQ_mjAPEOX0lSFH_1S11sLv22WpAMAiBdmbESBZZ0kZpZdG-aZRQLHUJMKm3fzPGzJ6aDBUDV-wEMLUGTGm_BQ=='
+    'old_password' => 'tScYoZ4S9G'
+    'new_password' => '123admin123'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'vhi2fc2g5gmrm5bfoc0b09gicd'
+    '_csrf' => '69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC\";}'
+    'email' => 'user14@mail.ru'
+    'password' => '73887f60894f9f31cc6657c9f0fa99df'
+]
+
+$_SESSION = [
+    'errors' => null
+    'about_action' => null
+    'password_reg' => null
+    'email_reg' => null
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => '3.15.38.254'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '147'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://3.15.38.254'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://3.15.38.254/settings'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=vhi2fc2g5gmrm5bfoc0b09gicd; _csrf=69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC%22%3B%7D; email=user14%40mail.ru; password=73887f60894f9f31cc6657c9f0fa99df'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\Amazon\\cfn-bootstrap\\;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6 Server at 3.15.38.254 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6'
+    'SERVER_NAME' => '3.15.38.254'
+    'SERVER_ADDR' => '172.31.21.128'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '188.163.46.192'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web/index.php'
+    'REMOTE_PORT' => '34861'
+    'REDIRECT_URL' => '/settings/security'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/settings/security'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1562683361.265
+    'REQUEST_TIME' => 1562683361
+]
+2019-07-09 16:42:52 [188.163.46.192][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: password in C:\xampp\htdocs\StudentSocialNetwork_Client\controllers\SettingsController.php:256
+Stack trace:
+#0 C:\xampp\htdocs\StudentSocialNetwork_Client\controllers\SettingsController.php(256): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 256, Array)
+#1 [internal function]: app\controllers\SettingsController->actionSecurity()
+#2 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('security', Array)
+#5 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('settings/securi...', Array)
+#6 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\xampp\htdocs\StudentSocialNetwork_Client\web\index.php(13): yii\base\Application->run()
+#8 {main}
+2019-07-09 16:42:52 [188.163.46.192][-][-][info][application] $_GET = []
+
+$_POST = [
+    '_csrf' => 'MQ_mjAPEOX0lSFH_1S11sLv22WpAMAiBdmbESBZZ0kZpZdG-aZRQLHUJMKm3fzPGzJ6aDBUDV-wEMLUGTGm_BQ=='
+    'old_password' => 'tScYoZ4S9G'
+    'new_password' => '123admin123'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'vhi2fc2g5gmrm5bfoc0b09gicd'
+    '_csrf' => '69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC\";}'
+    'email' => 'user14@mail.ru'
+    'password' => '73887f60894f9f31cc6657c9f0fa99df'
+]
+
+$_SESSION = [
+    'errors' => null
+    'about_action' => null
+    'password_reg' => null
+    'email_reg' => null
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => '3.15.38.254'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '147'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://3.15.38.254'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://3.15.38.254/settings'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=vhi2fc2g5gmrm5bfoc0b09gicd; _csrf=69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC%22%3B%7D; email=user14%40mail.ru; password=73887f60894f9f31cc6657c9f0fa99df'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\Amazon\\cfn-bootstrap\\;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6 Server at 3.15.38.254 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6'
+    'SERVER_NAME' => '3.15.38.254'
+    'SERVER_ADDR' => '172.31.21.128'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '188.163.46.192'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web/index.php'
+    'REMOTE_PORT' => '34767'
+    'REDIRECT_URL' => '/settings/security'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/settings/security'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1562683372.484
+    'REQUEST_TIME' => 1562683372
+]
+2019-07-09 16:44:56 [188.163.46.192][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: password in C:\xampp\htdocs\StudentSocialNetwork_Client\controllers\SettingsController.php:256
+Stack trace:
+#0 C:\xampp\htdocs\StudentSocialNetwork_Client\controllers\SettingsController.php(256): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 256, Array)
+#1 [internal function]: app\controllers\SettingsController->actionSecurity()
+#2 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('security', Array)
+#5 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('settings/securi...', Array)
+#6 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\xampp\htdocs\StudentSocialNetwork_Client\web\index.php(13): yii\base\Application->run()
+#8 {main}
+2019-07-09 16:44:56 [188.163.46.192][-][-][info][application] $_GET = []
+
+$_POST = [
+    '_csrf' => '-H8Dmru7l08HQxu_Z3UAVtG_kGLG13GUPGv7aMpYsdKgFTSo0ev-HlcCeukFJ0YgptfTBJPkLvlOPYomkGjckQ=='
+    'old_password' => 'tScYoZ4S9G'
+    'new_password' => 'pass123'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'vhi2fc2g5gmrm5bfoc0b09gicd'
+    '_csrf' => '69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC\";}'
+    'email' => 'user14@mail.ru'
+    'password' => '73887f60894f9f31cc6657c9f0fa99df'
+]
+
+$_SESSION = [
+    'errors' => null
+    'about_action' => null
+    'password_reg' => null
+    'email_reg' => null
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => '3.15.38.254'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '143'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://3.15.38.254'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://3.15.38.254/settings'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=vhi2fc2g5gmrm5bfoc0b09gicd; _csrf=69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC%22%3B%7D; email=user14%40mail.ru; password=73887f60894f9f31cc6657c9f0fa99df'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\Amazon\\cfn-bootstrap\\;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6 Server at 3.15.38.254 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6'
+    'SERVER_NAME' => '3.15.38.254'
+    'SERVER_ADDR' => '172.31.21.128'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '188.163.46.192'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web/index.php'
+    'REMOTE_PORT' => '34482'
+    'REDIRECT_URL' => '/settings/security'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/settings/security'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1562683496.223
+    'REQUEST_TIME' => 1562683496
+]
+2019-07-09 16:49:07 [188.163.46.192][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: password in C:\xampp\htdocs\StudentSocialNetwork_Client\controllers\SettingsController.php:255
+Stack trace:
+#0 C:\xampp\htdocs\StudentSocialNetwork_Client\controllers\SettingsController.php(255): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 255, Array)
+#1 [internal function]: app\controllers\SettingsController->actionSecurity()
+#2 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('security', Array)
+#5 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('settings/securi...', Array)
+#6 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\xampp\htdocs\StudentSocialNetwork_Client\web\index.php(13): yii\base\Application->run()
+#8 {main}
+2019-07-09 16:49:07 [188.163.46.192][-][-][info][application] $_GET = []
+
+$_POST = [
+    '_csrf' => '4RaH6G5fGz-zHwLDTdhzXaWKe4UapDz6pAofE5XQN0y5fLDaBA9ybuNeY5UvijUr0uI440-XY5fWXG5dz-BaDw=='
+    'old_password' => 'tScYoZ4S9G'
+    'new_password' => 'pass123'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'vhi2fc2g5gmrm5bfoc0b09gicd'
+    '_csrf' => '69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC\";}'
+    'email' => 'user14@mail.ru'
+    'password' => '73887f60894f9f31cc6657c9f0fa99df'
+]
+
+$_SESSION = [
+    'errors' => null
+    'about_action' => null
+    'password_reg' => null
+    'email_reg' => null
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => '3.15.38.254'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '143'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://3.15.38.254'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://3.15.38.254/settings'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=vhi2fc2g5gmrm5bfoc0b09gicd; _csrf=69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC%22%3B%7D; email=user14%40mail.ru; password=73887f60894f9f31cc6657c9f0fa99df'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\Amazon\\cfn-bootstrap\\;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6 Server at 3.15.38.254 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6'
+    'SERVER_NAME' => '3.15.38.254'
+    'SERVER_ADDR' => '172.31.21.128'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '188.163.46.192'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web/index.php'
+    'REMOTE_PORT' => '35171'
+    'REDIRECT_URL' => '/settings/security'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/settings/security'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1562683747.297
+    'REQUEST_TIME' => 1562683747
+]
+2019-07-09 16:54:08 [188.163.46.192][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: password in C:\xampp\htdocs\StudentSocialNetwork_Client\controllers\SettingsController.php:255
+Stack trace:
+#0 C:\xampp\htdocs\StudentSocialNetwork_Client\controllers\SettingsController.php(255): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 255, Array)
+#1 [internal function]: app\controllers\SettingsController->actionSecurity()
+#2 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('security', Array)
+#5 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('settings/securi...', Array)
+#6 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\xampp\htdocs\StudentSocialNetwork_Client\web\index.php(13): yii\base\Application->run()
+#8 {main}
+2019-07-09 16:54:08 [188.163.46.192][-][-][info][application] $_GET = []
+
+$_POST = [
+    '_csrf' => '4BxgevqNtYGgT1TBK2OaaZCHK3tXrYMS-8cq07NPjO-4dldIkN3c0PAONZdJMdwf5-9oHQKe3H-JkVud6X_hrA=='
+    'old_password' => 'tScYoZ4S9G'
+    'new_password' => 'pass123'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'vhi2fc2g5gmrm5bfoc0b09gicd'
+    '_csrf' => '69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC\";}'
+    'password' => '73887f60894f9f31cc6657c9f0fa99df'
+    'email' => 'user14@mail.ru'
+]
+
+$_SESSION = [
+    'errors' => null
+    'about_action' => null
+    'password_reg' => null
+    'email_reg' => null
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => '3.15.38.254'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '143'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://3.15.38.254'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://3.15.38.254/settings'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=vhi2fc2g5gmrm5bfoc0b09gicd; _csrf=69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC%22%3B%7D; password=73887f60894f9f31cc6657c9f0fa99df; email=user14%40mail.ru'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\Amazon\\cfn-bootstrap\\;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6 Server at 3.15.38.254 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6'
+    'SERVER_NAME' => '3.15.38.254'
+    'SERVER_ADDR' => '172.31.21.128'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '188.163.46.192'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web/index.php'
+    'REMOTE_PORT' => '34339'
+    'REDIRECT_URL' => '/settings/security'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/settings/security'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1562684048.127
+    'REQUEST_TIME' => 1562684048
+]
+2019-07-09 16:57:39 [188.163.46.192][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: password in C:\xampp\htdocs\StudentSocialNetwork_Client\controllers\SettingsController.php:255
+Stack trace:
+#0 C:\xampp\htdocs\StudentSocialNetwork_Client\controllers\SettingsController.php(255): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 255, Array)
+#1 [internal function]: app\controllers\SettingsController->actionSecurity()
+#2 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('security', Array)
+#5 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('settings/securi...', Array)
+#6 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\xampp\htdocs\StudentSocialNetwork_Client\web\index.php(13): yii\base\Application->run()
+#8 {main}
+2019-07-09 16:57:39 [188.163.46.192][-][-][info][application] $_GET = []
+
+$_POST = [
+    '_csrf' => 'Umhe_hcYFZVngnjpKUH8XawGqLRS29O3JZRRGoASpAwKAmnMfUh8xDfDGb9LE7or227r0gfojNpXwiBU2iLJTw=='
+    'old_password' => 'tScYoZ4S9G'
+    'new_password' => 'pass123'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'vhi2fc2g5gmrm5bfoc0b09gicd'
+    '_csrf' => '69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC\";}'
+    'password' => '73887f60894f9f31cc6657c9f0fa99df'
+    'email' => 'user14@mail.ru'
+]
+
+$_SESSION = [
+    'errors' => null
+    'about_action' => null
+    'password_reg' => null
+    'email_reg' => null
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => '3.15.38.254'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '143'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://3.15.38.254'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://3.15.38.254/settings'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=vhi2fc2g5gmrm5bfoc0b09gicd; _csrf=69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC%22%3B%7D; password=73887f60894f9f31cc6657c9f0fa99df; email=user14%40mail.ru'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\Amazon\\cfn-bootstrap\\;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6 Server at 3.15.38.254 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6'
+    'SERVER_NAME' => '3.15.38.254'
+    'SERVER_ADDR' => '172.31.21.128'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '188.163.46.192'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web/index.php'
+    'REMOTE_PORT' => '34891'
+    'REDIRECT_URL' => '/settings/security'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/settings/security'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1562684259.453
+    'REQUEST_TIME' => 1562684259
+]
+2019-07-09 16:58:43 [188.163.46.192][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: password in C:\xampp\htdocs\StudentSocialNetwork_Client\controllers\SettingsController.php:255
+Stack trace:
+#0 C:\xampp\htdocs\StudentSocialNetwork_Client\controllers\SettingsController.php(255): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 255, Array)
+#1 [internal function]: app\controllers\SettingsController->actionSecurity()
+#2 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('security', Array)
+#5 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('settings/securi...', Array)
+#6 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\xampp\htdocs\StudentSocialNetwork_Client\web\index.php(13): yii\base\Application->run()
+#8 {main}
+2019-07-09 16:58:43 [188.163.46.192][-][-][info][application] $_GET = []
+
+$_POST = [
+    '_csrf' => 'iohb0y2ZDyc9Sxb-EpmIToWJT68mGO8wdEAbupZCCyrS4mzhR8lmdm0Kd6hwy8448uEMyXMrsF0GFmr0zHJmaQ=='
+    'old_password' => 'tScYoZ4S9G'
+    'new_password' => 'pass123'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'vhi2fc2g5gmrm5bfoc0b09gicd'
+    '_csrf' => '69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC\";}'
+    'password' => '73887f60894f9f31cc6657c9f0fa99df'
+    'email' => 'user14@mail.ru'
+]
+
+$_SESSION = [
+    'errors' => null
+    'about_action' => null
+    'password_reg' => null
+    'email_reg' => null
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => '3.15.38.254'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '143'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://3.15.38.254'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://3.15.38.254/settings'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=vhi2fc2g5gmrm5bfoc0b09gicd; _csrf=69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC%22%3B%7D; password=73887f60894f9f31cc6657c9f0fa99df; email=user14%40mail.ru'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\Amazon\\cfn-bootstrap\\;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6 Server at 3.15.38.254 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6'
+    'SERVER_NAME' => '3.15.38.254'
+    'SERVER_ADDR' => '172.31.21.128'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '188.163.46.192'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web/index.php'
+    'REMOTE_PORT' => '34535'
+    'REDIRECT_URL' => '/settings/security'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/settings/security'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1562684323.143
+    'REQUEST_TIME' => 1562684323
+]
+2019-07-09 16:58:59 [188.163.46.192][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: password in C:\xampp\htdocs\StudentSocialNetwork_Client\controllers\SettingsController.php:255
+Stack trace:
+#0 C:\xampp\htdocs\StudentSocialNetwork_Client\controllers\SettingsController.php(255): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 255, Array)
+#1 [internal function]: app\controllers\SettingsController->actionSecurity()
+#2 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('security', Array)
+#5 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('settings/securi...', Array)
+#6 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\xampp\htdocs\StudentSocialNetwork_Client\web\index.php(13): yii\base\Application->run()
+#8 {main}
+2019-07-09 16:58:59 [188.163.46.192][-][-][info][application] $_GET = []
+
+$_POST = [
+    '_csrf' => 'GYoYo87RjFjW9xl65ANLl7G1C2MUj5x_ArTeA0xcLb9B4C-RpIHlCYa2eCyGUQ3hxt1IBUG8wxJw4q9NFmxA_A=='
+    'old_password' => 'ewgwe'
+    'new_password' => 'wegew'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'vhi2fc2g5gmrm5bfoc0b09gicd'
+    '_csrf' => '69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC\";}'
+    'password' => '73887f60894f9f31cc6657c9f0fa99df'
+    'email' => 'user14@mail.ru'
+]
+
+$_SESSION = [
+    'errors' => null
+    'about_action' => null
+    'password_reg' => null
+    'email_reg' => null
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => '3.15.38.254'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '136'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://3.15.38.254'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://3.15.38.254/settings'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=vhi2fc2g5gmrm5bfoc0b09gicd; _csrf=69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC%22%3B%7D; password=73887f60894f9f31cc6657c9f0fa99df; email=user14%40mail.ru'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\Amazon\\cfn-bootstrap\\;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6 Server at 3.15.38.254 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6'
+    'SERVER_NAME' => '3.15.38.254'
+    'SERVER_ADDR' => '172.31.21.128'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '188.163.46.192'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web/index.php'
+    'REMOTE_PORT' => '34707'
+    'REDIRECT_URL' => '/settings/security'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/settings/security'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1562684339.097
+    'REQUEST_TIME' => 1562684339
+]
+2019-07-09 17:11:38 [188.163.46.192][-][-][error][yii\base\ErrorException:2] yii\base\ErrorException: extract() expects parameter 1 to be array, null given in C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\View.php:334
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'extract() expec...', 'C:\\xampp\\htdocs...', 334, Array)
+#1 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\View.php(334): extract(NULL, 0)
+#2 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', NULL)
+#3 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', NULL, Object(app\controllers\FavoritesController))
+#4 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('index', NULL, Object(app\controllers\FavoritesController))
+#5 C:\xampp\htdocs\StudentSocialNetwork_Client\controllers\FavoritesController.php(48): yii\base\Controller->render('index', NULL)
+#6 [internal function]: app\controllers\FavoritesController->actionIndex()
+#7 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#10 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('favorites', Array)
+#11 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\xampp\htdocs\StudentSocialNetwork_Client\web\index.php(13): yii\base\Application->run()
+#13 {main}
+2019-07-09 17:11:38 [188.163.46.192][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'vhi2fc2g5gmrm5bfoc0b09gicd'
+    '_csrf' => '69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC\";}'
+    'password' => '73887f60894f9f31cc6657c9f0fa99df'
+    'email' => 'user14@mail.ru'
+]
+
+$_SESSION = [
+    'errors' => null
+    'about_action' => null
+    'password_reg' => null
+    'email_reg' => null
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => '3.15.38.254'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://3.15.38.254/settings'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=vhi2fc2g5gmrm5bfoc0b09gicd; _csrf=69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC%22%3B%7D; password=73887f60894f9f31cc6657c9f0fa99df; email=user14%40mail.ru'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\Amazon\\cfn-bootstrap\\;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6 Server at 3.15.38.254 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6'
+    'SERVER_NAME' => '3.15.38.254'
+    'SERVER_ADDR' => '172.31.21.128'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '188.163.46.192'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web/index.php'
+    'REMOTE_PORT' => '34504'
+    'REDIRECT_URL' => '/favorites'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/favorites'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1562685098.75
+    'REQUEST_TIME' => 1562685098
+]
+2019-07-09 17:11:41 [188.163.46.192][-][-][error][yii\base\ErrorException:2] yii\base\ErrorException: extract() expects parameter 1 to be array, null given in C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\View.php:334
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'extract() expec...', 'C:\\xampp\\htdocs...', 334, Array)
+#1 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\View.php(334): extract(NULL, 0)
+#2 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', NULL)
+#3 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', NULL, Object(app\controllers\MainController))
+#4 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('index', NULL, Object(app\controllers\MainController))
+#5 C:\xampp\htdocs\StudentSocialNetwork_Client\controllers\MainController.php(118): yii\base\Controller->render('index', NULL)
+#6 [internal function]: app\controllers\MainController->actionIndex()
+#7 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#10 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('main/index', Array)
+#11 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\xampp\htdocs\StudentSocialNetwork_Client\web\index.php(13): yii\base\Application->run()
+#13 {main}
+2019-07-09 17:11:41 [188.163.46.192][-][-][info][application] $_GET = [
+    'controller' => ''
+    'action' => ''
+    'id' => ''
+    'a' => ''
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'vhi2fc2g5gmrm5bfoc0b09gicd'
+    '_csrf' => '69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC\";}'
+    'password' => '73887f60894f9f31cc6657c9f0fa99df'
+    'email' => 'user14@mail.ru'
+]
+
+$_SESSION = [
+    'errors' => null
+    'about_action' => null
+    'password_reg' => null
+    'email_reg' => null
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => '3.15.38.254'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://3.15.38.254/favorites'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=vhi2fc2g5gmrm5bfoc0b09gicd; _csrf=69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC%22%3B%7D; password=73887f60894f9f31cc6657c9f0fa99df; email=user14%40mail.ru'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\Amazon\\cfn-bootstrap\\;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6 Server at 3.15.38.254 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6'
+    'SERVER_NAME' => '3.15.38.254'
+    'SERVER_ADDR' => '172.31.21.128'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '188.163.46.192'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web/index.php'
+    'REMOTE_PORT' => '35147'
+    'REDIRECT_URL' => '/'
+    'REDIRECT_QUERY_STRING' => 'controller=&action=&id=&a='
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'controller=&action=&id=&a='
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1562685101.156
+    'REQUEST_TIME' => 1562685101
+]
+2019-07-09 17:11:43 [188.163.46.192][-][-][error][yii\base\ErrorException:2] yii\base\ErrorException: extract() expects parameter 1 to be array, null given in C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\View.php:334
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'extract() expec...', 'C:\\xampp\\htdocs...', 334, Array)
+#1 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\View.php(334): extract(NULL, 0)
+#2 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', NULL)
+#3 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', NULL, Object(app\controllers\MainController))
+#4 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('index', NULL, Object(app\controllers\MainController))
+#5 C:\xampp\htdocs\StudentSocialNetwork_Client\controllers\MainController.php(118): yii\base\Controller->render('index', NULL)
+#6 [internal function]: app\controllers\MainController->actionIndex()
+#7 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#10 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('main/index', Array)
+#11 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\xampp\htdocs\StudentSocialNetwork_Client\web\index.php(13): yii\base\Application->run()
+#13 {main}
+2019-07-09 17:11:43 [188.163.46.192][-][-][info][application] $_GET = [
+    'controller' => ''
+    'action' => ''
+    'id' => ''
+    'a' => ''
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'vhi2fc2g5gmrm5bfoc0b09gicd'
+    '_csrf' => '69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC\";}'
+    'password' => '73887f60894f9f31cc6657c9f0fa99df'
+    'email' => 'user14@mail.ru'
+]
+
+$_SESSION = [
+    'errors' => null
+    'about_action' => null
+    'password_reg' => null
+    'email_reg' => null
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => '3.15.38.254'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://3.15.38.254/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=vhi2fc2g5gmrm5bfoc0b09gicd; _csrf=69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC%22%3B%7D; password=73887f60894f9f31cc6657c9f0fa99df; email=user14%40mail.ru'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\Amazon\\cfn-bootstrap\\;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6 Server at 3.15.38.254 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6'
+    'SERVER_NAME' => '3.15.38.254'
+    'SERVER_ADDR' => '172.31.21.128'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '188.163.46.192'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web/index.php'
+    'REMOTE_PORT' => '34891'
+    'REDIRECT_URL' => '/'
+    'REDIRECT_QUERY_STRING' => 'controller=&action=&id=&a='
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'controller=&action=&id=&a='
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1562685103.734
+    'REQUEST_TIME' => 1562685103
+]
+2019-07-09 17:12:15 [188.163.46.192][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "settings". in C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('settings', Array)
+#1 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\StudentSocialNetwork_Client\web\index.php(13): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\StudentSocialNetwork_Client\web\index.php(13): yii\base\Application->run()
+#2 {main}
+2019-07-09 17:12:15 [188.163.46.192][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'vhi2fc2g5gmrm5bfoc0b09gicd'
+    '_csrf' => '69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC\";}'
+    'email' => 'user14@mail.ru'
+    'password' => '0af8c38b4ab6d4eaf4545a536da18545'
+]
+
+$_SESSION = [
+    'errors' => null
+    'about_action' => null
+    'password_reg' => null
+    'email_reg' => null
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => '3.15.38.254'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://3.15.38.254/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=vhi2fc2g5gmrm5bfoc0b09gicd; _csrf=69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC%22%3B%7D; email=user14%40mail.ru; password=0af8c38b4ab6d4eaf4545a536da18545'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\Amazon\\cfn-bootstrap\\;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6 Server at 3.15.38.254 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6'
+    'SERVER_NAME' => '3.15.38.254'
+    'SERVER_ADDR' => '172.31.21.128'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '188.163.46.192'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web/index.php'
+    'REMOTE_PORT' => '34576'
+    'REDIRECT_URL' => '/settings'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/settings'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1562685135.048
+    'REQUEST_TIME' => 1562685135
+]
+2019-07-09 17:13:11 [188.163.46.192][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "settings". in C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('settings', Array)
+#1 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\StudentSocialNetwork_Client\web\index.php(13): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\StudentSocialNetwork_Client\web\index.php(13): yii\base\Application->run()
+#2 {main}
+2019-07-09 17:13:11 [188.163.46.192][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'vhi2fc2g5gmrm5bfoc0b09gicd'
+    '_csrf' => '69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC\";}'
+    'email' => 'user14@mail.ru'
+    'password' => '0af8c38b4ab6d4eaf4545a536da18545'
+]
+
+$_SESSION = [
+    'errors' => null
+    'about_action' => null
+    'password_reg' => null
+    'email_reg' => null
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => '3.15.38.254'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://3.15.38.254/favorites'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=vhi2fc2g5gmrm5bfoc0b09gicd; _csrf=69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC%22%3B%7D; email=user14%40mail.ru; password=0af8c38b4ab6d4eaf4545a536da18545'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\Amazon\\cfn-bootstrap\\;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6 Server at 3.15.38.254 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6'
+    'SERVER_NAME' => '3.15.38.254'
+    'SERVER_ADDR' => '172.31.21.128'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '188.163.46.192'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web/index.php'
+    'REMOTE_PORT' => '34566'
+    'REDIRECT_URL' => '/settings'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/settings'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1562685191.817
+    'REQUEST_TIME' => 1562685191
+]
+2019-07-09 17:13:34 [188.163.46.192][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "settings". in C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('settings', Array)
+#1 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\StudentSocialNetwork_Client\web\index.php(13): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\StudentSocialNetwork_Client\web\index.php(13): yii\base\Application->run()
+#2 {main}
+2019-07-09 17:13:34 [188.163.46.192][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'vhi2fc2g5gmrm5bfoc0b09gicd'
+    '_csrf' => '69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC\";}'
+    'email' => 'user14@mail.ru'
+    'password' => '0af8c38b4ab6d4eaf4545a536da18545'
+]
+
+$_SESSION = [
+    'errors' => null
+    'about_action' => null
+    'password_reg' => null
+    'email_reg' => null
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => '3.15.38.254'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://3.15.38.254/6'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=vhi2fc2g5gmrm5bfoc0b09gicd; _csrf=69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC%22%3B%7D; email=user14%40mail.ru; password=0af8c38b4ab6d4eaf4545a536da18545'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\Amazon\\cfn-bootstrap\\;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6 Server at 3.15.38.254 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6'
+    'SERVER_NAME' => '3.15.38.254'
+    'SERVER_ADDR' => '172.31.21.128'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '188.163.46.192'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web/index.php'
+    'REMOTE_PORT' => '35077'
+    'REDIRECT_URL' => '/settings'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/settings'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1562685214.663
+    'REQUEST_TIME' => 1562685214
+]
+2019-07-09 17:14:12 [188.163.46.192][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "settings". in C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('settings', Array)
+#1 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\StudentSocialNetwork_Client\web\index.php(13): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\StudentSocialNetwork_Client\web\index.php(13): yii\base\Application->run()
+#2 {main}
+2019-07-09 17:14:12 [188.163.46.192][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'vhi2fc2g5gmrm5bfoc0b09gicd'
+    '_csrf' => '69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC\";}'
+    'email' => 'user14@mail.ru'
+    'password' => '0af8c38b4ab6d4eaf4545a536da18545'
+]
+
+$_SESSION = [
+    'errors' => null
+    'about_action' => null
+    'password_reg' => null
+    'email_reg' => null
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => '3.15.38.254'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://3.15.38.254/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=vhi2fc2g5gmrm5bfoc0b09gicd; _csrf=69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC%22%3B%7D; email=user14%40mail.ru; password=0af8c38b4ab6d4eaf4545a536da18545'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\Amazon\\cfn-bootstrap\\;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6 Server at 3.15.38.254 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6'
+    'SERVER_NAME' => '3.15.38.254'
+    'SERVER_ADDR' => '172.31.21.128'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '188.163.46.192'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web/index.php'
+    'REMOTE_PORT' => '34642'
+    'REDIRECT_URL' => '/settings'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/settings'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1562685252.117
+    'REQUEST_TIME' => 1562685252
+]
+2019-07-09 17:15:25 [188.163.46.192][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "settings". in C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('settings', Array)
+#1 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\StudentSocialNetwork_Client\web\index.php(13): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\StudentSocialNetwork_Client\web\index.php(13): yii\base\Application->run()
+#2 {main}
+2019-07-09 17:15:25 [188.163.46.192][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'vhi2fc2g5gmrm5bfoc0b09gicd'
+    '_csrf' => '69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC\";}'
+    'email' => 'user14@mail.ru'
+    'password' => '0af8c38b4ab6d4eaf4545a536da18545'
+]
+
+$_SESSION = [
+    'errors' => null
+    'about_action' => null
+    'password_reg' => null
+    'email_reg' => null
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => '3.15.38.254'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://3.15.38.254/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=vhi2fc2g5gmrm5bfoc0b09gicd; _csrf=69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC%22%3B%7D; email=user14%40mail.ru; password=0af8c38b4ab6d4eaf4545a536da18545'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\Amazon\\cfn-bootstrap\\;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6 Server at 3.15.38.254 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6'
+    'SERVER_NAME' => '3.15.38.254'
+    'SERVER_ADDR' => '172.31.21.128'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '188.163.46.192'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web/index.php'
+    'REMOTE_PORT' => '35015'
+    'REDIRECT_URL' => '/settings'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/settings'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1562685324.997
+    'REQUEST_TIME' => 1562685324
+]
+2019-07-09 17:17:44 [188.163.46.192][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "settings". in C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('settings', Array)
+#1 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\StudentSocialNetwork_Client\web\index.php(13): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\StudentSocialNetwork_Client\web\index.php(13): yii\base\Application->run()
+#2 {main}
+2019-07-09 17:17:44 [188.163.46.192][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'vhi2fc2g5gmrm5bfoc0b09gicd'
+    '_csrf' => '69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC\";}'
+    'email' => 'admin@mail.ru'
+    'password' => 'dde464252a875322659d412d3b5411e9'
+]
+
+$_SESSION = [
+    'errors' => null
+    'about_action' => null
+    'password_reg' => null
+    'email_reg' => null
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => '3.15.38.254'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://3.15.38.254/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=vhi2fc2g5gmrm5bfoc0b09gicd; _csrf=69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC%22%3B%7D; email=admin%40mail.ru; password=dde464252a875322659d412d3b5411e9'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\Amazon\\cfn-bootstrap\\;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6 Server at 3.15.38.254 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6'
+    'SERVER_NAME' => '3.15.38.254'
+    'SERVER_ADDR' => '172.31.21.128'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '188.163.46.192'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web/index.php'
+    'REMOTE_PORT' => '35117'
+    'REDIRECT_URL' => '/settings'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/settings'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1562685464.697
+    'REQUEST_TIME' => 1562685464
+]
+2019-07-09 17:19:44 [188.163.46.192][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: password in C:\xampp\htdocs\StudentSocialNetwork_Client\controllers\SettingsController.php:255
+Stack trace:
+#0 C:\xampp\htdocs\StudentSocialNetwork_Client\controllers\SettingsController.php(255): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 255, Array)
+#1 [internal function]: app\controllers\SettingsController->actionSecurity()
+#2 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('security', Array)
+#5 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('settings/securi...', Array)
+#6 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\xampp\htdocs\StudentSocialNetwork_Client\web\index.php(13): yii\base\Application->run()
+#8 {main}
+2019-07-09 17:19:44 [188.163.46.192][-][-][info][application] $_GET = []
+
+$_POST = [
+    '_csrf' => '9eNgpcHupIgdKd9GiBnBisDEIoeYSt7nG0211KGGmWCtiVeXq77N2U1ovhDqS4f8t6xh4c15gYppG8Sa-7b0Iw=='
+    'old_password' => 'gre'
+    'new_password' => 'grege'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'vhi2fc2g5gmrm5bfoc0b09gicd'
+    '_csrf' => '69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC\";}'
+    'email' => 'user14@mail.ru'
+    'password' => '0af8c38b4ab6d4eaf4545a536da18545'
+]
+
+$_SESSION = [
+    'errors' => null
+    'about_action' => null
+    'password_reg' => null
+    'email_reg' => null
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => '3.15.38.254'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '134'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://3.15.38.254'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://3.15.38.254/settings'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=vhi2fc2g5gmrm5bfoc0b09gicd; _csrf=69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC%22%3B%7D; email=user14%40mail.ru; password=0af8c38b4ab6d4eaf4545a536da18545'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\Amazon\\cfn-bootstrap\\;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6 Server at 3.15.38.254 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6'
+    'SERVER_NAME' => '3.15.38.254'
+    'SERVER_ADDR' => '172.31.21.128'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '188.163.46.192'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web/index.php'
+    'REMOTE_PORT' => '34451'
+    'REDIRECT_URL' => '/settings/security'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/settings/security'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1562685584.781
+    'REQUEST_TIME' => 1562685584
+]
+2019-07-09 17:20:02 [188.163.46.192][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: password in C:\xampp\htdocs\StudentSocialNetwork_Client\controllers\SettingsController.php:255
+Stack trace:
+#0 C:\xampp\htdocs\StudentSocialNetwork_Client\controllers\SettingsController.php(255): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 255, Array)
+#1 [internal function]: app\controllers\SettingsController->actionSecurity()
+#2 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('security', Array)
+#5 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('settings/securi...', Array)
+#6 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\xampp\htdocs\StudentSocialNetwork_Client\web\index.php(13): yii\base\Application->run()
+#8 {main}
+2019-07-09 17:20:02 [188.163.46.192][-][-][info][application] $_GET = []
+
+$_POST = [
+    '_csrf' => 'jjLP21L86Sa6Ps2vxaCLTz06Tsf-CoQr56lzDIezXvbWWPjpOKyAd-p_rPmn8s05SlINoas520aV_wJC3YMztQ=='
+    'old_password' => 'pass123'
+    'new_password' => '123admin123'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'vhi2fc2g5gmrm5bfoc0b09gicd'
+    '_csrf' => '69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC\";}'
+    'email' => 'user14@mail.ru'
+    'password' => '0af8c38b4ab6d4eaf4545a536da18545'
+]
+
+$_SESSION = [
+    'errors' => null
+    'about_action' => null
+    'password_reg' => null
+    'email_reg' => null
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => '3.15.38.254'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '144'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://3.15.38.254'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://3.15.38.254/settings'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=vhi2fc2g5gmrm5bfoc0b09gicd; _csrf=69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC%22%3B%7D; email=user14%40mail.ru; password=0af8c38b4ab6d4eaf4545a536da18545'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\Amazon\\cfn-bootstrap\\;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6 Server at 3.15.38.254 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6'
+    'SERVER_NAME' => '3.15.38.254'
+    'SERVER_ADDR' => '172.31.21.128'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '188.163.46.192'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web/index.php'
+    'REMOTE_PORT' => '34917'
+    'REDIRECT_URL' => '/settings/security'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/settings/security'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1562685602.656
+    'REQUEST_TIME' => 1562685602
+]
+2019-07-09 17:22:00 [188.163.46.192][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: password in C:\xampp\htdocs\StudentSocialNetwork_Client\controllers\SettingsController.php:255
+Stack trace:
+#0 C:\xampp\htdocs\StudentSocialNetwork_Client\controllers\SettingsController.php(255): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 255, Array)
+#1 [internal function]: app\controllers\SettingsController->actionSecurity()
+#2 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('security', Array)
+#5 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('settings/securi...', Array)
+#6 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\xampp\htdocs\StudentSocialNetwork_Client\web\index.php(13): yii\base\Application->run()
+#8 {main}
+2019-07-09 17:22:00 [188.163.46.192][-][-][info][application] $_GET = []
+
+$_POST = [
+    '_csrf' => 'PfG9JACLdXSMi1_QYco0Jqri2H2bR5kC4A3qLqC0Lihlm4oWatscJdzKPoYDmHJQ3YqbG850xm-SW5tg-oRDaw=='
+    'old_password' => 'pass123'
+    'new_password' => 'pass123'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'vhi2fc2g5gmrm5bfoc0b09gicd'
+    '_csrf' => '69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC\";}'
+    'email' => 'user14@mail.ru'
+    'password' => '0af8c38b4ab6d4eaf4545a536da18545'
+]
+
+$_SESSION = [
+    'errors' => null
+    'about_action' => null
+    'password_reg' => null
+    'email_reg' => null
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => '3.15.38.254'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '140'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://3.15.38.254'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://3.15.38.254/settings'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=vhi2fc2g5gmrm5bfoc0b09gicd; _csrf=69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC%22%3B%7D; email=user14%40mail.ru; password=0af8c38b4ab6d4eaf4545a536da18545'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\Amazon\\cfn-bootstrap\\;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6 Server at 3.15.38.254 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6'
+    'SERVER_NAME' => '3.15.38.254'
+    'SERVER_ADDR' => '172.31.21.128'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '188.163.46.192'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web/index.php'
+    'REMOTE_PORT' => '35193'
+    'REDIRECT_URL' => '/settings/security'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/settings/security'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1562685720.646
+    'REQUEST_TIME' => 1562685720
+]
+2019-07-09 17:23:00 [188.163.46.192][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: password in C:\xampp\htdocs\StudentSocialNetwork_Client\controllers\SettingsController.php:255
+Stack trace:
+#0 C:\xampp\htdocs\StudentSocialNetwork_Client\controllers\SettingsController.php(255): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 255, Array)
+#1 [internal function]: app\controllers\SettingsController->actionSecurity()
+#2 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('security', Array)
+#5 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('settings/securi...', Array)
+#6 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\xampp\htdocs\StudentSocialNetwork_Client\web\index.php(13): yii\base\Application->run()
+#8 {main}
+2019-07-09 17:23:00 [188.163.46.192][-][-][info][application] $_GET = []
+
+$_POST = [
+    '_csrf' => 'wDBIKoGVrC-Taop7r1wlkw0qj8CY-x3q_LMOjRKXCQSYWn8Y68XFfsMr6y3NDmPlekLMps3IQoeO5X_DSKdkRw=='
+    'old_password' => '123admin123'
+    'new_password' => '123'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'vhi2fc2g5gmrm5bfoc0b09gicd'
+    '_csrf' => '69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC\";}'
+    'email' => 'admin@mail.ru'
+    'password' => 'dde464252a875322659d412d3b5411e9'
+]
+
+$_SESSION = [
+    'errors' => null
+    'about_action' => null
+    'password_reg' => null
+    'email_reg' => null
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => '3.15.38.254'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '140'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://3.15.38.254'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://3.15.38.254/settings'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=vhi2fc2g5gmrm5bfoc0b09gicd; _csrf=69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC%22%3B%7D; email=admin%40mail.ru; password=dde464252a875322659d412d3b5411e9'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\Amazon\\cfn-bootstrap\\;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6 Server at 3.15.38.254 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6'
+    'SERVER_NAME' => '3.15.38.254'
+    'SERVER_ADDR' => '172.31.21.128'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '188.163.46.192'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web/index.php'
+    'REMOTE_PORT' => '34807'
+    'REDIRECT_URL' => '/settings/security'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/settings/security'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1562685780.445
+    'REQUEST_TIME' => 1562685780
+]
+2019-07-09 17:26:28 [188.163.46.192][-][-][error][yii\base\ErrorException:2] yii\base\ErrorException: extract() expects parameter 1 to be array, null given in C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\View.php:334
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'extract() expec...', 'C:\\xampp\\htdocs...', 334, Array)
+#1 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\View.php(334): extract(NULL, 0)
+#2 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', NULL)
+#3 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', NULL, Object(app\controllers\MainController))
+#4 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('index', NULL, Object(app\controllers\MainController))
+#5 C:\xampp\htdocs\StudentSocialNetwork_Client\controllers\MainController.php(118): yii\base\Controller->render('index', NULL)
+#6 [internal function]: app\controllers\MainController->actionIndex()
+#7 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#10 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('main/index', Array)
+#11 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\xampp\htdocs\StudentSocialNetwork_Client\web\index.php(13): yii\base\Application->run()
+#13 {main}
+2019-07-09 17:26:28 [188.163.46.192][-][-][info][application] $_GET = [
+    'controller' => ''
+    'action' => ''
+    'id' => ''
+    'a' => ''
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'vhi2fc2g5gmrm5bfoc0b09gicd'
+    '_csrf' => '69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC\";}'
+    'email' => 'user14@mail.ru'
+    'password' => '0af8c38b4ab6d4eaf4545a536da18545'
+]
+
+$_SESSION = [
+    'errors' => null
+    'about_action' => null
+    'password_reg' => null
+    'email_reg' => null
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => '3.15.38.254'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://3.15.38.254/settings'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=vhi2fc2g5gmrm5bfoc0b09gicd; _csrf=69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC%22%3B%7D; email=user14%40mail.ru; password=0af8c38b4ab6d4eaf4545a536da18545'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\Amazon\\cfn-bootstrap\\;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6 Server at 3.15.38.254 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6'
+    'SERVER_NAME' => '3.15.38.254'
+    'SERVER_ADDR' => '172.31.21.128'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '188.163.46.192'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web/index.php'
+    'REMOTE_PORT' => '34287'
+    'REDIRECT_URL' => '/'
+    'REDIRECT_QUERY_STRING' => 'controller=&action=&id=&a='
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'controller=&action=&id=&a='
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1562685988.579
+    'REQUEST_TIME' => 1562685988
+]
+2019-07-09 17:26:32 [188.163.46.192][-][-][error][yii\base\ErrorException:2] yii\base\ErrorException: extract() expects parameter 1 to be array, null given in C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\View.php:334
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'extract() expec...', 'C:\\xampp\\htdocs...', 334, Array)
+#1 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\View.php(334): extract(NULL, 0)
+#2 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', NULL)
+#3 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp\\htdocs...', NULL, Object(app\controllers\MainController))
+#4 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('index', NULL, Object(app\controllers\MainController))
+#5 C:\xampp\htdocs\StudentSocialNetwork_Client\controllers\MainController.php(118): yii\base\Controller->render('index', NULL)
+#6 [internal function]: app\controllers\MainController->actionIndex()
+#7 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#10 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('main/index', Array)
+#11 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\xampp\htdocs\StudentSocialNetwork_Client\web\index.php(13): yii\base\Application->run()
+#13 {main}
+2019-07-09 17:26:32 [188.163.46.192][-][-][info][application] $_GET = [
+    'controller' => ''
+    'action' => ''
+    'id' => ''
+    'a' => ''
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'vhi2fc2g5gmrm5bfoc0b09gicd'
+    '_csrf' => '69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC\";}'
+    'email' => 'user14@mail.ru'
+    'password' => '0af8c38b4ab6d4eaf4545a536da18545'
+]
+
+$_SESSION = [
+    'errors' => null
+    'about_action' => null
+    'password_reg' => null
+    'email_reg' => null
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => '3.15.38.254'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://3.15.38.254/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=vhi2fc2g5gmrm5bfoc0b09gicd; _csrf=69b91218715c031a3e6ea2b517ae45522e1f7260f866bf0d54cb4ee525704194a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Xj72jPiQPAaVbRFvwhCfU3_mrVqNZ0mC%22%3B%7D; email=user14%40mail.ru; password=0af8c38b4ab6d4eaf4545a536da18545'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\Amazon\\cfn-bootstrap\\;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6 Server at 3.15.38.254 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1c PHP/7.3.6'
+    'SERVER_NAME' => '3.15.38.254'
+    'SERVER_ADDR' => '172.31.21.128'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '188.163.46.192'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/StudentSocialNetwork_Client/web/index.php'
+    'REMOTE_PORT' => '34604'
+    'REDIRECT_URL' => '/'
+    'REDIRECT_QUERY_STRING' => 'controller=&action=&id=&a='
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'controller=&action=&id=&a='
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1562685992.313
+    'REQUEST_TIME' => 1562685992
+]

@@ -87,17 +87,13 @@ class MainController extends \yii\web\Controller
 
         // Если пользователь авторизируется
         if (Yii::$app->request->isPost) {
-            // Удалить прошлые данные авторизации
-            setcookie('email', 0, strtotime('-1 days'), '/');
-            setcookie('password', 0, strtotime('-1 days'), '/');
-
             $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/main/auth");
             curl_setopt($ch, CURLOPT_POST, 1);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             curl_setopt($ch, CURLOPT_POSTFIELDS,
                 array(
                     'email' => Yii::$app->request->post()['email'],
-                    'password' => Yii::$app->request->post()['password'],
+                    'password' => md5(md5(Yii::$app->request->post()['password'])),
                     'ip' => $_SERVER['REMOTE_ADDR']
                 ));
             $response = curl_exec($ch);
@@ -105,6 +101,9 @@ class MainController extends \yii\web\Controller
             curl_close($ch);
 
             if (!isset($data['errors'])) {
+                /*// Удалить прошлые данные авторизации
+                setcookie('email', 0, strtotime('-1 days'), '/');
+                setcookie('password', 0, strtotime('-1 days'), '/');*/
                 // Установить новые данные авторизации
                 setcookie('email', $data['auth_data']['email'], 0, '/');
                 setcookie('password', $data['auth_data']['password_hash'], 0, '/');

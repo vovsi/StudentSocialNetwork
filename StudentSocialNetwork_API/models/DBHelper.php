@@ -1165,7 +1165,7 @@ class DBHelper
     {
         $acc = $this->getAccountAsObject($idUser);
         if (!empty($acc)) {
-            $acc->password_hash = password_hash($newPassword, PASSWORD_DEFAULT);
+            $acc->password_hash = $newPassword;
             $acc->save();
             return true;
         } else {
