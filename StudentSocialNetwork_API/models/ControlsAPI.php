@@ -5,7 +5,7 @@ namespace app\models;
 class ControlsAPI extends \yii\db\ActiveRecord
 {
     // rest api utilities
-    public const HOST = "http://localhost/"; //"http://socialnetworkforstudents.zzz.com.ua/";
+    public const HOST = "http://18.223.123.52/"; //"http://socialnetworkforstudents.zzz.com.ua/";
 
     public static function checkAuth()
     {
@@ -47,7 +47,7 @@ class ControlsAPI extends \yii\db\ActiveRecord
         if (!empty($resultArray['auth_data'])) {
             $db->refreshVisit($resultArray['auth_data']['id']);
             $countNewDialogsMsgs = $db->getCountNotViewedDialogsMessages($resultArray['auth_data']['id']);
-            $countNewConversationsMsgs = $db->getCountNotViewedDialogsMessages($resultArray['auth_data']['id']);
+            $countNewConversationsMsgs = $db->getCountNotViewedConversationsMessages($resultArray['auth_data']['id']);
             $resultArray['count_new_group_msgs'] = $countNewDialogsMsgs + $countNewConversationsMsgs;
 
             $resultArray['photo_path'] = self::HOST . $db->getAvatarAccount($resultArray['auth_data']['id']);

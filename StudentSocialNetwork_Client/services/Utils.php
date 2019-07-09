@@ -33,7 +33,7 @@ class Utils
     public function checkAuth()
     {
         // Проверяем авторизацию
-        $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/main/checkauth");
+        $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/main/checkauth?ip=".$_SERVER['REMOTE_ADDR']);
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -51,7 +51,8 @@ class Utils
         // Если указан id в URL, то отобразить профиль
         if (isset($idShow)) {
             if (!empty($idShow)) {
-                $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/main/getprofiletouser?id=" . $idShow);
+                $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/main/getprofiletouser?id=" . $idShow . "&ip="
+                    .$_SERVER['REMOTE_ADDR']);
                 curl_setopt($ch, CURLOPT_POST, 1);
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                 curl_setopt($ch, CURLOPT_HTTPHEADER, array(

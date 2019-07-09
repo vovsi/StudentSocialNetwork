@@ -1,5 +1,5 @@
 // Host server
-const HOST = "http://localhost"; //"http://socialnetworkforstudents.zzz.com.ua/web";
+const HOST = "http://18.223.123.52"; //"http://socialnetworkforstudents.zzz.com.ua/web";
 
 // Получить параметры для авторизации (повторные, при каждом запросе)
 function getAuthParams() {
