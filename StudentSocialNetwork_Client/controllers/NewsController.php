@@ -18,7 +18,7 @@ class NewsController extends \yii\web\Controller
             $this->view->params['data'] = $authData;
 
             $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/news/getnews?limit=10&offset=0&ip="
-                .$_SERVER['REMOTE_ADDR']);
+                . $_SERVER['REMOTE_ADDR']);
             curl_setopt($ch, CURLOPT_POST, 1);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -37,7 +37,8 @@ class NewsController extends \yii\web\Controller
             if (isset($dataResp['news'])) {
                 for ($i = 0; $i < count($dataResp['news']); $i++) {
                     if ($dataResp['news'][$i]['image_path'] != null) {
-                        $dataResp['news'][$i]['image_path'] = 'data:image/jpeg;base64,' . base64_encode(file_get_contents($dataResp['news'][$i]['image_path']));
+                        $dataResp['news'][$i]['image_path'] = 'data:image/jpeg;base64,' .
+                            base64_encode(file_get_contents($dataResp['news'][$i]['image_path']));
                     }
                 }
             }
@@ -75,11 +76,13 @@ class NewsController extends \yii\web\Controller
             if ($authData['auth_data']['role'] == "admin") {
                 if (isset(Yii::$app->request->post()['theme']) && isset(Yii::$app->request->post()['description'])) {
                     if (!empty(Yii::$app->request->post()['theme']) && !empty(Yii::$app->request->post()['description'])) {
-                        if (iconv_strlen(Yii::$app->request->post()['theme']) < 1500 && iconv_strlen(Yii::$app->request->post()['description']) < 5000) {
+                        if (iconv_strlen(Yii::$app->request->post()['theme']) < 1500 &&
+                            iconv_strlen(Yii::$app->request->post()['description']) < 5000) {
                             // Проверяем дату события и место события (если есть)
                             $dateEvent = null;
                             $eventDescription = null;
-                            if (isset(Yii::$app->request->post()['date_event']) && isset(Yii::$app->request->post()['event_description'])) {
+                            if (isset(Yii::$app->request->post()['date_event']) &&
+                                isset(Yii::$app->request->post()['event_description'])) {
                                 if (!empty(Yii::$app->request->post()['date_event'])) {
                                     if (!empty(Yii::$app->request->post()['event_description'])) {
                                         if (iconv_strlen(Yii::$app->request->post()['event_description']) < 200) {
@@ -93,7 +96,8 @@ class NewsController extends \yii\web\Controller
                                     }
                                     $dateEvent = Yii::$app->request->post()['date_event'];
                                 }
-                                if (empty(Yii::$app->request->post()['date_event']) && !empty(Yii::$app->request->post()['event_description'])) {
+                                if (empty(Yii::$app->request->post()['date_event']) &&
+                                    !empty(Yii::$app->request->post()['event_description'])) {
                                     $errors[] = 'Укажите дату события.';
                                     $_SESSION['errors'] = $errors;
                                     return $this->render('addnewspage');
@@ -113,7 +117,9 @@ class NewsController extends \yii\web\Controller
                                         $base64Encode = 'data:image/' . $type . ';base64,' . $hexString;
                                         unlink($_FILES["image"]["name"]);
                                     } else {
-                                        $errors['image'] = "Ошибка загрузки изображения. Убедитесь что файл является изображением. Допустимые форматы: gif, png, jpg, jpeg";
+                                        $errors['image'] = "Ошибка загрузки изображения. Убедитесь что файл является 
+                                        изображением. Допустимые форматы: " .
+                                            implode(", ", Utils::ALLOW_IMAGE_TYPES);
                                     }
                                 }
                             }
@@ -158,14 +164,13 @@ class NewsController extends \yii\web\Controller
                                 $pollAnon = (isset(Yii::$app->request->post()['addPollAnon'])) ? 'true' : 'false';
 
                                 $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/news/add?ip="
-                                    .$_SERVER['REMOTE_ADDR']);
+                                    . $_SERVER['REMOTE_ADDR']);
                                 curl_setopt($ch, CURLOPT_POST, 1);
                                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                                 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
                                     'Cookie: email=' . $_COOKIE['email'] . '; password=' . $_COOKIE['password'] . ''
                                 ));
                                 curl_setopt($ch, CURLOPT_POSTFIELDS,
-                                    //тут переменные которые будут переданы методом POST
                                     array(
                                         'theme' => $theme,
                                         'description' => $description,
@@ -191,7 +196,8 @@ class NewsController extends \yii\web\Controller
                                 }
                             }
                         } else {
-                            $errors[] = 'Длина темы или описания больше допустимого значения. Допускается: Тема (до 1500 символов) и Описание (до 5000 символов).';
+                            $errors[] = 'Длина темы или описания больше допустимого значения. Допускается: 
+                            Тема (до 1500 символов) и Описание (до 5000 символов).';
                         }
                     } else {
                         $errors[] = 'Ошибка введенных данных. Проверьте что тема и описание задано.';
@@ -225,13 +231,13 @@ class NewsController extends \yii\web\Controller
             if ($authData['auth_data']['role'] == "admin") {
                 if (isset($_GET['id'])) {
                     if (!empty($_GET['id'])) {
-                        $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/news/remove?ip=".$_SERVER['REMOTE_ADDR']);
+                        $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/news/remove?ip=" . $_SERVER['REMOTE_ADDR']);
                         curl_setopt($ch, CURLOPT_POST, 1);
                         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                         curl_setopt($ch, CURLOPT_HTTPHEADER, array(
                             'Cookie: email=' . $_COOKIE['email'] . '; password=' . $_COOKIE['password'] . ''
                         ));
-                        curl_setopt($ch, CURLOPT_POSTFIELDS, //тут переменные которые будут переданы методом POST
+                        curl_setopt($ch, CURLOPT_POSTFIELDS,
                             array(
                                 'id' => $_GET['id'],
                             ));

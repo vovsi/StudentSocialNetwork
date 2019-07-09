@@ -2,6 +2,7 @@
 
 namespace app\modules\v1\controllers;
 
+use app\config\ConfigDataDB;
 use app\models\ControlsAPI;
 use app\models\DBHelper;
 use Yii;
@@ -99,12 +100,14 @@ class AdminpanelController extends ActiveController
                         isset(Yii::$app->request->post()['patronymic']) && isset(Yii::$app->request->post()['group']) &&
                         isset(Yii::$app->request->post()['role']) && isset(Yii::$app->request->post()['gender']) &&
                         isset(Yii::$app->request->post()['email'])) {
-                        if (1 == preg_match('/^((([0-9A-Za-z]{1}[-0-9A-z\.]{1,}[0-9A-Za-z]{1})|([0-9А-Яа-я]{1}[-0-9А-я\.]{1,}[0-9А-Яа-я]{1}))@([-0-9A-Za-z]{1,}\.){1,2}[-A-Za-z]{2,})$/u',
+                        if (1 == preg_match(ConfigDataDB::REGEX_VALID_EMAIL,
                                 Yii::$app->request->post()['email'])) {
-                            if (iconv_strlen(Yii::$app->request->post()['first_name']) < 100 && iconv_strlen(Yii::$app->request->post()['last_name']) < 100 &&
+                            if (iconv_strlen(Yii::$app->request->post()['first_name']) < 100 &&
+                                iconv_strlen(Yii::$app->request->post()['last_name']) < 100 &&
                                 iconv_strlen(Yii::$app->request->post()['patronymic']) < 100) {
                                 if (!$db->emailExists(Yii::$app->request->post()['email'])) {
-                                    if ($db->groupExists(Yii::$app->request->post()['group']) && $db->roleExists(Yii::$app->request->post()['role'])) {
+                                    if ($db->groupExists(Yii::$app->request->post()['group']) &&
+                                        $db->roleExists(Yii::$app->request->post()['role'])) {
                                         if ($db->genderExists(Yii::$app->request->post()['gender'])) {
                                             $firstName = htmlspecialchars(Yii::$app->request->post()['first_name']);
                                             $lastName = htmlspecialchars(Yii::$app->request->post()['last_name']);

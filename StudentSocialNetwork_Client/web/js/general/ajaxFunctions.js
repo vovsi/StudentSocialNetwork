@@ -1081,7 +1081,7 @@ function getPosts(accountToId, limit, offset, myId) {
             //response( data );
             if (data['posts'] != null) {
                 // Скрываем кнопку Показать ещё, если больше нет записей
-                if(!data['is_there_more_posts']){
+                if (!data['is_there_more_posts']) {
                     $('#show_more').remove();
                 }
 
@@ -1393,7 +1393,7 @@ function getNews(limit, offset) {
                 }
 
                 // Скрываем кнопку Показать ещё, если больше нет записей
-                if(!data['is_there_more']){
+                if (!data['is_there_more']) {
                     $('#show_more').remove();
                 }
 
@@ -1480,7 +1480,7 @@ function getDialogs(limit, offset) {
                     //$('#show_more_dialogs').remove();
                 }
                 // Скрываем кнопку Показать ещё, если больше нет записей
-                if(!data['is_there_more']){
+                if (!data['is_there_more']) {
                     $('#show_more_dialogs').remove();
                 }
                 for (let i = 0; i < data['dialogs'].length; i++) {
@@ -1574,7 +1574,7 @@ function getConversations(limit, offset) {
                     $('#show_more_conversations').remove();
                 }
                 // Скрываем кнопку Показать ещё, если больше нет записей
-                if(!data['is_there_more']){
+                if (!data['is_there_more']) {
                     $('#show_more_conversations').remove();
                 }
                 for (let i = 0; i < data['conversations'].length; i++) {
@@ -1654,7 +1654,7 @@ function getMessagesFromDialog(idDialog, limit, offset) {
             //response( data );
             if (data['messages'] != null) {
                 // Скрываем кнопку Показать ещё, если больше нет записей
-                if(!data['is_there_more']){
+                if (!data['is_there_more']) {
                     $('#show_more').remove();
                 }
 
@@ -1756,7 +1756,7 @@ function getMessagesFromConversation(myId, idConversation, limit, offset) {
             //response( data );
             if (data['messages'] != null) {
                 // Скрываем кнопку Показать ещё, если больше нет записей
-                if(!data['is_there_more']){
+                if (!data['is_there_more']) {
                     $('#show_more').remove();
                 }
 
@@ -1943,7 +1943,7 @@ function getFavoritesOfUser(limit, offset) {
 function getMembersOfConversation(conversationId) {
     var res;
     $.ajax({
-        url: HOST + "/v1/messages/getmembersofconversation?id="+conversationId+"&" + getAuthParams(),
+        url: HOST + "/v1/messages/getmembersofconversation?id=" + conversationId + "&" + getAuthParams(),
         dataType: "json",
         async: false,
         type: "GET",
@@ -2021,7 +2021,7 @@ function getFavorites(limit, offset) {
                     $('#show_more').remove();
                 }
                 // Скрываем кнопку Показать ещё, если больше нет записей
-                if(!data['is_there_more_favorites']){
+                if (!data['is_there_more_favorites']) {
                     $('#show_more').remove();
                 }
                 for (let i = 0; i < data['favorites'].length; i++) {
@@ -2087,7 +2087,7 @@ function getBlackList(limit, offset) {
                     $('#show_more').remove();
                 }
                 // Скрываем кнопку Показать ещё, если больше нет записей
-                if(!data['is_there_more_black_list']){
+                if (!data['is_there_more_black_list']) {
                     $('#show_more').remove();
                 }
                 for (let i = 0; i < data['black_list'].length; i++) {
@@ -2434,7 +2434,7 @@ function getNotViewedMessagesFromDialog(idDialog) {
                         // Добавляем новое сообщение к другим
                         $('#messages').append(itemMess);
                     }
-                    if(data['new_messages'].length>0) {
+                    if (data['new_messages'].length > 0) {
                         // Scroll в самый низ списка сообщений
                         $('#messages').scrollTop($('#messages').height() * $('#messages').height());
                         // Обновляем смайлики собеседника
@@ -2531,7 +2531,7 @@ function getNotViewedMessagesFromConversation(myId, idConversation) {
                         // Добавляем новое сообщение в список других
                         $('#messages').append(itemMessage);
                     }
-                    if(data['new_messages'].length>0) {
+                    if (data['new_messages'].length > 0) {
                         // Scroll в самый низ списка сообщений
                         $('#messages').scrollTop($('#messages').height() * $('#messages').height());
                         // Обновляем смайлики мои

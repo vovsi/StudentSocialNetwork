@@ -17,7 +17,7 @@ class FavoritesController extends \yii\web\Controller
             $this->view->params['data'] = $authData;
 
             $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/favorites/getmyfavorites?limit=10&offset=0&ip="
-                .$_SERVER['REMOTE_ADDR']);
+                . $_SERVER['REMOTE_ADDR']);
             curl_setopt($ch, CURLOPT_POST, 1);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -35,10 +35,11 @@ class FavoritesController extends \yii\web\Controller
 
             if (isset($dataResp['favorites'])) {
                 for ($i = 0; $i < count($dataResp['favorites']); $i++) {
-                    $dataResp['favorites'][$i]['photo_path'] = 'data:image/jpeg;base64,' . base64_encode(file_get_contents($dataResp['favorites'][$i]['photo_path']));
+                    $dataResp['favorites'][$i]['photo_path'] = 'data:image/jpeg;base64,' .
+                        base64_encode(file_get_contents($dataResp['favorites'][$i]['photo_path']));
                 }
-				$data['favorites'] = $dataResp['favorites'];
-				$data['is_there_more_favorites'] = $dataResp['is_there_more_favorites'];
+                $data['favorites'] = $dataResp['favorites'];
+                $data['is_there_more_favorites'] = $dataResp['is_there_more_favorites'];
             }
         } else {
             $_SESSION['errors'] = ['' => 'Необходима авторизация.'];

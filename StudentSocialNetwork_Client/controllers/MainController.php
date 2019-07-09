@@ -13,7 +13,7 @@ class MainController extends \yii\web\Controller
         $data = array();
         if (isset($_COOKIE['email']) && isset($_COOKIE['password'])) {
             // Проверяем авторизацию
-            $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/main/checkauth?ip=".$_SERVER['REMOTE_ADDR']);
+            $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/main/checkauth?ip=" . $_SERVER['REMOTE_ADDR']);
             curl_setopt($ch, CURLOPT_POST, 1);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -29,7 +29,7 @@ class MainController extends \yii\web\Controller
                 if (!empty($_GET['id'])) {
                     // Получаем данные профиля
                     $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/main/getprofiletouser?id=" . $_GET['id']
-                        ."&ip=".$_SERVER['REMOTE_ADDR']);
+                        . "&ip=" . $_SERVER['REMOTE_ADDR']);
                     curl_setopt($ch, CURLOPT_POST, 1);
                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                     curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -38,19 +38,20 @@ class MainController extends \yii\web\Controller
                     $response = curl_exec($ch);
                     $dataProfile = json_decode($response, true);
                     curl_close($ch);
-					
-					if (isset($dataProfile['errors'])) {
+
+                    if (isset($dataProfile['errors'])) {
                         $_SESSION['errors'] = $dataProfile['errors'];
                         header("Location: /");
                         exit;
                     }
-					
+
                     $dataProfile['auth_data'] = $data['auth_data'];
-                    $dataProfile['profile']['photo_path'] = 'data:image/jpeg;base64,' . base64_encode(file_get_contents($dataProfile['profile']['photo_path']));
+                    $dataProfile['profile']['photo_path'] = 'data:image/jpeg;base64,' .
+                        base64_encode(file_get_contents($dataProfile['profile']['photo_path']));
 
                     // Получаем первые 10 записей профиля
                     $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/main/getposts?id=" . $_GET['id']
-                        . "&limit=10&offset=0&ip=".$_SERVER['REMOTE_ADDR']);
+                        . "&limit=10&offset=0&ip=" . $_SERVER['REMOTE_ADDR']);
                     curl_setopt($ch, CURLOPT_POST, 1);
                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                     curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -70,9 +71,11 @@ class MainController extends \yii\web\Controller
 
                     if (isset($dataProfile['posts'])) {
                         for ($i = 0; $i < count($dataProfile['posts']); $i++) {
-                            $dataProfile['posts'][$i]['photo_FROM'] = 'data:image/jpeg;base64,' . base64_encode(file_get_contents($dataProfile['posts'][$i]['photo_FROM']));
+                            $dataProfile['posts'][$i]['photo_FROM'] = 'data:image/jpeg;base64,' .
+                                base64_encode(file_get_contents($dataProfile['posts'][$i]['photo_FROM']));
                             if ($dataProfile['posts'][$i]['path_to_image'] != null) {
-                                $dataProfile['posts'][$i]['path_to_image'] = 'data:image/jpeg;base64,' . base64_encode(file_get_contents($dataProfile['posts'][$i]['path_to_image']));
+                                $dataProfile['posts'][$i]['path_to_image'] = 'data:image/jpeg;base64,' .
+                                    base64_encode(file_get_contents($dataProfile['posts'][$i]['path_to_image']));
                             }
                         }
                     }
@@ -91,7 +94,7 @@ class MainController extends \yii\web\Controller
             $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/main/auth");
             curl_setopt($ch, CURLOPT_POST, 1);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-            curl_setopt($ch, CURLOPT_POSTFIELDS, //тут переменные которые будут переданы методом POST
+            curl_setopt($ch, CURLOPT_POSTFIELDS,
                 array(
                     'email' => Yii::$app->request->post()['email'],
                     'password' => Yii::$app->request->post()['password'],
@@ -271,13 +274,13 @@ class MainController extends \yii\web\Controller
                             $base64Encode = 'data:image/' . $type . ';base64,' . $hexString;
                             unlink($_FILES["update_photo"]["name"]);
 
-                            $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/main/updatephoto?ip=".$_SERVER['REMOTE_ADDR']);
+                            $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/main/updatephoto?ip=" . $_SERVER['REMOTE_ADDR']);
                             curl_setopt($ch, CURLOPT_POST, 1);
                             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                             curl_setopt($ch, CURLOPT_HTTPHEADER, array(
                                 'Cookie: email=' . $_COOKIE['email'] . '; password=' . $_COOKIE['password'] . ''
                             ));
-                            curl_setopt($ch, CURLOPT_POSTFIELDS, //тут переменные которые будут переданы методом POST
+                            curl_setopt($ch, CURLOPT_POSTFIELDS,
                                 array(
                                     'file' => (!empty($base64Encode)) ? $base64Encode : null
                                 ));
@@ -288,7 +291,8 @@ class MainController extends \yii\web\Controller
                                 $data['errors'] = $dataResult['errors'];
                             }
                         } else {
-                            $data['errors'][] = 'Неверный формат файла. Допустимые форматы: gif, png, jpg, jpeg';
+                            $data['errors'][] = 'Неверный формат файла. Допустимые форматы: ' .
+                                implode(", ", Utils::ALLOW_IMAGE_TYPES);
                         }
                     } else {
                         $data['errors'][] = 'Ошибка обнаружения файла.';

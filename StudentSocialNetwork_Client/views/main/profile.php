@@ -81,7 +81,7 @@ if (isset($errors)) {
                                   <span aria-hidden=\"true\">&times;</span>
                                 </button>
                               </div>
-                              <form method='post' onsubmit='return validateSendMessage()' action='".Url::to(['/messages/send'])."' enctype=\"multipart/form-data\">
+                              <form method='post' onsubmit='return validateSendMessage()' action='" . Url::to(['/messages/send']) . "' enctype=\"multipart/form-data\">
                                 <input type=\"hidden\" name=\"_csrf\" value=\"" . Yii::$app->request->getCsrfToken() . "\" />
                                   <div id='parentOfTextbox' class=\"modal-body\">
                                     <label style='color: gray;'>Кому:</label>
@@ -169,7 +169,7 @@ if (isset($errors)) {
                                 <span aria-hidden=\"true\">&times;</span>
                             </button>
                         </div>
-                        <form class=\"needs-validation\" novalidate method=\"post\" action=\"".Url::to(['/main/updatephoto'])."\" enctype=\"multipart/form-data\">
+                        <form class=\"needs-validation\" novalidate method=\"post\" action=\"" . Url::to(['/main/updatephoto']) . "\" enctype=\"multipart/form-data\">
                             <div class=\"modal-body\">
                                 <input type=\"hidden\" name=\"_csrf\" value=\"" . Yii::$app->request->getCsrfToken() . "\" />
                                 <input type=\"hidden\" name=\"account_to_id\" id=\"account_to_id\" value=\"" . $_GET['id'] . "\">

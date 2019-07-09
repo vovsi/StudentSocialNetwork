@@ -68,7 +68,7 @@ class AlbumController extends ActiveController
 
         if (!empty($data['auth_data'])) {
             if (!$db->checkBlockAccount($data['auth_data']['id'])) {
-                if(iconv_strlen($description) <= ConfigDataDB::LIMIT_SYMBOLS_PHOTO_DESCRIPTION) {
+                if (iconv_strlen($description) <= ConfigDataDB::LIMIT_SYMBOLS_PHOTO_DESCRIPTION) {
                     if (!empty($file)) {
                         $type = explode(';', $file)[0];
                         $type = explode('/', $type)[1];
@@ -80,14 +80,15 @@ class AlbumController extends ActiveController
                                 $errors[] = 'Ошибка загрузки фото.';
                             }
                         } else {
-                            $errors[] = 'Ошибка загрузки изображения. Убедитесь что файл является изображением. Допустимые форматы: ' . implode(", ",
-                                    ConfigDataDB::ALLOWS_IMAGE_EXTENSION);
+                            $errors[] = 'Ошибка загрузки изображения. Убедитесь что файл является изображением. 
+                                Допустимые форматы: ' . implode(", ", ConfigDataDB::ALLOWS_IMAGE_EXTENSION);
                         }
                     } else {
                         $errors[] = 'Файл не найден.';
                     }
-                }else{
-                    $errors[] = 'Кол-во символов в описании к фотографии должно быть не больше '.ConfigDataDB::LIMIT_SYMBOLS_PHOTO_DESCRIPTION;
+                } else {
+                    $errors[] = 'Кол-во символов в описании к фотографии должно быть не больше ' .
+                        ConfigDataDB::LIMIT_SYMBOLS_PHOTO_DESCRIPTION;
                 }
             } else {
                 $errors[] = 'Аккаунт заблокирован.';

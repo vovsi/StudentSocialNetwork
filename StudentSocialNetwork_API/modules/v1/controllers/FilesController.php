@@ -33,7 +33,7 @@ class FilesController extends ActiveController
         return $behaviors;
     }
 
-    // Получить файлы пользователя !!! ДОБАВИТЬ В ДОКУМЕНТАЦИЮ
+    // Получить файлы пользователя
     public function actionGetfiles()
     {
         $db = new DBHelper();
@@ -54,7 +54,7 @@ class FilesController extends ActiveController
         return $dataOut;
     }
 
-    // Загрузить файл !!! ДОБАВИТЬ В ДОКУМЕНТАЦИЮ
+    // Загрузить файл
     public function actionLoad()
     {
         $db = new DBHelper();

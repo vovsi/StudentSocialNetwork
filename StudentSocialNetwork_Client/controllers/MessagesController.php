@@ -20,7 +20,7 @@ class MessagesController extends \yii\web\Controller
 
                 // Получаем диалоги (10 шт.)
                 $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/messages/getdialogs?limit=10&offset=0&ip="
-                    .$_SERVER['REMOTE_ADDR']);
+                    . $_SERVER['REMOTE_ADDR']);
                 curl_setopt($ch, CURLOPT_POST, 1);
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -38,9 +38,11 @@ class MessagesController extends \yii\web\Controller
 
                 if (isset($dataResp['dialogs'])) {
                     for ($i = 0; $i < count($dataResp['dialogs']); $i++) {
-                        $dataResp['dialogs'][$i]['interlocutor_image'] = 'data:image/jpeg;base64,' . base64_encode(file_get_contents($dataResp['dialogs'][$i]['interlocutor_image']));
+                        $dataResp['dialogs'][$i]['interlocutor_image'] = 'data:image/jpeg;base64,' .
+                            base64_encode(file_get_contents($dataResp['dialogs'][$i]['interlocutor_image']));
                         if ($dataResp['dialogs'][$i]['last_message_photo'] != null) {
-                            $dataResp['dialogs'][$i]['last_message_photo'] = 'data:image/jpeg;base64,' . base64_encode(file_get_contents($dataResp['dialogs'][$i]['last_message_photo']));
+                            $dataResp['dialogs'][$i]['last_message_photo'] = 'data:image/jpeg;base64,' .
+                                base64_encode(file_get_contents($dataResp['dialogs'][$i]['last_message_photo']));
                         }
                     }
                 }
@@ -49,7 +51,7 @@ class MessagesController extends \yii\web\Controller
 
                 // Получаем беседы (10 шт.)
                 $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/messages/getconversations?limit=10&offset=0&ip="
-                    .$_SERVER['REMOTE_ADDR']);
+                    . $_SERVER['REMOTE_ADDR']);
                 curl_setopt($ch, CURLOPT_POST, 1);
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -67,9 +69,11 @@ class MessagesController extends \yii\web\Controller
 
                 if (isset($dataResp['conversations'])) {
                     for ($i = 0; $i < count($dataResp['conversations']); $i++) {
-                        $dataResp['conversations'][$i]['conversation_photo'] = 'data:image/jpeg;base64,' . base64_encode(file_get_contents($dataResp['conversations'][$i]['conversation_photo']));
+                        $dataResp['conversations'][$i]['conversation_photo'] = 'data:image/jpeg;base64,' .
+                            base64_encode(file_get_contents($dataResp['conversations'][$i]['conversation_photo']));
                         if ($dataResp['conversations'][$i]['last_message_photo'] != null) {
-                            $dataResp['conversations'][$i]['last_message_photo'] = 'data:image/jpeg;base64,' . base64_encode(file_get_contents($dataResp['conversations'][$i]['last_message_photo']));
+                            $dataResp['conversations'][$i]['last_message_photo'] = 'data:image/jpeg;base64,' .
+                                base64_encode(file_get_contents($dataResp['conversations'][$i]['last_message_photo']));
                         }
                     }
                 }
@@ -105,7 +109,10 @@ class MessagesController extends \yii\web\Controller
                                 if (iconv_strlen(Yii::$app->request->post()['message']) < 3000) {
                                     $message = Yii::$app->request->post()['message'];
                                 } else {
-                                    $_SESSION['errors'] = ['' => 'Длина сообщения больше допустимого значения. Допускается: 3000 символов.'];
+                                    $_SESSION['errors'] = [
+                                        '' => 'Длина сообщения больше допустимого значения. 
+                                    Допускается: 3000 символов.'
+                                    ];
                                     return $this->render('index', $data);
                                 }
                             }
@@ -125,7 +132,9 @@ class MessagesController extends \yii\web\Controller
                                     $base64Encode = 'data:image/' . $type . ';base64,' . $hexString;
                                     unlink($_FILES["att_photo_newMessage"]["name"]);
                                 } else {
-                                    $_SESSION['errors']['file'] = "Ошибка загрузки изображения. Убедитесь что файл является изображением. Допустимые форматы: gif, png, jpg, jpeg";
+                                    $_SESSION['errors']['file'] = "Ошибка загрузки изображения. Убедитесь что файл 
+                                    является изображением. Допустимые форматы: " .
+                                        implode(", ", Utils::ALLOW_IMAGE_TYPES);
                                 }
                             }
                         }
@@ -133,13 +142,13 @@ class MessagesController extends \yii\web\Controller
                         // Send...
                         if (!isset($_SESSION['errors']['file'])) {
                             $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/messages/sendtodialog?ip="
-                                .$_SERVER['REMOTE_ADDR']);
+                                . $_SERVER['REMOTE_ADDR']);
                             curl_setopt($ch, CURLOPT_POST, 1);
                             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                             curl_setopt($ch, CURLOPT_HTTPHEADER, array(
                                 'Cookie: email=' . $_COOKIE['email'] . '; password=' . $_COOKIE['password'] . ''
                             ));
-                            curl_setopt($ch, CURLOPT_POSTFIELDS, //тут переменные которые будут переданы методом POST
+                            curl_setopt($ch, CURLOPT_POSTFIELDS,
                                 array(
                                     'account_to_id' => $accountToId,
                                     'message' => $message,
@@ -196,7 +205,7 @@ class MessagesController extends \yii\web\Controller
                 if (isset($_GET['id'])) {
                     if (!empty($_GET['id'])) {
                         $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/messages/getdialog?id="
-                            . $_GET['id'] . "&limit=10&offset=0&ip=".$_SERVER['REMOTE_ADDR']);
+                            . $_GET['id'] . "&limit=10&offset=0&ip=" . $_SERVER['REMOTE_ADDR']);
                         curl_setopt($ch, CURLOPT_POST, 1);
                         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                         curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -212,12 +221,15 @@ class MessagesController extends \yii\web\Controller
                             }
                         }
 
-                        $dataResp['recipient_photo_path'] = 'data:image/jpeg;base64,' . base64_encode(file_get_contents($dataResp['recipient_photo_path']));
+                        $dataResp['recipient_photo_path'] = 'data:image/jpeg;base64,' .
+                            base64_encode(file_get_contents($dataResp['recipient_photo_path']));
                         if (isset($dataResp['messages'])) {
                             for ($i = 0; $i < count($dataResp['messages']); $i++) {
-                                $dataResp['messages'][$i]['sender_photo'] = 'data:image/jpeg;base64,' . base64_encode(file_get_contents($dataResp['messages'][$i]['sender_photo']));
+                                $dataResp['messages'][$i]['sender_photo'] = 'data:image/jpeg;base64,' .
+                                    base64_encode(file_get_contents($dataResp['messages'][$i]['sender_photo']));
                                 if ($dataResp['messages'][$i]['message_photo_path'] != null) {
-                                    $dataResp['messages'][$i]['message_photo_path'] = 'data:image/jpeg;base64,' . base64_encode(file_get_contents($dataResp['messages'][$i]['message_photo_path']));
+                                    $dataResp['messages'][$i]['message_photo_path'] = 'data:image/jpeg;base64,' .
+                                        base64_encode(file_get_contents($dataResp['messages'][$i]['message_photo_path']));
                                 }
                             }
                         }
@@ -251,7 +263,7 @@ class MessagesController extends \yii\web\Controller
                 if (isset($_GET['id'])) {
                     if (!empty($_GET['id'])) {
                         $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/messages/getconversation?id="
-                            . $_GET['id'] . "&limit=10&offset=0&ip=".$_SERVER['REMOTE_ADDR']);
+                            . $_GET['id'] . "&limit=10&offset=0&ip=" . $_SERVER['REMOTE_ADDR']);
                         curl_setopt($ch, CURLOPT_POST, 1);
                         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                         curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -267,12 +279,15 @@ class MessagesController extends \yii\web\Controller
                             }
                         }
 
-                        $dataResp['photo_path'] = 'data:image/jpeg;base64,' . base64_encode(file_get_contents($dataResp['photo_path']));
+                        $dataResp['photo_path'] = 'data:image/jpeg;base64,' .
+                            base64_encode(file_get_contents($dataResp['photo_path']));
                         if (isset($dataResp['messages'])) {
                             for ($i = 0; $i < count($dataResp['messages']); $i++) {
-                                $dataResp['messages'][$i]['sender_photo'] = 'data:image/jpeg;base64,' . base64_encode(file_get_contents($dataResp['messages'][$i]['sender_photo']));
+                                $dataResp['messages'][$i]['sender_photo'] = 'data:image/jpeg;base64,' .
+                                    base64_encode(file_get_contents($dataResp['messages'][$i]['sender_photo']));
                                 if ($dataResp['messages'][$i]['message_photo_path'] != null) {
-                                    $dataResp['messages'][$i]['message_photo_path'] = 'data:image/jpeg;base64,' . base64_encode(file_get_contents($dataResp['messages'][$i]['message_photo_path']));
+                                    $dataResp['messages'][$i]['message_photo_path'] = 'data:image/jpeg;base64,' .
+                                        base64_encode(file_get_contents($dataResp['messages'][$i]['message_photo_path']));
                                 }
                             }
                         }

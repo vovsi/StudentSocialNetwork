@@ -34,7 +34,7 @@ AppAsset::register($this);
     <br/><br/>
     <hr/>
     <br/>
-    <p style="color: #9d9d9d;font-size: 13px" class="text-center">Student Social Network by Vlad Ovsienko - 2018</p>
+    <p style="color: #9d9d9d;font-size: 13px" class="text-center">«STEP NETWORK» by Vlad Ovsienko - 2019</p>
     <br/>
 
 </div>

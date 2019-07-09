@@ -4,5 +4,5 @@ namespace app\config;
 
 class ConfigAPI
 {
-    const HOST_API = "18.223.123.52"; //"socialnetworkforstudents.zzz.com.ua/web";
+    const HOST_API = "localhost"; // Example: "socialnetworkforstudents.zzz.com.ua/web";
 }

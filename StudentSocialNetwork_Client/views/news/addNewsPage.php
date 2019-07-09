@@ -15,7 +15,8 @@ if (isset($refresh)) {
 <div class="tab-content border" id="pills-tabContent" style="padding: 10px">
     <li class="list-group-item">Добавление новости</li>
     <div class="tab-pane fade show active" id="pills-my_data" role="tabpanel" aria-labelledby="pills-my_data-tab">
-        <form class="needs-validation" method="post" action="<?php echo Url::to(['/news/add']); ?>" enctype="multipart/form-data" novalidate>
+        <form class="needs-validation" method="post" action="<?php echo Url::to(['/news/add']); ?>"
+              enctype="multipart/form-data" novalidate>
             <input type="hidden" name="_csrf" value="<?php echo Yii::$app->request->getCsrfToken(); ?>"/>
             <div class="form-group row" style="margin-top: 20px">
                 <label class="col-sm-2 col-form-label"><p style="color: red;display: inline-block">*</p>Тема</label>

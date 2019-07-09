@@ -133,19 +133,23 @@ class NewsController extends ActiveController
                             // Проверяем дату события и место события (если есть)
                             $eventDate = null;
                             $eventDescription = null;
-                            if (isset(Yii::$app->request->post()['event_date']) && isset(Yii::$app->request->post()['event_description'])) {
+                            if (isset(Yii::$app->request->post()['event_date']) &&
+                                isset(Yii::$app->request->post()['event_description'])) {
                                 if (!empty(Yii::$app->request->post()['event_date'])) {
                                     if (!empty(Yii::$app->request->post()['event_description'])) {
-                                        if (iconv_strlen(Yii::$app->request->post()['event_description']) < ConfigDataDB::LIMIT_SYMBOLS_NEWS_EVENT_DESCRIPTION) {
+                                        if (iconv_strlen(Yii::$app->request->post()['event_description']) <
+                                            ConfigDataDB::LIMIT_SYMBOLS_NEWS_EVENT_DESCRIPTION) {
                                             $eventDescription = htmlspecialchars(Yii::$app->request->post()['event_description']);
                                         } else {
-                                            $errors[] = 'Место события не должно превышать ' . ConfigDataDB::LIMIT_SYMBOLS_NEWS_EVENT_DESCRIPTION . ' символов.';
+                                            $errors[] = 'Место события не должно превышать ' .
+                                                ConfigDataDB::LIMIT_SYMBOLS_NEWS_EVENT_DESCRIPTION . ' символов.';
                                             return ['errors' => $errors];
                                         }
                                     }
                                     $eventDate = htmlspecialchars(Yii::$app->request->post()['event_date']);
                                 }
-                                if (empty(Yii::$app->request->post()['event_date']) && !empty(Yii::$app->request->post()['event_description'])) {
+                                if (empty(Yii::$app->request->post()['event_date']) &&
+                                    !empty(Yii::$app->request->post()['event_description'])) {
                                     $errors[] = 'Укажите дату события.';
                                     return ['errors' => $errors];
                                 }
@@ -156,7 +160,8 @@ class NewsController extends ActiveController
                                 $type = explode(';', $image)[0];
                                 $type = explode('/', $type)[1];
                                 if (!$db->checkFileImage($type)) {
-                                    $errors[] = 'Ошибка загрузки изображения. Убедитесь что файл является изображением. Допустимые форматы: ' . implode(", ",
+                                    $errors[] = 'Ошибка загрузки изображения. Убедитесь что файл является изображением.
+                                     Допустимые форматы: ' . implode(", ",
                                             ConfigDataDB::ALLOWS_IMAGE_EXTENSION);
                                     return ['errors' => $errors];
                                 }
@@ -171,7 +176,8 @@ class NewsController extends ActiveController
                                             foreach ($pollAnswers as $key => $value) {
                                                 if (!empty($value)) {
                                                     if (iconv_strlen($value) > ConfigDataDB::LIMIT_SYMBOLS_POLL_ANSWER) {
-                                                        $errors[] = 'Количество символов в варианте ответа к опросу не должно превышать ' . ConfigDataDB::LIMIT_SYMBOLS_POLL_ANSWER;
+                                                        $errors[] = 'Количество символов в варианте ответа к опросу не 
+                                                        должно превышать ' . ConfigDataDB::LIMIT_SYMBOLS_POLL_ANSWER;
                                                         return ['errors' => $errors];
                                                     }
                                                     $pollExists = true;
@@ -181,14 +187,16 @@ class NewsController extends ActiveController
                                                 }
                                             }
                                         } else {
-                                            $errors[] = 'Количество символов в теме опроса не должно превышать ' . ConfigDataDB::LIMIT_SYMBOLS_POLL_THEME;
+                                            $errors[] = 'Количество символов в теме опроса не должно превышать ' .
+                                                ConfigDataDB::LIMIT_SYMBOLS_POLL_THEME;
                                         }
                                     } else {
                                         $errors[] = 'Значение PollAnon должно быть true либо false.';
                                         return ['errors' => $errors];
                                     }
                                 } else {
-                                    $errors[] = 'Количество ответов в опросе должно быть больше 0 и не больше ' . ConfigDataDB::LIMIT_COUNT_POLL_ANSWERS;
+                                    $errors[] = 'Количество ответов в опросе должно быть больше 0 и не больше ' .
+                                        ConfigDataDB::LIMIT_COUNT_POLL_ANSWERS;
                                     return ['errors' => $errors];
                                 }
                             }
@@ -208,7 +216,10 @@ class NewsController extends ActiveController
                                 $errors[] = 'Ошибка добавления новости.';
                             }
                         } else {
-                            $errors[] = 'Длина темы или описания больше допустимого значения. Допускается: Тема (до ' . ConfigDataDB::LIMIT_SYMBOLS_NEWS_THEME . ' символов) Описание (до ' . ConfigDataDB::LIMIT_SYMBOLS_NEWS_DESCRIPTION . ' символов) Видео YouTube (до ' . ConfigDataDB::LIMIT_SYMBOLS_VIDEO_YOUTUBE . ' символов).';
+                            $errors[] = 'Длина темы или описания больше допустимого значения. Допускается: Тема (до ' .
+                                ConfigDataDB::LIMIT_SYMBOLS_NEWS_THEME . ' символов) Описание (до ' .
+                                ConfigDataDB::LIMIT_SYMBOLS_NEWS_DESCRIPTION . ' символов) Видео YouTube (до ' .
+                                ConfigDataDB::LIMIT_SYMBOLS_VIDEO_YOUTUBE . ' символов).';
                         }
                     } else {
                         $errors[] = 'Введенные данные имеют неверный формат.';

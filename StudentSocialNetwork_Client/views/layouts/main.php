@@ -153,7 +153,7 @@ AppAsset::register($this);
 
         <?= $content ?>
 
-        <p style="color: #9d9d9d;font-size: 13px;margin-top: 5px">«Step Network»‎ by Vlad Ovsienko - 2019</p>
+        <p style="color: #9d9d9d;font-size: 13px;margin-top: 5px">«STEP NETWORK»‎ by Vlad Ovsienko - 2019</p>
 
         <button id="errorsModalBtn" data-toggle="modal" data-target="#errorsModal" style="display:none;"></button>
         <div class="modal fade" id="errorsModal" tabindex="-1" role="dialog" aria-labelledby="errorsModalLabel"

@@ -97,12 +97,14 @@ use yii\helpers\Url;
 }
                     </pre>
                 </div>
-				<div class="alert alert-success" role="alert">
-                    <h4 class="alert-heading"><span class="badge badge-secondary">GET</span> getbase64fromurlimage (<code><span>/v1/main/getbase64fromurlimage</span></code>)
+                <div class="alert alert-success" role="alert">
+                    <h4 class="alert-heading"><span class="badge badge-secondary">GET</span> getbase64fromurlimage
+                        (<code><span>/v1/main/getbase64fromurlimage</span></code>)
                     </h4>
                     <hr>
                     <p class="mb-0">
-                    <p style="font-weight: bold">Описание:</p>Получить base64 строку, отправляя ссылку на ресурс, который находится на сервере.</p>
+                    <p style="font-weight: bold">Описание:</p>Получить base64 строку, отправляя ссылку на ресурс,
+                    который находится на сервере.</p>
                     <hr/>
                     <p style="font-weight: bold">Входные параметры:</p>
                     <table class="table table-sm">
@@ -127,12 +129,14 @@ use yii\helpers\Url;
 "data:image/jpeg;base64,/9j/4A..."
                     </pre>
                 </div>
-				<div class="alert alert-success" role="alert">
-                    <h4 class="alert-heading"><span class="badge badge-secondary">GET</span> getpollanswervoted (<code><span>/v1/main/getpollanswervoted</span></code>)
+                <div class="alert alert-success" role="alert">
+                    <h4 class="alert-heading"><span class="badge badge-secondary">GET</span> getpollanswervoted
+                        (<code><span>/v1/main/getpollanswervoted</span></code>)
                     </h4>
                     <hr>
                     <p class="mb-0">
-                    <p style="font-weight: bold">Описание:</p>Получить массив проголосовавших пользователей за вариант ответа в опросе.</p>
+                    <p style="font-weight: bold">Описание:</p>Получить массив проголосовавших пользователей за вариант
+                    ответа в опросе.</p>
                     <hr/>
                     <p style="font-weight: bold">Входные параметры:</p>
                     <table class="table table-sm">
@@ -144,7 +148,7 @@ use yii\helpers\Url;
                         </tr>
                         </thead>
                         <tbody>
-						<tr class="table-light">
+                        <tr class="table-light">
                             <td>email (Get/Cookie)</td>
                             <td>string</td>
                             <td>Email пользователя</td>
@@ -506,25 +510,26 @@ use yii\helpers\Url;
                                 5gyvnQnvAlI (опционально)
                             </td>
                         </tr>
-						<tr class="table-light">
+                        <tr class="table-light">
                             <td>files</td>
                             <td>string</td>
                             <td>Id файлов (разделитель - "|") (опционально)</td>
                         </tr>
-						<tr class="table-light">
+                        <tr class="table-light">
                             <td>poll_theme</td>
                             <td>string</td>
                             <td>Тема опроса (опционально, если другие поля опроса не отправляются)</td>
                         </tr>
-						<tr class="table-light">
+                        <tr class="table-light">
                             <td>poll_answers</td>
                             <td>array string</td>
                             <td>Варианты ответов опроса (опционально, если другие поля опроса не отправляются)</td>
                         </tr>
-						<tr class="table-light">
+                        <tr class="table-light">
                             <td>poll_anon</td>
                             <td>string</td>
-                            <td>Анонимный опрос? (true/false) (опционально, если другие поля опроса не отправляются)</td>
+                            <td>Анонимный опрос? (true/false) (опционально, если другие поля опроса не отправляются)
+                            </td>
                         </tr>
                         </tbody>
                     </table>
@@ -718,7 +723,7 @@ use yii\helpers\Url;
 }
                     </pre>
                 </div>
-				<div class="alert alert-success" role="alert">
+                <div class="alert alert-success" role="alert">
                     <h4 class="alert-heading"><span class="badge badge-secondary">POST</span> cancelvotepoll
                         (<code><span>/v1/main/cancelvotepoll</span></code>)</h4>
                     <hr>
@@ -773,7 +778,7 @@ use yii\helpers\Url;
 }
                     </pre>
                 </div>
-				<div class="alert alert-success" role="alert">
+                <div class="alert alert-success" role="alert">
                     <h4 class="alert-heading"><span class="badge badge-secondary">POST</span> votepoll
                         (<code><span>/v1/main/votepoll</span></code>)</h4>
                     <hr>
@@ -805,7 +810,7 @@ use yii\helpers\Url;
                             <td>int</td>
                             <td>id записи</td>
                         </tr>
-						<tr class="table-light">
+                        <tr class="table-light">
                             <td>answer_id</td>
                             <td>int</td>
                             <td>id варианта ответа за который проголосовал пользователь</td>
@@ -833,7 +838,7 @@ use yii\helpers\Url;
 }
                     </pre>
                 </div>
-			</div>
+            </div>
         </div>
 
 
@@ -1413,8 +1418,8 @@ use yii\helpers\Url;
                 </div>
             </div>
         </div>
-		
-		<div class="card-header text-center" id="headingFiles">
+
+        <div class="card-header text-center" id="headingFiles">
             <h5 class="mb-0">
                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFiles"
                         aria-expanded="true" aria-controls="collapseAlbum">
@@ -1470,7 +1475,7 @@ use yii\helpers\Url;
     "errors": []
 }
                     </pre>
-				</div>
+                </div>
                 <div class="alert alert-success" role="alert">
                     <h4 class="alert-heading"><span class="badge badge-secondary">GET</span> getfile (<code><span>/v1/files/getfile</span></code>)
                     </h4>
@@ -1498,12 +1503,12 @@ use yii\helpers\Url;
                             <td>string</td>
                             <td>Пароль пользователя (hash)</td>
                         </tr>
-						<tr class="table-light">
+                        <tr class="table-light">
                             <td>idUser</td>
                             <td>int</td>
                             <td>id пользователя</td>
                         </tr>
-						<tr class="table-light">
+                        <tr class="table-light">
                             <td>id</td>
                             <td>int</td>
                             <td>id файла</td>
@@ -1528,7 +1533,7 @@ use yii\helpers\Url;
 }
                     </pre>
                 </div>
-				<div class="alert alert-success" role="alert">
+                <div class="alert alert-success" role="alert">
                     <h4 class="alert-heading"><span class="badge badge-secondary">POST</span> load (<code><span>/v1/files/load</span></code>)
                     </h4>
                     <hr>
@@ -1558,7 +1563,7 @@ use yii\helpers\Url;
                         <tr class="table-light">
                             <td>file</td>
                             <td>string</td>
-                            <td>Файл закодированный в base64 </td>
+                            <td>Файл закодированный в base64</td>
                         </tr>
                         <tr class="table-light">
                             <td>fileName</td>
@@ -1866,8 +1871,9 @@ use yii\helpers\Url;
 }
                     </pre>
                 </div>
-				<div class="alert alert-success" role="alert">
-                    <h4 class="alert-heading"><span class="badge badge-secondary">GET</span> getmembersofconversation (<code><span>/v1/messages/getmembersofconversation</span></code>)
+                <div class="alert alert-success" role="alert">
+                    <h4 class="alert-heading"><span class="badge badge-secondary">GET</span> getmembersofconversation
+                        (<code><span>/v1/messages/getmembersofconversation</span></code>)
                     </h4>
                     <hr>
                     <p class="mb-0">
@@ -1965,8 +1971,9 @@ use yii\helpers\Url;
 }
                     </pre>
                 </div>
-				<div class="alert alert-success" role="alert">
-                    <h4 class="alert-heading"><span class="badge badge-secondary">GET</span> getconversations (<code><span>/v1/messages/getconversations</span></code>)
+                <div class="alert alert-success" role="alert">
+                    <h4 class="alert-heading"><span class="badge badge-secondary">GET</span> getconversations
+                        (<code><span>/v1/messages/getconversations</span></code>)
                     </h4>
                     <hr>
                     <p class="mb-0">
@@ -2131,8 +2138,9 @@ use yii\helpers\Url;
 }
                     </pre>
                 </div>
-				<div class="alert alert-success" role="alert">
-                    <h4 class="alert-heading"><span class="badge badge-secondary">GET</span> getconversation (<code><span>/v1/messages/getconversation</span></code>)
+                <div class="alert alert-success" role="alert">
+                    <h4 class="alert-heading"><span class="badge badge-secondary">GET</span> getconversation
+                        (<code><span>/v1/messages/getconversation</span></code>)
                     </h4>
                     <hr>
                     <p class="mb-0">
@@ -2252,8 +2260,9 @@ use yii\helpers\Url;
 }
                     </pre>
                 </div>
-				<div class="alert alert-success" role="alert">
-                    <h4 class="alert-heading"><span class="badge badge-secondary">GET</span> getnewmessagesfromconversation
+                <div class="alert alert-success" role="alert">
+                    <h4 class="alert-heading"><span class="badge badge-secondary">GET</span>
+                        getnewmessagesfromconversation
                         (<code><span>/v1/messages/getnewmessagesfromconversation</span></code>)</h4>
                     <hr>
                     <p class="mb-0">
@@ -2336,15 +2345,16 @@ use yii\helpers\Url;
                             <td>string</td>
                             <td>Файл изображения закодированное в base64 (gif, png, jpg, jpeg) (опционально)</td>
                         </tr>
-						<tr class="table-light">
+                        <tr class="table-light">
                             <td>files</td>
                             <td>string</td>
                             <td>Файлы (id разделенные знаком "|") (опционально)</td>
                         </tr>
-						<tr class="table-light">
+                        <tr class="table-light">
                             <td>videoYT</td>
                             <td>string</td>
-                            <td>Ссылка на ютую видео. Пример: https://www.youtube.com/watch?v=eME64iXQeMM(опционально)</td>
+                            <td>Ссылка на ютую видео. Пример: https://www.youtube.com/watch?v=eME64iXQeMM(опционально)
+                            </td>
                         </tr>
                         </tbody>
                     </table>
@@ -2371,7 +2381,7 @@ use yii\helpers\Url;
 }
                     </pre>
                 </div>
-				<div class="alert alert-success" role="alert">
+                <div class="alert alert-success" role="alert">
                     <h4 class="alert-heading"><span class="badge badge-secondary">POST</span> sendtoconversation (<code><span>/v1/messages/sendtoconversation</span></code>)
                     </h4>
                     <hr>
@@ -2413,15 +2423,16 @@ use yii\helpers\Url;
                             <td>string</td>
                             <td>Файл изображения закодированное в base64 (gif, png, jpg, jpeg) (опционально)</td>
                         </tr>
-						<tr class="table-light">
+                        <tr class="table-light">
                             <td>files</td>
                             <td>string</td>
                             <td>Файлы (id разделенные знаком "|") (опционально)</td>
                         </tr>
-						<tr class="table-light">
+                        <tr class="table-light">
                             <td>videoYT</td>
                             <td>string</td>
-                            <td>Ссылка на ютую видео. Пример: https://www.youtube.com/watch?v=eME64iXQeMM(опционально)</td>
+                            <td>Ссылка на ютую видео. Пример: https://www.youtube.com/watch?v=eME64iXQeMM(опционально)
+                            </td>
                         </tr>
                         </tbody>
                     </table>
@@ -2447,7 +2458,7 @@ use yii\helpers\Url;
 }
                     </pre>
                 </div>
-				<div class="alert alert-success" role="alert">
+                <div class="alert alert-success" role="alert">
                     <h4 class="alert-heading"><span class="badge badge-secondary">POST</span> createconversation (<code><span>/v1/messages/createconversation</span></code>)
                     </h4>
                     <hr>
@@ -2500,7 +2511,7 @@ use yii\helpers\Url;
 }
                     </pre>
                 </div>
-				<div class="alert alert-success" role="alert">
+                <div class="alert alert-success" role="alert">
                     <h4 class="alert-heading"><span class="badge badge-secondary">POST</span> removeсonversation (<code><span>/v1/messages/removeсonversation</span></code>)
                     </h4>
                     <hr>
@@ -2542,7 +2553,7 @@ use yii\helpers\Url;
 }
                     </pre>
                 </div>
-				<div class="alert alert-success" role="alert">
+                <div class="alert alert-success" role="alert">
                     <h4 class="alert-heading"><span class="badge badge-secondary">POST</span> renameсonversation (<code><span>/v1/messages/renameсonversation</span></code>)
                     </h4>
                     <hr>
@@ -2574,7 +2585,7 @@ use yii\helpers\Url;
                             <td>int</td>
                             <td>Id беседы</td>
                         </tr>
-						<tr class="table-light">
+                        <tr class="table-light">
                             <td>name</td>
                             <td>string</td>
                             <td>Новое название</td>
@@ -2589,7 +2600,7 @@ use yii\helpers\Url;
 }
                     </pre>
                 </div>
-				<div class="alert alert-success" role="alert">
+                <div class="alert alert-success" role="alert">
                     <h4 class="alert-heading"><span class="badge badge-secondary">POST</span> refreshphotoconversation (<code><span>/v1/messages/refreshphotoconversation</span></code>)
                     </h4>
                     <hr>
@@ -2621,7 +2632,7 @@ use yii\helpers\Url;
                             <td>int</td>
                             <td>Id беседы</td>
                         </tr>
-						<tr class="table-light">
+                        <tr class="table-light">
                             <td>photoBase64</td>
                             <td>string</td>
                             <td>Новое фото (в формате base64)</td>
@@ -2636,8 +2647,9 @@ use yii\helpers\Url;
 }
                     </pre>
                 </div>
-				<div class="alert alert-success" role="alert">
-                    <h4 class="alert-heading"><span class="badge badge-secondary">POST</span> leaveconversation (<code><span>/v1/messages/leaveconversation</span></code>)
+                <div class="alert alert-success" role="alert">
+                    <h4 class="alert-heading"><span class="badge badge-secondary">POST</span> leaveconversation
+                        (<code><span>/v1/messages/leaveconversation</span></code>)
                     </h4>
                     <hr>
                     <p class="mb-0">
@@ -2678,8 +2690,9 @@ use yii\helpers\Url;
 }
                     </pre>
                 </div>
-				<div class="alert alert-success" role="alert">
-                    <h4 class="alert-heading"><span class="badge badge-secondary">POST</span> changemembersconversation (<code><span>/v1/messages/changemembersconversation</span></code>)
+                <div class="alert alert-success" role="alert">
+                    <h4 class="alert-heading"><span class="badge badge-secondary">POST</span> changemembersconversation
+                        (<code><span>/v1/messages/changemembersconversation</span></code>)
                     </h4>
                     <hr>
                     <p class="mb-0">
@@ -2710,7 +2723,7 @@ use yii\helpers\Url;
                             <td>int</td>
                             <td>Id беседы</td>
                         </tr>
-						<tr class="table-light">
+                        <tr class="table-light">
                             <td>members</td>
                             <td>int</td>
                             <td>Id участников беседы (обновленный) (разделитель - "|")</td>
@@ -2726,7 +2739,7 @@ use yii\helpers\Url;
 }
                     </pre>
                 </div>
-			</div>
+            </div>
         </div>
 
 
@@ -2979,17 +2992,19 @@ use yii\helpers\Url;
                                 5gyvnQnvAlI (опционально)
                             </td>
                         </tr>
-						<tr class="table-light">
+                        <tr class="table-light">
                             <td>pollTheme</td>
                             <td>string</td>
                             <td>Тема опроса (опционально, если нет других данных о опросе)</td>
                         </tr>
-						<tr class="table-light">
+                        <tr class="table-light">
                             <td>pollAnswers</td>
                             <td>string</td>
-                            <td>Варианты ответов опроса (разделитель - "|") (опционально, если нет других данных о опросе)</td>
+                            <td>Варианты ответов опроса (разделитель - "|") (опционально, если нет других данных о
+                                опросе)
+                            </td>
                         </tr>
-						<tr class="table-light">
+                        <tr class="table-light">
                             <td>pollAnon</td>
                             <td>string</td>
                             <td>Анонимный ли опрос? (true/false) (опцинально, если нет других данных о опросе)</td>
@@ -3056,7 +3071,7 @@ use yii\helpers\Url;
 }
                     </pre>
                 </div>
-				<div class="alert alert-success" role="alert">
+                <div class="alert alert-success" role="alert">
                     <h4 class="alert-heading"><span class="badge badge-secondary">POST</span> votepoll (<code><span>/v1/news/votepoll</span></code>)
                     </h4>
                     <hr>
@@ -3088,7 +3103,7 @@ use yii\helpers\Url;
                             <td>string</td>
                             <td>id новости</td>
                         </tr>
-						<tr class="table-light">
+                        <tr class="table-light">
                             <td>answer_id</td>
                             <td>string</td>
                             <td>id варианта ответа</td>
@@ -3116,8 +3131,9 @@ use yii\helpers\Url;
 }
                     </pre>
                 </div>
-				<div class="alert alert-success" role="alert">
-                    <h4 class="alert-heading"><span class="badge badge-secondary">POST</span> cancelvotepoll (<code><span>/v1/news/cancelvotepoll</span></code>)
+                <div class="alert alert-success" role="alert">
+                    <h4 class="alert-heading"><span class="badge badge-secondary">POST</span> cancelvotepoll
+                        (<code><span>/v1/news/cancelvotepoll</span></code>)
                     </h4>
                     <hr>
                     <p class="mb-0">

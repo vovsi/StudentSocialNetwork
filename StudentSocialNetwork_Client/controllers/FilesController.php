@@ -16,7 +16,7 @@ class FilesController extends \yii\web\Controller
             $data = $authData;
             $this->view->params['data'] = $authData;
 
-            $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/files/getfiles?ip=".$_SERVER['REMOTE_ADDR']);
+            $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/files/getfiles?ip=" . $_SERVER['REMOTE_ADDR']);
             curl_setopt($ch, CURLOPT_POST, 1);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -60,13 +60,13 @@ class FilesController extends \yii\web\Controller
                         $base64Encode = 'data:application/' . $type . ';base64,' . $hexString;
                         unlink($_FILES["load_file"]["name"]);
 
-                        $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/files/load?ip=".$_SERVER['REMOTE_ADDR']);
+                        $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/files/load?ip=" . $_SERVER['REMOTE_ADDR']);
                         curl_setopt($ch, CURLOPT_POST, 1);
                         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                         curl_setopt($ch, CURLOPT_HTTPHEADER, array(
                             'Cookie: email=' . $_COOKIE['email'] . '; password=' . $_COOKIE['password'] . ''
                         ));
-                        curl_setopt($ch, CURLOPT_POSTFIELDS, //тут переменные которые будут переданы методом POST
+                        curl_setopt($ch, CURLOPT_POSTFIELDS,
                             array(
                                 'fileName' => $_FILES["load_file"]["name"],
                                 'file' => $base64Encode
@@ -85,9 +85,8 @@ class FilesController extends \yii\web\Controller
                             }
                         }
                     } else {
-                        $_SESSION['errors']['fileError'] = 'Формат файла недопустим. Разрешается: \'pdf\', \'ppt\', 
-                        \'pptx\', \'rar\', \'txt\', \'doc\', \'docx\', \'dot\', \'docm\', \'dotx\', \'dotm\', \'docb\',
-                         \'xls\', \'xlt\', \'xlm\', \'xlsx\', \'xlsm\', \'xltx\', \'xltm\', \'zip\'';
+                        $_SESSION['errors']['fileError'] = 'Формат файла недопустим. Разрешается: ' .
+                            implode(", ", Utils::ALLOW_FILE_TYPES);
                     }
                 } else {
                     $_SESSION['errors'][] = 'Ошибка введенных данных. Проверьте что файл выбран.';

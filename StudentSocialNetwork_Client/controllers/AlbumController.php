@@ -20,7 +20,7 @@ class AlbumController extends \yii\web\Controller
 
                 if (!empty($_GET['id'])) {
                     $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/album/getalbum?id="
-                        . $_GET['id'] . "&limit=100&offset=0&ip=".$_SERVER['REMOTE_ADDR']);
+                        . $_GET['id'] . "&limit=100&offset=0&ip=" . $_SERVER['REMOTE_ADDR']);
                     curl_setopt($ch, CURLOPT_POST, 1);
                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                     curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -37,7 +37,8 @@ class AlbumController extends \yii\web\Controller
                     }
                     if (isset($dataResp['photos'])) {
                         for ($i = 0; $i < count($dataResp['photos']); $i++) {
-                            $dataResp['photos'][$i]['path'] = 'data:image/jpeg;base64,' . base64_encode(file_get_contents($dataResp['photos'][$i]['path']));
+                            $dataResp['photos'][$i]['path'] = 'data:image/jpeg;base64,' .
+                                base64_encode(file_get_contents($dataResp['photos'][$i]['path']));
                         }
 
                         $data['photos'] = $dataResp['photos'];
@@ -93,13 +94,13 @@ class AlbumController extends \yii\web\Controller
                         unlink($_FILES["photo"]["name"]);
 
 
-                        $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/album/add?ip=".$_SERVER['REMOTE_ADDR']);
+                        $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/album/add?ip=" . $_SERVER['REMOTE_ADDR']);
                         curl_setopt($ch, CURLOPT_POST, 1);
                         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                         curl_setopt($ch, CURLOPT_HTTPHEADER, array(
                             'Cookie: email=' . $_COOKIE['email'] . '; password=' . $_COOKIE['password'] . ''
                         ));
-                        curl_setopt($ch, CURLOPT_POSTFIELDS, //тут переменные которые будут переданы методом POST
+                        curl_setopt($ch, CURLOPT_POSTFIELDS,
                             array(
                                 'file' => $base64Encode,
                                 'description' => $description,
@@ -118,7 +119,8 @@ class AlbumController extends \yii\web\Controller
                             }
                         }
                     } else {
-                        $_SESSION['errors']['fileError'] = 'Формат файла недопустим. Разрешается: gif, png, jpg, jpeg';
+                        $_SESSION['errors']['fileError'] = 'Формат файла недопустим. Разрешается: ' .
+                            implode(", ", Utils::ALLOW_IMAGE_TYPES);
                     }
                 } else {
                     $errors[] = 'Ошибка введенных данных. Проверьте что файл выбран.';
@@ -147,13 +149,13 @@ class AlbumController extends \yii\web\Controller
             $this->view->params['data'] = $authData;
 
             if (isset($_GET['id'])) {
-                $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/album/remove?ip=".$_SERVER['REMOTE_ADDR']);
+                $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/album/remove?ip=" . $_SERVER['REMOTE_ADDR']);
                 curl_setopt($ch, CURLOPT_POST, 1);
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
                     'Cookie: email=' . $_COOKIE['email'] . '; password=' . $_COOKIE['password'] . ''
                 ));
-                curl_setopt($ch, CURLOPT_POSTFIELDS, //тут переменные которые будут переданы методом POST
+                curl_setopt($ch, CURLOPT_POSTFIELDS,
                     array(
                         'id' => $_GET['id'],
                     ));

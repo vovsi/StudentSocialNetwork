@@ -430,10 +430,10 @@ class DBHelper
                 'offset' => $offset
             ));
             // Проверяем, есть ли ещё записи?
-            if(count($accounts) == $limit) {
+            if (count($accounts) == $limit) {
                 $res['is_there_more_black_list'] = true;
                 array_pop($accounts);
-            }else{
+            } else {
                 $res['is_there_more_black_list'] = false;
             }
             $res['black_list'] = array();
@@ -824,8 +824,7 @@ class DBHelper
         $pollTheme,
         $pollAnswers,
         $pollAnon
-    )
-    {
+    ) {
         if (!empty($accountFromId) && !empty($accountToId)) {
             // Если такие аккаунты есть
             if (entities\Account::first($accountFromId) && entities\Account::first($accountToId)) {
@@ -942,10 +941,10 @@ class DBHelper
         }
 
         // Проверяем, есть ли ещё записи?
-        if(count($posts) == $limit) {
+        if (count($posts) == $limit) {
             $res['is_there_more_posts'] = true;
             array_pop($posts);
-        }else{
+        } else {
             $res['is_there_more_posts'] = false;
         }
 
@@ -984,7 +983,7 @@ class DBHelper
                 for ($i = 0; $i < count($filesIds); $i++) {
                     if (!empty($filesIds[$i])) {
                         $fileArr = $this->getFileAsArray($filesIds[$i]);
-                        if(!empty($fileArr)) {
+                        if (!empty($fileArr)) {
                             $filesArray[] = $this->getFileUserAsArray($accFROM->id, $fileArr['file_name']);
                         }
                     }
@@ -1125,8 +1124,7 @@ class DBHelper
         $interests,
         $aboutMe,
         $dateBirthday
-    )
-    {
+    ) {
         if (!empty($id) && !empty($firstName) && !empty($lastName) && !empty($patronymic) && !empty($email) &&
             !empty($gender)) {
             $acc = entities\Account::first($id);
@@ -1210,10 +1208,10 @@ class DBHelper
                 $userDialogsIds[] = $value->id;
             }
             // Проверяем, есть ли ещё записи?
-            if(count($userDialogsIds) == $limit) {
+            if (count($userDialogsIds) == $limit) {
                 $res['is_there_more'] = true;
                 array_pop($userDialogsIds);
-            }else{
+            } else {
                 $res['is_there_more'] = false;
             }
             $res['result'] = $userDialogsIds;
@@ -1261,10 +1259,10 @@ class DBHelper
                 $messagesUser[] = $value->id;
             }
             // Проверяем, есть ли ещё записи?
-            if(count($messagesUser) == $limit) {
+            if (count($messagesUser) == $limit) {
                 $res['is_there_more'] = true;
                 array_pop($messagesUser);
-            }else{
+            } else {
                 $res['is_there_more'] = false;
             }
             $messagesUser = array_reverse($messagesUser);
@@ -1292,10 +1290,10 @@ class DBHelper
                 $messagesUser[] = $value->id;
             }
             // Проверяем, есть ли ещё записи?
-            if(count($messagesUser) == $limit) {
+            if (count($messagesUser) == $limit) {
                 $res['is_there_more'] = true;
                 array_pop($messagesUser);
-            }else{
+            } else {
                 $res['is_there_more'] = false;
             }
             $messagesUser = array_reverse($messagesUser);
@@ -1827,10 +1825,10 @@ class DBHelper
             }
 
             // Проверяем, есть ли ещё записи?
-            if(count($favoritesOfUser) == $limit) {
+            if (count($favoritesOfUser) == $limit) {
                 $res['is_there_more'] = true;
                 array_pop($favoritesOfUser);
-            }else{
+            } else {
                 $res['is_there_more'] = false;
             }
 
@@ -2273,8 +2271,7 @@ class DBHelper
         $pollTheme,
         $pollAnswers,
         $pollAnon
-    )
-    {
+    ) {
         try {
             if (!empty($idAuthor) && !empty($theme) && !empty($description)) {
                 if ($this->accountIdExists($idAuthor)) {
@@ -2406,10 +2403,10 @@ class DBHelper
         }
 
         // Проверяем, есть ли ещё записи?
-        if(count($newsObj) == $limit) {
+        if (count($newsObj) == $limit) {
             $res['is_there_more'] = true;
             array_pop($newsObj);
-        }else{
+        } else {
             $res['is_there_more'] = false;
         }
 
@@ -2925,7 +2922,8 @@ class DBHelper
                     foreach ($oldMembersIds as $oldMemberId) {
                         // Если в новом списке участников нет старого участника, и этот участник не создатель,
                         // значит он был удалён
-                        if (!in_array($oldMemberId, $membersArrayIds) && $conversation->account_author_id != $oldMemberId) {
+                        if (!in_array($oldMemberId,
+                                $membersArrayIds) && $conversation->account_author_id != $oldMemberId) {
                             $removedMember = $this->getAccountAsObject($oldMemberId);
                             // Отправляем сообщение всем в беседу, что выгнали участника (сообщение
                             // отправляется от имени создателя беседы

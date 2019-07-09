@@ -18,8 +18,8 @@ class SettingsController extends \yii\web\Controller
             $this->view->params['data'] = $authData;
 
             if (!empty($authData['auth_data'])) {
-                // --- Получение данных приватности
-                $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/settings/getdataprivacy?ip=".$_SERVER['REMOTE_ADDR']);
+                // Получение данных приватности
+                $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/settings/getdataprivacy?ip=" . $_SERVER['REMOTE_ADDR']);
                 curl_setopt($ch, CURLOPT_POST, 0);
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -40,9 +40,9 @@ class SettingsController extends \yii\web\Controller
                 }
 
 
-                // --- Получение чёрного списка
+                // Получение чёрного списка
                 $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/settings/getdatablacklist?limit=10&offset=0&ip="
-                    .$_SERVER['REMOTE_ADDR']);
+                    . $_SERVER['REMOTE_ADDR']);
                 curl_setopt($ch, CURLOPT_POST, 0);
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -60,14 +60,15 @@ class SettingsController extends \yii\web\Controller
 
                 if (isset($dataResult['black_list'])) {
                     for ($i = 0; $i < count($dataResult['black_list']); $i++) {
-                        $dataResult['black_list'][$i]['photo_path'] = 'data:image/jpeg;base64,' . base64_encode(file_get_contents($dataResult['black_list'][$i]['photo_path']));
+                        $dataResult['black_list'][$i]['photo_path'] = 'data:image/jpeg;base64,' .
+                            base64_encode(file_get_contents($dataResult['black_list'][$i]['photo_path']));
                     }
                     $data['black_list'] = $dataResult['black_list'];
                     $data['is_there_more_black_list'] = $dataResult['is_there_more_black_list'];
                 }
 
-                // --- Получение profile data
-                $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/settings/getdataprofile?ip=".$_SERVER['REMOTE_ADDR']);
+                // Получение profile data
+                $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/settings/getdataprofile?ip=" . $_SERVER['REMOTE_ADDR']);
                 curl_setopt($ch, CURLOPT_POST, 0);
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -112,9 +113,9 @@ class SettingsController extends \yii\web\Controller
                     if (!empty(Yii::$app->request->post()['first_name']) && !empty(Yii::$app->request->post()['last_name']) &&
                         !empty(Yii::$app->request->post()['patronymic']) && !empty(Yii::$app->request->post()['email']) &&
                         !empty(Yii::$app->request->post()['gender'])) {
-                        if (1 == preg_match('/^((([0-9A-Za-z]{1}[-0-9A-z\.]{1,}[0-9A-Za-z]{1})|([0-9А-Яа-я]{1}[-0-9А-я\.]{1,}[0-9А-Яа-я]{1}))@([-0-9A-Za-z]{1,}\.){1,2}[-A-Za-z]{2,})$/u',
-                                Yii::$app->request->post()['email'])) {
-                            if (iconv_strlen(Yii::$app->request->post()['first_name']) < 100 && iconv_strlen(Yii::$app->request->post()['last_name']) < 100 &&
+                        if (1 == preg_match(Utils::REGEX_VALID_EMAIL, Yii::$app->request->post()['email'])) {
+                            if (iconv_strlen(Yii::$app->request->post()['first_name']) < 100 &&
+                                iconv_strlen(Yii::$app->request->post()['last_name']) < 100 &&
                                 iconv_strlen(Yii::$app->request->post()['patronymic']) < 100) {
                                 if (Utils::genderExists($_POST['gender'])) {
                                     $firstName = htmlspecialchars(Yii::$app->request->post()['first_name']);
@@ -129,14 +130,13 @@ class SettingsController extends \yii\web\Controller
                                     $dateBirthday = htmlspecialchars(Yii::$app->request->post()['date_birthday']);
 
                                     $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/settings/saveprofile?ip="
-                                        .$_SERVER['REMOTE_ADDR']);
+                                        . $_SERVER['REMOTE_ADDR']);
                                     curl_setopt($ch, CURLOPT_POST, 1);
                                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                                     curl_setopt($ch, CURLOPT_HTTPHEADER, array(
                                         'Cookie: email=' . $_COOKIE['email'] . '; password=' . $_COOKIE['password'] . ''
                                     ));
                                     curl_setopt($ch, CURLOPT_POSTFIELDS,
-                                        //тут переменные которые будут переданы методом POST
                                         array(
                                             'first_name' => $firstName,
                                             'last_name' => $lastName,
@@ -203,13 +203,13 @@ class SettingsController extends \yii\web\Controller
                             $writePost = 'nobody';
                         }
 
-                        $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/settings/saveprivacy?ip=".$_SERVER['REMOTE_ADDR']);
+                        $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/settings/saveprivacy?ip=" . $_SERVER['REMOTE_ADDR']);
                         curl_setopt($ch, CURLOPT_POST, 1);
                         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                         curl_setopt($ch, CURLOPT_HTTPHEADER, array(
                             'Cookie: email=' . $_COOKIE['email'] . '; password=' . $_COOKIE['password'] . ''
                         ));
-                        curl_setopt($ch, CURLOPT_POSTFIELDS, //тут переменные которые будут переданы методом POST
+                        curl_setopt($ch, CURLOPT_POSTFIELDS,
                             array(
                                 'write_post' => $writePost
                             ));
@@ -259,7 +259,7 @@ class SettingsController extends \yii\web\Controller
                                 $newPassword = Yii::$app->request->post()['new_password'];
 
                                 $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/settings/changepassword?ip="
-                                    .$_SERVER['REMOTE_ADDR']);
+                                    . $_SERVER['REMOTE_ADDR']);
                                 curl_setopt($ch, CURLOPT_POST, 1);
                                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                                 curl_setopt($ch, CURLOPT_HTTPHEADER, array(

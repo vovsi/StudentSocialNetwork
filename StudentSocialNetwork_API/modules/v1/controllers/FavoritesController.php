@@ -50,7 +50,7 @@ class FavoritesController extends ActiveController
         $errors = array();
         if (!empty($data['auth_data'])) {
             if (!$db->checkBlockAccount($data['auth_data']['id'])) {
-               return $db->getFavoritesForHtml($data['auth_data']['id'], $limit, $offset);
+                return $db->getFavoritesForHtml($data['auth_data']['id'], $limit, $offset);
             } else {
                 $errors[] = 'Аккаунт заблокирован.';
             }

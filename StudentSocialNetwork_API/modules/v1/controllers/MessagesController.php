@@ -68,7 +68,8 @@ class MessagesController extends ActiveController
                     $messageAttFiles = $lastMessage['files']; // Прикрепленные файлы
                     $messageAttVideoYT = $lastMessage['videoYT']; // Прикрепленное видео YT
                     $senderPoint = ''; // Метка сообщения (отправителя)
-                    if ($data['auth_data']['id'] == $lastMessage['sender_id']) // Если последнее сообщение от вас - то перед сообщением будет указано 'Вы:'
+                    if ($data['auth_data']['id'] == $lastMessage['sender_id']) // Если последнее сообщение от вас - то
+                        // перед сообщением будет указано 'Вы:'
                     {
                         $senderPoint = 'Вы:&nbsp;';
                     }
@@ -130,7 +131,8 @@ class MessagesController extends ActiveController
                     $messageAttFiles = $lastMessage['files']; // Прикрепленные файлы
                     $messageAttVideoYT = $lastMessage['videoYT']; // Прикрепленное видео YT
                     $senderPoint = ''; // Метка сообщения (отправителя)
-                    if ($data['auth_data']['id'] == $lastMessage['sender_id']) // Если последнее сообщение от вас - то перед сообщением будет указано 'Вы:'
+                    if ($data['auth_data']['id'] == $lastMessage['sender_id']) // Если последнее сообщение от вас - то
+                        // перед сообщением будет указано 'Вы:'
                     {
                         $senderPoint = 'Вы:&nbsp;';
                     } else {
@@ -168,11 +170,11 @@ class MessagesController extends ActiveController
                 // Проверяем, есть ли ещё записи?
                 $limit++;
                 // Получаем беседы с отступом и лимитом
-                $sliceConversations =  array_slice($conversationsShowHtml, $offset, $limit);
-                if(count($sliceConversations) == $limit) {
+                $sliceConversations = array_slice($conversationsShowHtml, $offset, $limit);
+                if (count($sliceConversations) == $limit) {
                     $data['is_there_more'] = true;
                     array_pop($sliceConversations);
-                }else{
+                } else {
                     $data['is_there_more'] = false;
                 }
 
@@ -237,7 +239,8 @@ class MessagesController extends ActiveController
                                             $filesParts = explode("|", $files);
                                             $countSelectFiles = count($filesParts) - 1;
                                             if ($countSelectFiles > ConfigDataDB::LIMIT_SELECTED_FILES) {
-                                                $errors[] = 'Выбрано слишком много файлов. Доступно выбрать максимум ' . ConfigDataDB::LIMIT_SELECTED_FILES . ' файлов.';
+                                                $errors[] = 'Выбрано слишком много файлов. Доступно выбрать максимум ' .
+                                                    ConfigDataDB::LIMIT_SELECTED_FILES . ' файлов.';
                                                 $dataOut['errors'] = $errors;
                                                 return $dataOut;
                                             }
@@ -260,7 +263,8 @@ class MessagesController extends ActiveController
                                             if ($db->checkFileImage($type)) {
                                                 $imageExist = true;
                                             } else {
-                                                $errors[] = 'Ошибка загрузки изображения. Убедитесь что файл является изображением. Допустимые форматы: ' . implode(", ",
+                                                $errors[] = 'Ошибка загрузки изображения. Убедитесь что файл является 
+                                                    изображением. Допустимые форматы: ' . implode(", ",
                                                         ConfigDataDB::ALLOWS_IMAGE_EXTENSION);
                                                 $dataOut['errors'] = $errors;
                                                 return $dataOut;
@@ -271,7 +275,8 @@ class MessagesController extends ActiveController
                                     // Если сообщение есть, то проверяем что оно не длинее 3000 символов
                                     if ($messageExist) {
                                         if (iconv_strlen($message) > ConfigDataDB::LIMIT_SYMBOLS_MESSAGE) {
-                                            $errors[] = 'Сообщение не должно превышать ' . ConfigDataDB::LIMIT_SYMBOLS_MESSAGE . ' символов.';
+                                            $errors[] = 'Сообщение не должно превышать ' .
+                                                ConfigDataDB::LIMIT_SYMBOLS_MESSAGE . ' символов.';
                                             $dataOut['errors'] = $errors;
                                             return $dataOut;
                                         }
@@ -314,7 +319,8 @@ class MessagesController extends ActiveController
                                                         'photo_path' => $messageSend['photo_path'],
                                                         'files' => $filesArr,
                                                         'videoYT' => $messageSend['videoYT'],
-                                                        'date_send' => date_create($messageSend['date_send'])->Format('Y-m-d H:i'),
+                                                        'date_send' => date_create($messageSend['date_send'])
+                                                            ->Format('Y-m-d H:i'),
                                                         'viewed' => $messageSend['viewed']
                                                     ],
                                                 ];
@@ -345,7 +351,7 @@ class MessagesController extends ActiveController
             } else {
                 $errors[] = 'Необходима авторизация.';
             }
-        }catch (\Exception $ex) {
+        } catch (\Exception $ex) {
             $errors[] = $ex->getMessage();
         }
 
@@ -399,7 +405,8 @@ class MessagesController extends ActiveController
                                     $filesParts = explode("|", $files);
                                     $countSelectFiles = count($filesParts) - 1;
                                     if ($countSelectFiles > ConfigDataDB::LIMIT_SELECTED_FILES) {
-                                        $errors[] = 'Выбрано слишком много файлов. Доступно выбрать максимум ' . ConfigDataDB::LIMIT_SELECTED_FILES . ' файлов.';
+                                        $errors[] = 'Выбрано слишком много файлов. Доступно выбрать максимум ' .
+                                            ConfigDataDB::LIMIT_SELECTED_FILES . ' файлов.';
                                         $dataOut['errors'] = $errors;
                                         return $dataOut;
                                     }
@@ -422,7 +429,8 @@ class MessagesController extends ActiveController
                                     if ($db->checkFileImage($type)) {
                                         $imageExist = true;
                                     } else {
-                                        $errors[] = 'Ошибка загрузки изображения. Убедитесь что файл является изображением. Допустимые форматы: ' . implode(", ",
+                                        $errors[] = 'Ошибка загрузки изображения. Убедитесь что файл является 
+                                            изображением. Допустимые форматы: ' . implode(", ",
                                                 ConfigDataDB::ALLOWS_IMAGE_EXTENSION);
                                         $dataOut['errors'] = $errors;
                                         return $dataOut;
@@ -433,7 +441,8 @@ class MessagesController extends ActiveController
                             // Если сообщение есть, то проверяем что оно не длинее 3000 символов
                             if ($messageExist) {
                                 if (iconv_strlen($message) > ConfigDataDB::LIMIT_SYMBOLS_MESSAGE) {
-                                    $errors[] = 'Сообщение не должно превышать ' . ConfigDataDB::LIMIT_SYMBOLS_MESSAGE . ' символов.';
+                                    $errors[] = 'Сообщение не должно превышать ' . ConfigDataDB::LIMIT_SYMBOLS_MESSAGE .
+                                        ' символов.';
                                     $dataOut['errors'] = $errors;
                                     return $dataOut;
                                 }
@@ -475,7 +484,8 @@ class MessagesController extends ActiveController
                                                 'photo_path' => $messageSend['photo_path'],
                                                 'files' => $filesArr,
                                                 'videoYT' => $messageSend['videoYT'],
-                                                'date_send' => date_create($messageSend['date_send'])->Format('Y-m-d H:i'),
+                                                'date_send' => date_create($messageSend['date_send'])
+                                                    ->Format('Y-m-d H:i'),
                                                 'viewed' => $messageSend['viewed']
                                             ],
                                         ];
@@ -535,7 +545,8 @@ class MessagesController extends ActiveController
                                 $type = explode(';', $imageBase64)[0];
                                 $type = explode('/', $type)[1];
                                 if (!$db->checkFileImage($type)) {
-                                    $errors[] = 'Ошибка загрузки изображения. Убедитесь что файл является изображением. Допустимые форматы: ' . implode(", ",
+                                    $errors[] = 'Ошибка загрузки изображения. Убедитесь что файл является изображением. 
+                                        Допустимые форматы: ' . implode(", ",
                                             ConfigDataDB::ALLOWS_IMAGE_EXTENSION);
                                     $dataOut['errors'] = $errors;
                                     return $dataOut;
@@ -606,7 +617,8 @@ class MessagesController extends ActiveController
                         $errors[] = 'Укажите хотя-бы одного участника.';
                     }
                 } else {
-                    $errors[] = 'Название беседы должно содержать от ' . ConfigDataDB::MIN_SYMBOLS_CONVERSATION_NAME . ' до ' . ConfigDataDB::LIMIT_SYMBOLS_CONVERSATION_NAME . ' символов.';
+                    $errors[] = 'Название беседы должно содержать от ' . ConfigDataDB::MIN_SYMBOLS_CONVERSATION_NAME .
+                        ' до ' . ConfigDataDB::LIMIT_SYMBOLS_CONVERSATION_NAME . ' символов.';
                 }
             } else {
                 $errors[] = 'Аккаунт заблокирован.';
@@ -659,7 +671,7 @@ class MessagesController extends ActiveController
                                     for ($i = 0; $i < count($filesIds); $i++) {
                                         if (!empty($filesIds[$i])) {
                                             $fileArr = $db->getFileAsArray($filesIds[$i]);
-                                            if(!empty($fileArr)) {
+                                            if (!empty($fileArr)) {
                                                 $filesArray[] = $db->getFileUserAsArray($msg['sender_id'],
                                                     $fileArr['file_name']);
                                             }
@@ -756,7 +768,7 @@ class MessagesController extends ActiveController
                                     for ($i = 0; $i < count($filesIds); $i++) {
                                         if (!empty($filesIds[$i])) {
                                             $fileArr = $db->getFileAsArray($filesIds[$i]);
-                                            if(!empty($fileArr)) {
+                                            if (!empty($fileArr)) {
                                                 $filesArray[] = $db->getFileUserAsArray($msg['sender_id'],
                                                     $fileArr['file_name']);
                                             }
@@ -976,7 +988,9 @@ class MessagesController extends ActiveController
                                     $errors[] = 'Ошибка переименования беседы. Проверьте отправляемые данные.';
                                 }
                             } else {
-                                $errors[] = 'Название беседы должно содержать от ' . ConfigDataDB::MIN_SYMBOLS_CONVERSATION_NAME . ' до ' . ConfigDataDB::LIMIT_SYMBOLS_CONVERSATION_NAME . ' символов.';
+                                $errors[] = 'Название беседы должно содержать от ' .
+                                    ConfigDataDB::MIN_SYMBOLS_CONVERSATION_NAME . ' до ' .
+                                    ConfigDataDB::LIMIT_SYMBOLS_CONVERSATION_NAME . ' символов.';
                             }
                         } else {
                             $errors[] = 'Нет прав на переименование беседы.';
@@ -1113,7 +1127,7 @@ class MessagesController extends ActiveController
                                     if (null != $perInfo) {
                                         $conv = $db->getConversationAsObject($id);
                                         // Если это создатель, то делаем пометку
-                                        if($acc['id']==$conv->account_author_id) {
+                                        if ($acc['id'] == $conv->account_author_id) {
                                             $acc['status_member'] = 'creator';
                                         }
                                         // Формируем полную ссылку к фото (аватарке)

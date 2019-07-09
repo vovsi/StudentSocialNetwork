@@ -19,8 +19,8 @@ class AdminpanelController extends \yii\web\Controller
 
             if (!empty($authData['auth_data'])) {
                 if ($authData['auth_data'] != null && $authData['auth_data']['role'] == 'admin') {
-                    // --- Получение списка групп
-                    $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/adminpanel/getgroups?ip=".$_SERVER['REMOTE_ADDR']);
+                    // Получение списка групп
+                    $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/adminpanel/getgroups?ip=" . $_SERVER['REMOTE_ADDR']);
                     curl_setopt($ch, CURLOPT_POST, 0);
                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                     curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -40,8 +40,8 @@ class AdminpanelController extends \yii\web\Controller
                         $data['groups'] = $dataResult['groups'];
                     }
 
-                    // --- Получение списка админов
-                    $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/adminpanel/getadmins?ip=".$_SERVER['REMOTE_ADDR']);
+                    // Получение списка админов
+                    $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/adminpanel/getadmins?ip=" . $_SERVER['REMOTE_ADDR']);
                     curl_setopt($ch, CURLOPT_POST, 0);
                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                     curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -90,12 +90,13 @@ class AdminpanelController extends \yii\web\Controller
                             !empty(Yii::$app->request->post()['patronymic']) && !empty(Yii::$app->request->post()['group']) &&
                             !empty(Yii::$app->request->post()['role']) && !empty(Yii::$app->request->post()['gender']) &&
                             !empty(Yii::$app->request->post()['email'])) {
-                            if (1 == preg_match('/^((([0-9A-Za-z]{1}[-0-9A-z\.]{1,}[0-9A-Za-z]{1})|([0-9А-Яа-я]{1}[-0-9А-я\.]{1,}[0-9А-Яа-я]{1}))@([-0-9A-Za-z]{1,}\.){1,2}[-A-Za-z]{2,})$/u',
-                                    Yii::$app->request->post()['email'])) {
-                                if (iconv_strlen(Yii::$app->request->post()['first_name']) < 100 && iconv_strlen(Yii::$app->request->post()['last_name']) < 100 &&
+                            if (1 == preg_match(Utils::REGEX_VALID_EMAIL, Yii::$app->request->post()['email'])) {
+                                if (iconv_strlen(Yii::$app->request->post()['first_name']) < 100 &&
+                                    iconv_strlen(Yii::$app->request->post()['last_name']) < 100 &&
                                     iconv_strlen(Yii::$app->request->post()['patronymic']) < 100) {
 
-                                    $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/adminpanel/registrationaccount?ip=".$_SERVER['REMOTE_ADDR']);
+                                    $ch = curl_init("http://" . ConfigAPI::HOST_API .
+                                        "/v1/adminpanel/registrationaccount?ip=" . $_SERVER['REMOTE_ADDR']);
                                     curl_setopt($ch, CURLOPT_POST, 1);
                                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                                     curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -121,7 +122,8 @@ class AdminpanelController extends \yii\web\Controller
                                     }
                                     if (isset($dataResult['status'])) {
                                         if ($dataResult['status'] == "OK") {
-                                            $_SESSION['about_action'][] = "Пользователь успешно зарегистрирован! Запишите следующие данные авторизации:";
+                                            $_SESSION['about_action'][] = "Пользователь успешно зарегистрирован! 
+                                                Запишите следующие данные авторизации:";
                                             $_SESSION['password_reg'] = $dataResult['password'];
                                             $_SESSION['email_reg'] = Yii::$app->request->post()['email'];
                                         }
@@ -165,14 +167,15 @@ class AdminpanelController extends \yii\web\Controller
                         if (Yii::$app->request->post()['actionBlock'] == "Заблокировать") {
                             if (Yii::$app->request->post()['email'] != $authData['auth_data']['email']) {
                                 if (!empty(Yii::$app->request->post()['email'])) {
-                                    $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/adminpanel/blockaccount?ip=".$_SERVER['REMOTE_ADDR']);
+                                    $ch = curl_init("http://" . ConfigAPI::HOST_API .
+                                        "/v1/adminpanel/blockaccount?ip=" . $_SERVER['REMOTE_ADDR']);
                                     curl_setopt($ch, CURLOPT_POST, 1);
                                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                                     curl_setopt($ch, CURLOPT_HTTPHEADER, array(
                                         'Cookie: email=' . $_COOKIE['email'] . '; password=' . $_COOKIE['password'] . ''
                                     ));
                                     curl_setopt($ch, CURLOPT_POSTFIELDS,
-                                        //тут переменные которые будут переданы методом POST
+                                        // Тут переменные которые будут переданы методом POST
                                         array(
                                             'email' => Yii::$app->request->post()['email'],
                                         ));
@@ -199,14 +202,13 @@ class AdminpanelController extends \yii\web\Controller
                                 if (Yii::$app->request->post()['email'] != $authData['auth_data']['email']) {
                                     if (!empty(Yii::$app->request->post()['email'])) {
                                         $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/adminpanel/unblockaccount?ip="
-                                            .$_SERVER['REMOTE_ADDR']);
+                                            . $_SERVER['REMOTE_ADDR']);
                                         curl_setopt($ch, CURLOPT_POST, 1);
                                         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                                         curl_setopt($ch, CURLOPT_HTTPHEADER, array(
                                             'Cookie: email=' . $_COOKIE['email'] . '; password=' . $_COOKIE['password'] . ''
                                         ));
                                         curl_setopt($ch, CURLOPT_POSTFIELDS,
-                                            //тут переменные которые будут переданы методом POST
                                             array(
                                                 'email' => Yii::$app->request->post()['email'],
                                             ));
@@ -261,13 +263,13 @@ class AdminpanelController extends \yii\web\Controller
                     if (isset(Yii::$app->request->post()['nameGroup'])) {
                         if (!empty(Yii::$app->request->post()['nameGroup'])) {
                             $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/adminpanel/creategroup?ip="
-                                .$_SERVER['REMOTE_ADDR']);
+                                . $_SERVER['REMOTE_ADDR']);
                             curl_setopt($ch, CURLOPT_POST, 1);
                             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                             curl_setopt($ch, CURLOPT_HTTPHEADER, array(
                                 'Cookie: email=' . $_COOKIE['email'] . '; password=' . $_COOKIE['password'] . ''
                             ));
-                            curl_setopt($ch, CURLOPT_POSTFIELDS, //тут переменные которые будут переданы методом POST
+                            curl_setopt($ch, CURLOPT_POSTFIELDS,
                                 array(
                                     'name' => Yii::$app->request->post()['nameGroup'],
                                 ));
@@ -315,13 +317,13 @@ class AdminpanelController extends \yii\web\Controller
                     if (isset(Yii::$app->request->post()['group']) && isset(Yii::$app->request->post()['newNameGroup'])) {
                         if (!empty(Yii::$app->request->post()['group']) && !empty(Yii::$app->request->post()['newNameGroup'])) {
                             $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/adminpanel/renamegroup?ip="
-                                .$_SERVER['REMOTE_ADDR']);
+                                . $_SERVER['REMOTE_ADDR']);
                             curl_setopt($ch, CURLOPT_POST, 1);
                             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                             curl_setopt($ch, CURLOPT_HTTPHEADER, array(
                                 'Cookie: email=' . $_COOKIE['email'] . '; password=' . $_COOKIE['password'] . ''
                             ));
-                            curl_setopt($ch, CURLOPT_POSTFIELDS, //тут переменные которые будут переданы методом POST
+                            curl_setopt($ch, CURLOPT_POSTFIELDS,
                                 array(
                                     'oldName' => Yii::$app->request->post()['group'],
                                     'newName' => Yii::$app->request->post()['newNameGroup'],
@@ -370,13 +372,13 @@ class AdminpanelController extends \yii\web\Controller
                     if (isset(Yii::$app->request->post()['idAccount']) && isset(Yii::$app->request->post()['group'])) {
                         if (!empty(Yii::$app->request->post()['idAccount']) && !empty(Yii::$app->request->post()['group'])) {
                             $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/adminpanel/moveusertodiferentgroup?ip="
-                                .$_SERVER['REMOTE_ADDR']);
+                                . $_SERVER['REMOTE_ADDR']);
                             curl_setopt($ch, CURLOPT_POST, 1);
                             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                             curl_setopt($ch, CURLOPT_HTTPHEADER, array(
                                 'Cookie: email=' . $_COOKIE['email'] . '; password=' . $_COOKIE['password'] . ''
                             ));
-                            curl_setopt($ch, CURLOPT_POSTFIELDS, //тут переменные которые будут переданы методом POST
+                            curl_setopt($ch, CURLOPT_POSTFIELDS,
                                 array(
                                     'userId' => Yii::$app->request->post()['idAccount'],
                                     'nameGroup' => Yii::$app->request->post()['group'],
@@ -390,8 +392,8 @@ class AdminpanelController extends \yii\web\Controller
                             }
                             if (isset($dataResult['status'])) {
                                 if ($dataResult['status'] == "OK") {
-                                    $_SESSION['about_action'][] = "Перемещение пользователя в группу <b>" . Yii::$app->request->post()['group'] .
-                                        "</b> завершено.";
+                                    $_SESSION['about_action'][] = "Перемещение пользователя в группу <b>" .
+                                        Yii::$app->request->post()['group'] . "</b> завершено.";
                                 }
                             }
                         } else {

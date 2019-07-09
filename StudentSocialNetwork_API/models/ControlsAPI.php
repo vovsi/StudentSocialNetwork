@@ -28,14 +28,14 @@ class ControlsAPI extends \yii\db\ActiveRecord
         $resultArray = null;
         $ipUser = null;
         // Если ip указан в get запросе, то берем оттуда, инчае напрямую из запроса
-        if(isset($_GET['ip'])) {
+        if (isset($_GET['ip'])) {
             $ipUser = $_GET['ip'];
-        }else{
+        } else {
             // При старте на хостинге заменить верхнюю строку на следующую:
             // }else if($_SERVER['REMOTE_ADDR'] != $_SERVER['SERVER_ADDR']){
             $ipUser = $_SERVER['REMOTE_ADDR'];
         }
-        if(!empty($ipUser)) {
+        if (!empty($ipUser)) {
             // Если ip пользователя привязан к аккаунту, то получаем его данные
             if ($db->checkIpExists($res['id'], $ipUser)) {
                 $resultArray['auth_data'] = $db->checkHashPasswords($email, $res['password_hash']);

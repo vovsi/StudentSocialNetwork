@@ -1,7 +1,7 @@
 function changeMembersConversationForm() {
     // id беседы
     let conversationId = $('#conversation_id').val();
-    if(null!=conversationId) {
+    if (null != conversationId) {
         // Записываем всех выбранных участников в строку
         membersAddConversation = "";
         // Если выбрано участников до 10 (включительно) то всё ОК, больше - нельзя, ошибка
@@ -11,13 +11,13 @@ function changeMembersConversationForm() {
                     membersAddConversation += $(this).val() + '|';
                 });
                 changeMembersConversation(conversationId, membersAddConversation);
-            }else{
+            } else {
                 showErrors(['Выберите хотя-бы 1 участника.']);
             }
-        }else{
+        } else {
             showErrors(["Допустимо выбрать не более 10 участников."]);
         }
-    }else {
+    } else {
         showErrors(['Не найден id беседы.']);
     }
 }
@@ -40,7 +40,7 @@ $('#membersConversationModal').on('show.bs.modal', function (e) {
                 let statusMember = res[i]['status_member'];
 
                 let statusMemberHtml = "";
-                if(statusMember==='creator'){
+                if (statusMember === 'creator') {
                     statusMemberHtml = " <sup style='font-weight: bold'>admin</sup>";
                 }
 
@@ -51,9 +51,9 @@ $('#membersConversationModal').on('show.bs.modal', function (e) {
                     statusVisitHtml = "<span name='status_visit' title='Этого пользователя сейчас нет на этом сайте.' class=\"badge badge-pill badge-danger\" style='font-size: x-small'>offline</span> ";
                 }
 
-                itemMember += "<div style='margin-bottom: 5px;'><a href='/"+id+"'>\n" +
+                itemMember += "<div style='margin-bottom: 5px;'><a href='/" + id + "'>\n" +
                     "  <img src=\"" + photoPath + "\" class='rounded-circle' height='50px' width=\"50px\" style='margin-right: 25px' alt=\"img\"></a>" +
-                    "  <a href='/"+id+"'><label>" + firstName + " " + lastName + "</label></a>\n" +
+                    "  <a href='/" + id + "'><label>" + firstName + " " + lastName + "</label></a>\n" +
                     statusVisitHtml +
                     statusMemberHtml +
                     "</div>";
@@ -90,7 +90,7 @@ $('#changeMembersConversationModal').on('show.bs.modal', function (e) {
         let favorites = getFavoritesOfUser(1000, 0);
         let members = getMembersOfConversation($('#conversation_id').val());
         // Задаем кол-во выбранных участников
-        $('#countSelectedMembers').text(members.length-1);
+        $('#countSelectedMembers').text(members.length - 1);
         if (favorites != null && members != null) {
             for (let i = 0; i < favorites.length; i++) {
                 let itemFavorite = '';
@@ -104,7 +104,7 @@ $('#changeMembersConversationModal').on('show.bs.modal', function (e) {
                 // Если этот участник выбран, то выбираем его в списке checkboxes
                 let selected = '';
                 let res = members.find(f => f['id'] === id);
-                if(null!=res) {
+                if (null != res) {
                     selected = 'checked';
                 }
 
@@ -117,7 +117,7 @@ $('#changeMembersConversationModal').on('show.bs.modal', function (e) {
 
                 itemFavorite += "<div  data-toggle=\"member" + id + "\" class=\"custom-control custom-checkbox\" style='margin-bottom: 5px;'>\n" +
                     "  <img src=\"" + photoPath + "\" class='rounded-circle' height='50px' width=\"50px\" style='margin-right: 25px'>" +
-                    "  <input "+selected+" onclick='showCountSelectedMembers(" + id + ")' type=\"checkbox\" class=\"custom-control-input\" value='" + id + "' name='selectedMembersAddCon' id='member" + id + "' >\n" +
+                    "  <input " + selected + " onclick='showCountSelectedMembers(" + id + ")' type=\"checkbox\" class=\"custom-control-input\" value='" + id + "' name='selectedMembersAddCon' id='member" + id + "' >\n" +
                     "  <label class=\"custom-control-label\" for=\"member" + id + "\">" + firstName + " " + lastName + "</label>\n" +
                     statusVisitHtml +
                     "  <sup>Id: " + id + "</sup>" +

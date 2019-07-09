@@ -6,6 +6,10 @@ use app\config\ConfigAPI;
 
 class Utils
 {
+    // Проверка email на валидность
+    const REGEX_VALID_EMAIL = '/^((([0-9A-Za-z]{1}[-0-9A-z\.]{1,}[0-9A-Za-z]{1})|([0-9А-Яа-я]{1}[-0-9А-я\.]{1,}
+        [0-9А-Яа-я]{1}))@([-0-9A-Za-z]{1,}\.){1,2}[-A-Za-z]{2,})$/u';
+
     // Разрешенные типы файлов, для загрузки в Мои файлы
     const ALLOW_FILE_TYPES = array(
         'pdf',
@@ -30,10 +34,19 @@ class Utils
         'zip'
     );
 
+    // Разрешенные типы изображений (файлов)
+    const ALLOW_IMAGE_TYPES = array(
+        'gif',
+        'png',
+        'jpg',
+        'jpeg'
+    );
+
+    // Проверка авторизации, и получение основных данных пользователя
     public function checkAuth()
     {
         // Проверяем авторизацию
-        $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/main/checkauth?ip=".$_SERVER['REMOTE_ADDR']);
+        $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/main/checkauth?ip=" . $_SERVER['REMOTE_ADDR']);
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -46,13 +59,14 @@ class Utils
         return $data;
     }
 
+    // Получение детальной информации о польз.
     public function getInfoProfile($idShow, $email, $password)
     {
         // Если указан id в URL, то отобразить профиль
         if (isset($idShow)) {
             if (!empty($idShow)) {
                 $ch = curl_init("http://" . ConfigAPI::HOST_API . "/v1/main/getprofiletouser?id=" . $idShow . "&ip="
-                    .$_SERVER['REMOTE_ADDR']);
+                    . $_SERVER['REMOTE_ADDR']);
                 curl_setopt($ch, CURLOPT_POST, 1);
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -71,7 +85,7 @@ class Utils
     // Проверить на допустимость загружаемой картинки
     public static function checkFileImage($filename)
     {
-        $allowed = array('gif', 'png', 'jpg', 'jpeg');
+        $allowed = array(self::ALLOW_IMAGE_TYPES);
         $ext = pathinfo($filename, PATHINFO_EXTENSION);
         if (!in_array($ext, $allowed)) {
             return false;
