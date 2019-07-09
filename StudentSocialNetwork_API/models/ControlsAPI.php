@@ -4,8 +4,8 @@ namespace app\models;
 
 class ControlsAPI extends \yii\db\ActiveRecord
 {
-    // rest api utilities
-    public const HOST = "http://18.223.123.52/"; //"http://socialnetworkforstudents.zzz.com.ua/";
+    // Rest api utilities
+    public const HOST = "http://localhost/"; // Example: "http://socialnetworkforstudents.zzz.com.ua/";
 
     public static function checkAuth()
     {
@@ -24,7 +24,7 @@ class ControlsAPI extends \yii\db\ActiveRecord
         }
         $res = $db->auth($email, $pass);
 
-        //$resultArray['auth_data'] = $db->checkHashPasswords($email, $res['password_hash']);
+        //Without checking ip: $resultArray['auth_data'] = $db->checkHashPasswords($email, $res['password_hash']);
         $resultArray = null;
         $ipUser = null;
         // Если ip указан в get запросе, то берем оттуда, инчае напрямую из запроса
