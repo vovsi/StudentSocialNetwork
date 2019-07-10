@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 4.8.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Июл 09 2019 г., 17:53
--- Версия сервера: 10.3.16-MariaDB
--- Версия PHP: 7.3.6
+-- Время создания: Июл 10 2019 г., 12:53
+-- Версия сервера: 10.1.32-MariaDB
+-- Версия PHP: 7.2.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -35,7 +35,7 @@ CREATE TABLE `account` (
   `patronymic` varchar(100) NOT NULL,
   `email` varchar(200) NOT NULL,
   `personal_info_id` int(11) NOT NULL,
-  `blocked` tinyint(1) NOT NULL DEFAULT 0,
+  `blocked` tinyint(1) NOT NULL DEFAULT '0',
   `role` varchar(100) DEFAULT NULL,
   `password_hash` text NOT NULL,
   `settings_id` int(11) NOT NULL,
@@ -61,16 +61,15 @@ INSERT INTO `account` (`id`, `first_name`, `last_name`, `patronymic`, `email`, `
 (32, 'Христина', 'Щербакова', 'Кузьмевна', 'user11@mail.ru', 33, 0, 'user', 'bb58ce544cab426a34e7382a808b3995', 33, 10),
 (33, 'Бронислава', 'Кортнева', 'Владиленовна', 'user12@mail.ru', 34, 0, 'user', '89456d2c7e152f79bc5a2a7605f13093', 34, 4),
 (34, 'Семён', 'Свечин', 'Андриянович', 'user13@mail.ru', 35, 0, 'admin', 'ff1feb7a1ce48a0af95400958db209f7', 35, 9),
-(35, 'Кирилл', 'Кутепов', 'Филимонович', 'user14@mail.ru', 36, 0, 'user', '0af8c38b4ab6d4eaf4545a536da18545', 36, 10),
-(36, 'Вера', 'Марьина', 'Вячеславовна', 'user15@mail.ru', 37, 0, 'user', '0af8c38b4ab6d4eaf4545a536da18545', 37, 5),
-(37, 'Эмилия', 'Яковиченко', 'Ростиславовна', 'user16@mail.ru', 38, 0, 'user', '0af8c38b4ab6d4eaf4545a536da18545', 38, 1),
-(38, 'Тамара', 'Жарыхина', 'Феликсовна', 'user17@mail.ru', 39, 0, 'user', '0af8c38b4ab6d4eaf4545a536da18545', 39, 1),
-(39, 'Дина', 'Масмеха', 'Глебовна', 'user18@mail.ru', 40, 0, 'user', '0af8c38b4ab6d4eaf4545a536da18545', 40, 8),
-(40, 'Артур', 'Халтурин', 'Платонович', 'user19@mail.ru', 41, 0, 'user', '0af8c38b4ab6d4eaf4545a536da18545', 41, 4),
+(35, 'Кирилл', 'Кутепов', 'Филимонович', 'user14@mail.ru', 36, 0, 'user', '73887f60894f9f31cc6657c9f0fa99df', 36, 10),
+(36, 'Вера', 'Марьина', 'Вячеславовна', 'user15@mail.ru', 37, 0, 'user', '7ad48a3d528e28d39e396a9639d50805', 37, 5),
+(37, 'Эмилия', 'Яковиченко', 'Ростиславовна', 'user16@mail.ru', 38, 0, 'user', 'a31140accca12ccec25c8e5905968790', 38, 1),
+(38, 'Тамара', 'Жарыхина', 'Феликсовна', 'user17@mail.ru', 39, 0, 'user', '72c184d4926c07080e4d313e741e1c9e', 39, 1),
+(39, 'Дина', 'Масмеха', 'Глебовна', 'user18@mail.ru', 40, 0, 'user', 'bda6590a94fd7a00aa461dbca0326641', 40, 8),
+(40, 'Артур', 'Халтурин', 'Платонович', 'user19@mail.ru', 41, 0, 'user', '6c7a7ab2e4c3411fb38c9561f80969cf', 41, 4),
 (41, 'Дарья', 'Жикина', 'Мироновна', 'user20@mail.ru', 42, 0, 'admin', 'cd1792acdcdb3bdd1aabfe067f030c9a', 42, 9),
 (42, 'Администратор', 'SSN', '-', 'admin-main@mail.ru', 43, 0, 'admin', 'dde464252a875322659d412d3b5411e9', 43, 9),
-(43, 'Тарас', 'Иващенко', 'Анатольевич', 'taras@mail.com', 44, 0, 'user', '6d653f17b4e0408844fe7403998f3a62', 44, 1),
-(44, 'Маруся', 'Фолько', 'Инокентевна', 'ponchik@mail.com', 45, 0, 'user', '1e782a8388a17309520652797ff79a3e', 45, 4);
+(43, 'Тарас', 'Иващенко', 'Анатольевич', 'taras@mail.com', 44, 0, 'user', '6d653f17b4e0408844fe7403998f3a62', 44, 1);
 
 -- --------------------------------------------------------
 
@@ -121,13 +120,7 @@ CREATE TABLE `account_ip` (
 INSERT INTO `account_ip` (`id`, `ip_address`, `account_id`) VALUES
 (36, '188.163.46.192', 6),
 (37, '188.163.46.192', 43),
-(39, '72.35.247.136', 6),
-(40, '188.163.46.192', 36),
-(41, '188.163.46.192', 35),
-(42, '188.163.46.192', 37),
-(43, '188.163.46.192', 38),
-(44, '188.163.46.192', 39),
-(45, '188.163.46.192', 40);
+(38, '::1', 6);
 
 -- --------------------------------------------------------
 
@@ -205,7 +198,7 @@ INSERT INTO `dialog` (`id`, `from_id`, `to_id`, `date_change`) VALUES
 (26, 6, 42, '2019-07-02 20:25:22'),
 (27, 34, 6, '2019-07-03 08:45:19'),
 (28, 25, 23, '2019-07-03 09:08:44'),
-(29, 43, 6, '2019-07-09 14:09:33');
+(29, 43, 6, '2019-07-09 13:36:28');
 
 -- --------------------------------------------------------
 
@@ -317,11 +310,11 @@ CREATE TABLE `message` (
   `conversation_id` int(11) DEFAULT NULL,
   `sender_id` int(11) NOT NULL,
   `recipient_id` int(11) DEFAULT NULL,
-  `text` text DEFAULT NULL,
+  `text` text,
   `photo_path` varchar(1000) DEFAULT NULL,
   `date_send` datetime NOT NULL,
-  `viewed` tinyint(1) NOT NULL DEFAULT 0,
-  `files` text DEFAULT NULL,
+  `viewed` tinyint(1) NOT NULL DEFAULT '0',
+  `files` text,
   `video_youtube` varchar(400) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -351,14 +344,13 @@ INSERT INTO `message` (`id`, `dialog_id`, `conversation_id`, `sender_id`, `recip
 (577, 25, NULL, 6, 38, 'Хай! &amp;:9 ', '', '2019-07-03 08:41:54', 0, NULL, NULL),
 (578, 24, NULL, 6, 29, 'Соломон! Ты тут?! &amp;5:55 ', '', '2019-07-03 08:42:13', 0, NULL, NULL),
 (579, 27, NULL, 34, 6, 'Дарова!', '', '2019-07-03 08:45:19', 0, NULL, NULL),
-(580, 19, NULL, 23, 6, 'Хорошо. Сам как? &amp;5:57 ', '', '2019-07-03 09:00:33', 1, NULL, NULL),
+(580, 19, NULL, 23, 6, 'Хорошо. Сам как? &amp;5:57 ', '', '2019-07-03 09:00:33', 0, NULL, NULL),
 (581, 20, NULL, 24, 6, 'Что случилось?', '', '2019-07-03 09:01:01', 0, NULL, NULL),
 (582, 20, NULL, 24, 6, 'Ты где? &amp;8:89 ', '', '2019-07-03 09:01:13', 0, NULL, NULL),
 (583, 28, NULL, 25, 23, 'Халло!', '', '2019-07-03 09:08:44', 0, NULL, NULL),
 (584, 29, NULL, 43, 6, 'Халло Влад! Помнишь меня Тараса?))', '', '2019-07-09 13:36:28', 1, NULL, NULL),
 (585, NULL, 52, 43, NULL, 'Приветствую всех!', '', '2019-07-09 13:38:10', 0, NULL, NULL),
-(586, NULL, 52, 43, NULL, 'Я Тарас! Смотрите на меня! &amp;5:55 ', '', '2019-07-09 13:39:02', 0, NULL, NULL),
-(587, 29, NULL, 6, 43, 'Ага. Да. &amp;:9 ', '', '2019-07-09 14:09:33', 0, NULL, NULL);
+(586, NULL, 52, 43, NULL, 'Я Тарас! Смотрите на меня! &amp;5:55 ', '', '2019-07-09 13:39:02', 0, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -467,7 +459,7 @@ INSERT INTO `personal_info` (`id`, `gender`, `phone_number`, `activities`, `inte
 (33, 'Женский', NULL, NULL, NULL, NULL, 'db/photos/profile32.jpg', '1970-01-01'),
 (34, 'Женский', NULL, NULL, NULL, NULL, 'db/photos/profile33.jpg', '1970-01-01'),
 (35, 'Мужской', NULL, NULL, NULL, NULL, 'db/photos/profile34.jpg', '1970-01-01'),
-(36, 'Мужской', '', '', '', '', 'db/photos/profile35.jpg', '1970-01-01'),
+(36, 'Мужской', NULL, NULL, NULL, NULL, 'db/photos/profile35.jpg', '1970-01-01'),
 (37, 'Женский', NULL, NULL, NULL, NULL, 'db/photos/profile36.jpg', '1970-01-01'),
 (38, 'Женский', NULL, NULL, NULL, NULL, 'db/photos/profile37.jpg', '1970-01-01'),
 (39, 'Женский', NULL, NULL, NULL, NULL, 'db/photos/profile38.jpg', '1970-01-01'),
@@ -475,8 +467,7 @@ INSERT INTO `personal_info` (`id`, `gender`, `phone_number`, `activities`, `inte
 (41, 'Мужской', NULL, NULL, NULL, NULL, 'db/photos/profile40.jpg', '1970-01-01'),
 (42, 'Женский', NULL, NULL, NULL, NULL, 'db/photos/profile41.jpg', '1970-01-01'),
 (43, 'Мужской', '', 'Администратор сайта StudentSocialNetwork.', 'Bag fixes, site improvement.', 'Отвечаю на вопросы студентов/преподавателей, принимаю пожелания для улучшения сайта.', 'db/photos/profile42.jpg', '1970-01-01'),
-(44, 'Мужской', NULL, NULL, NULL, NULL, 'db/photos/profile43.jpg', '1900-01-01'),
-(45, 'Женский', NULL, NULL, NULL, NULL, 'db/photos/1.jpg', '1900-01-01');
+(44, 'Мужской', NULL, NULL, NULL, NULL, 'db/photos/profile43.jpg', '1900-01-01');
 
 -- --------------------------------------------------------
 
@@ -525,7 +516,7 @@ INSERT INTO `photo` (`id`, `description`, `datetime_add`, `account_id`, `path`) 
 CREATE TABLE `poll` (
   `id` int(11) NOT NULL,
   `theme` varchar(1500) NOT NULL,
-  `anon` tinyint(1) DEFAULT 0
+  `anon` tinyint(1) DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -550,7 +541,7 @@ CREATE TABLE `poll_answer` (
   `id` int(11) NOT NULL,
   `poll_id` int(11) NOT NULL,
   `answer` varchar(500) NOT NULL,
-  `votes` int(11) NOT NULL DEFAULT 0
+  `votes` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -605,7 +596,7 @@ INSERT INTO `poll_voted` (`id`, `account_id`, `poll_id`, `answer_id`) VALUES
 (127, 28, 35, 72),
 (128, 29, 35, 72),
 (129, 31, 35, 71),
-(133, 6, 35, 71);
+(130, 6, 35, 71);
 
 -- --------------------------------------------------------
 
@@ -621,7 +612,7 @@ CREATE TABLE `post` (
   `message` varchar(3000) DEFAULT NULL,
   `path_to_image` varchar(1000) DEFAULT NULL,
   `video_link` varchar(1000) DEFAULT NULL,
-  `files` text DEFAULT NULL,
+  `files` text,
   `poll_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -714,8 +705,7 @@ INSERT INTO `privacy` (`id`, `view_my_posts`, `write_post`) VALUES
 (41, 'all', 'all'),
 (42, 'all', 'all'),
 (43, 'all', 'nobody'),
-(44, 'all', 'all'),
-(45, 'all', 'all');
+(44, 'all', 'all');
 
 -- --------------------------------------------------------
 
@@ -755,8 +745,7 @@ INSERT INTO `settings` (`id`, `privacy_id`) VALUES
 (41, 41),
 (42, 42),
 (43, 43),
-(44, 44),
-(45, 45);
+(44, 44);
 
 -- --------------------------------------------------------
 
@@ -774,7 +763,7 @@ CREATE TABLE `visit_user` (
 --
 
 INSERT INTO `visit_user` (`account_id`, `datetime`) VALUES
-(6, '2019-07-09 18:44:17'),
+(6, '2019-07-10 13:53:46'),
 (22, '2018-12-17 16:13:07'),
 (23, '2019-07-03 09:00:35'),
 (24, '2019-07-03 09:01:31'),
@@ -788,16 +777,15 @@ INSERT INTO `visit_user` (`account_id`, `datetime`) VALUES
 (32, '2019-07-02 17:10:17'),
 (33, '2019-07-02 17:11:02'),
 (34, '2019-07-03 13:44:55'),
-(35, '2019-07-09 18:51:17'),
-(36, '2019-07-09 18:49:01'),
-(37, '2019-07-09 18:49:46'),
-(38, '2019-07-09 18:50:06'),
-(39, '2019-07-09 18:50:41'),
-(40, '2019-07-09 18:51:02'),
+(35, '2019-07-02 17:11:35'),
+(36, '2019-07-02 17:12:10'),
+(37, '2019-07-02 17:12:39'),
+(38, '2018-10-27 21:41:07'),
+(39, '2019-07-02 17:13:41'),
+(40, '2019-06-27 13:21:09'),
 (41, '2019-07-03 08:59:06'),
 (42, '2019-07-03 08:59:43'),
-(43, '2019-07-09 13:39:20'),
-(44, '1900-01-01 00:00:00');
+(43, '2019-07-09 13:39:20');
 
 --
 -- Индексы сохранённых таблиц
@@ -983,7 +971,7 @@ ALTER TABLE `visit_user`
 -- AUTO_INCREMENT для таблицы `account`
 --
 ALTER TABLE `account`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT для таблицы `account_conversation`
@@ -995,13 +983,13 @@ ALTER TABLE `account_conversation`
 -- AUTO_INCREMENT для таблицы `account_ip`
 --
 ALTER TABLE `account_ip`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT для таблицы `black_list`
 --
 ALTER TABLE `black_list`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT для таблицы `conversation`
@@ -1019,13 +1007,13 @@ ALTER TABLE `dialog`
 -- AUTO_INCREMENT для таблицы `favorite`
 --
 ALTER TABLE `favorite`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
 
 --
 -- AUTO_INCREMENT для таблицы `file`
 --
 ALTER TABLE `file`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT для таблицы `group`
@@ -1037,7 +1025,7 @@ ALTER TABLE `group`
 -- AUTO_INCREMENT для таблицы `message`
 --
 ALTER TABLE `message`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=588;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=587;
 
 --
 -- AUTO_INCREMENT для таблицы `message_no_viewed`
@@ -1055,13 +1043,13 @@ ALTER TABLE `news`
 -- AUTO_INCREMENT для таблицы `personal_info`
 --
 ALTER TABLE `personal_info`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
 -- AUTO_INCREMENT для таблицы `photo`
 --
 ALTER TABLE `photo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=86;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=90;
 
 --
 -- AUTO_INCREMENT для таблицы `poll`
@@ -1079,25 +1067,25 @@ ALTER TABLE `poll_answer`
 -- AUTO_INCREMENT для таблицы `poll_voted`
 --
 ALTER TABLE `poll_voted`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=134;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=131;
 
 --
 -- AUTO_INCREMENT для таблицы `post`
 --
 ALTER TABLE `post`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=297;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=298;
 
 --
 -- AUTO_INCREMENT для таблицы `privacy`
 --
 ALTER TABLE `privacy`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
 -- AUTO_INCREMENT для таблицы `settings`
 --
 ALTER TABLE `settings`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц

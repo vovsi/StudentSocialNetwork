@@ -2894,3 +2894,324 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1562685992.313
     'REQUEST_TIME' => 1562685992
 ]
+2019-07-10 12:29:33 [::1][-][-][error][yii\base\ErrorException:2] yii\base\ErrorException: extract() expects parameter 1 to be array, null given in C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\View.php:334
+Stack trace:
+#0 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\View.php(254): yii\web\View->renderPhpFile()
+#1 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\View.php(156): yii\web\View->renderFile()
+#2 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Controller.php(384): yii\web\View->render()
+#3 C:\xampp\htdocs\StudentSocialNetwork_Client\controllers\MainController.php(117): app\controllers\MainController->render()
+#4 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\InlineAction.php(57): app\controllers\MainController->actionIndex()
+#5 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#6 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams()
+#7 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Module.php(528): app\controllers\MainController->runAction()
+#8 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\web\Application.php(103): yii\web\Application->runAction()
+#9 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest()
+#10 C:\xampp\htdocs\StudentSocialNetwork_Client\web\index.php(13): yii\web\Application->run()
+#11 {main}
+2019-07-10 12:29:27 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'qfquirq1j882447kpcapqar3eo'
+    '_csrf' => '401dc1514f1de110ac80faa5a90608ba2f9e12a4c25fc718dbdecd2387cce743a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"H7fSr9eLvEQAoZaTvIVDaGoVpfYprw8L\";}'
+    'email' => 'admin@mail.ru'
+    'password' => 'dde464252a875322659d412d3b5411e9'
+]
+
+$_SESSION = [
+    'errors' => null
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\xampp\\htdocs\\StudentSocialNetwork_Client\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '35830'
+    'SERVER_SOFTWARE' => 'PHP 7.2.5 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\xampp\\htdocs\\StudentSocialNetwork_Client\\web\\index.php'
+    'PHP_SELF' => '/index.php'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=qfquirq1j882447kpcapqar3eo; _csrf=401dc1514f1de110ac80faa5a90608ba2f9e12a4c25fc718dbdecd2387cce743a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22H7fSr9eLvEQAoZaTvIVDaGoVpfYprw8L%22%3B%7D; email=admin%40mail.ru; password=dde464252a875322659d412d3b5411e9'
+    'REQUEST_TIME_FLOAT' => 1562754567.2488
+    'REQUEST_TIME' => 1562754567
+]
+2019-07-10 12:29:55 [::1][-][-][error][yii\base\ErrorException:2] yii\base\ErrorException: extract() expects parameter 1 to be array, null given in C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\View.php:334
+Stack trace:
+#0 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\View.php(254): yii\web\View->renderPhpFile()
+#1 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\View.php(156): yii\web\View->renderFile()
+#2 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Controller.php(384): yii\web\View->render()
+#3 C:\xampp\htdocs\StudentSocialNetwork_Client\controllers\MainController.php(117): app\controllers\MainController->render()
+#4 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\InlineAction.php(57): app\controllers\MainController->actionIndex()
+#5 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#6 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams()
+#7 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Module.php(528): app\controllers\MainController->runAction()
+#8 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\web\Application.php(103): yii\web\Application->runAction()
+#9 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest()
+#10 C:\xampp\htdocs\StudentSocialNetwork_Client\web\index.php(13): yii\web\Application->run()
+#11 {main}
+2019-07-10 12:29:53 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'qfquirq1j882447kpcapqar3eo'
+    '_csrf' => '401dc1514f1de110ac80faa5a90608ba2f9e12a4c25fc718dbdecd2387cce743a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"H7fSr9eLvEQAoZaTvIVDaGoVpfYprw8L\";}'
+    'email' => 'admin@mail.ru'
+    'password' => 'dde464252a875322659d412d3b5411e9'
+]
+
+$_SESSION = [
+    'errors' => null
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\xampp\\htdocs\\StudentSocialNetwork_Client\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '38743'
+    'SERVER_SOFTWARE' => 'PHP 7.2.5 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\xampp\\htdocs\\StudentSocialNetwork_Client\\web\\index.php'
+    'PHP_SELF' => '/index.php'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost:8080/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=qfquirq1j882447kpcapqar3eo; _csrf=401dc1514f1de110ac80faa5a90608ba2f9e12a4c25fc718dbdecd2387cce743a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22H7fSr9eLvEQAoZaTvIVDaGoVpfYprw8L%22%3B%7D; email=admin%40mail.ru; password=dde464252a875322659d412d3b5411e9'
+    'REQUEST_TIME_FLOAT' => 1562754592.9931
+    'REQUEST_TIME' => 1562754592
+]
+2019-07-10 12:34:27 [::1][-][-][error][yii\base\ErrorException:2] yii\base\ErrorException: file_get_contents(0000_N6lgVsPJo6s.jpg): failed to open stream: No such file or directory in C:\xampp\htdocs\StudentSocialNetwork_Client\controllers\AlbumController.php:90
+Stack trace:
+#0 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\InlineAction.php(57): app\controllers\AlbumController->actionLoadphoto()
+#1 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#2 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams()
+#3 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Module.php(528): app\controllers\AlbumController->runAction()
+#4 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\web\Application.php(103): yii\web\Application->runAction()
+#5 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest()
+#6 C:\xampp\htdocs\StudentSocialNetwork_Client\web\index.php(13): yii\web\Application->run()
+#7 {main}
+2019-07-10 12:34:25 [::1][-][-][info][application] $_GET = []
+
+$_POST = [
+    '_csrf' => 'Ue4AsI0ZdszRPJ0bdKk7GPdPBrLZTlgiXkPgt9sywIcZ2Wbj_yATgKd5zFob81pMgQZQ9rgJN3QuJbnHqUX4yw=='
+    'description' => ''
+]
+
+$_FILES = [
+    'photo' => [
+        'name' => '0000_N6lgVsPJo6s.jpg'
+        'type' => ''
+        'tmp_name' => ''
+        'error' => 1
+        'size' => 0
+    ]
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'qfquirq1j882447kpcapqar3eo'
+    '_csrf' => '401dc1514f1de110ac80faa5a90608ba2f9e12a4c25fc718dbdecd2387cce743a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"H7fSr9eLvEQAoZaTvIVDaGoVpfYprw8L\";}'
+    'email' => 'admin@mail.ru'
+    'password' => 'dde464252a875322659d412d3b5411e9'
+]
+
+$_SESSION = [
+    'errors' => null
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\xampp\\htdocs\\StudentSocialNetwork_Client\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '6362'
+    'SERVER_SOFTWARE' => 'PHP 7.2.5 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/album/loadphoto'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\xampp\\htdocs\\StudentSocialNetwork_Client\\web\\index.php'
+    'PATH_INFO' => '/album/loadphoto'
+    'PHP_SELF' => '/index.php/album/loadphoto'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '4709125'
+    'HTTP_CONTENT_LENGTH' => '4709125'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundary7DvbhYopuwh4MJRZ'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundary7DvbhYopuwh4MJRZ'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost:8080/album/addphoto'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=qfquirq1j882447kpcapqar3eo; _csrf=401dc1514f1de110ac80faa5a90608ba2f9e12a4c25fc718dbdecd2387cce743a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22H7fSr9eLvEQAoZaTvIVDaGoVpfYprw8L%22%3B%7D; email=admin%40mail.ru; password=dde464252a875322659d412d3b5411e9'
+    'REQUEST_TIME_FLOAT' => 1562754864.9021
+    'REQUEST_TIME' => 1562754864
+]
+2019-07-10 12:43:49 [::1][-][-][error][yii\base\ErrorException:2] yii\base\ErrorException: file_get_contents(2.jpg): failed to open stream: No such file or directory in C:\xampp\htdocs\StudentSocialNetwork_Client\controllers\AlbumController.php:90
+Stack trace:
+#0 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\InlineAction.php(57): app\controllers\AlbumController->actionLoadphoto()
+#1 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#2 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams()
+#3 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Module.php(528): app\controllers\AlbumController->runAction()
+#4 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\web\Application.php(103): yii\web\Application->runAction()
+#5 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest()
+#6 C:\xampp\htdocs\StudentSocialNetwork_Client\web\index.php(13): yii\web\Application->run()
+#7 {main}
+2019-07-10 12:43:46 [::1][-][-][info][application] $_GET = []
+
+$_POST = [
+    '_csrf' => 'Y9Ju_FvxAgQ3EZRsFme-INu6QDzTyLEGVPRoAczwKagr5QivKchnSEFUxS15Pd90rfMWeLKP3lAkkjFxvocR5A=='
+    'description' => ''
+]
+
+$_FILES = [
+    'photo' => [
+        'name' => '2.jpg'
+        'type' => ''
+        'tmp_name' => ''
+        'error' => 1
+        'size' => 0
+    ]
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'qfquirq1j882447kpcapqar3eo'
+    '_csrf' => '401dc1514f1de110ac80faa5a90608ba2f9e12a4c25fc718dbdecd2387cce743a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"H7fSr9eLvEQAoZaTvIVDaGoVpfYprw8L\";}'
+    'email' => 'admin@mail.ru'
+    'password' => 'dde464252a875322659d412d3b5411e9'
+]
+
+$_SESSION = [
+    'errors' => null
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\xampp\\htdocs\\StudentSocialNetwork_Client\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '4196'
+    'SERVER_SOFTWARE' => 'PHP 7.2.5 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/album/loadphoto'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\xampp\\htdocs\\StudentSocialNetwork_Client\\web\\index.php'
+    'PATH_INFO' => '/album/loadphoto'
+    'PHP_SELF' => '/index.php/album/loadphoto'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '7277173'
+    'HTTP_CONTENT_LENGTH' => '7277173'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryysreHlkazV3wloxB'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryysreHlkazV3wloxB'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost:8080/album/addphoto'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=qfquirq1j882447kpcapqar3eo; _csrf=401dc1514f1de110ac80faa5a90608ba2f9e12a4c25fc718dbdecd2387cce743a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22H7fSr9eLvEQAoZaTvIVDaGoVpfYprw8L%22%3B%7D; email=admin%40mail.ru; password=dde464252a875322659d412d3b5411e9'
+    'REQUEST_TIME_FLOAT' => 1562755426.4834
+    'REQUEST_TIME' => 1562755426
+]
+2019-07-10 12:45:24 [::1][-][-][error][yii\base\ErrorException:2] yii\base\ErrorException: file_get_contents(0000_N6lgVsPJo6s.jpg): failed to open stream: No such file or directory in C:\xampp\htdocs\StudentSocialNetwork_Client\controllers\AlbumController.php:90
+Stack trace:
+#0 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\InlineAction.php(57): app\controllers\AlbumController->actionLoadphoto()
+#1 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#2 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams()
+#3 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Module.php(528): app\controllers\AlbumController->runAction()
+#4 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\web\Application.php(103): yii\web\Application->runAction()
+#5 C:\xampp\htdocs\StudentSocialNetwork_Client\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest()
+#6 C:\xampp\htdocs\StudentSocialNetwork_Client\web\index.php(13): yii\web\Application->run()
+#7 {main}
+2019-07-10 12:45:22 [::1][-][-][info][application] $_GET = []
+
+$_POST = [
+    '_csrf' => 'nTckfh3tCUxvXbWJmNde6ZVnZD9D_41b4AbbveKU50_VAEItb9RsABkY5Mj3jT-94y4yeyK44g2QYILNkOPfAw=='
+    'description' => ''
+]
+
+$_FILES = [
+    'photo' => [
+        'name' => '0000_N6lgVsPJo6s.jpg'
+        'type' => ''
+        'tmp_name' => ''
+        'error' => 1
+        'size' => 0
+    ]
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'qfquirq1j882447kpcapqar3eo'
+    '_csrf' => '401dc1514f1de110ac80faa5a90608ba2f9e12a4c25fc718dbdecd2387cce743a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"H7fSr9eLvEQAoZaTvIVDaGoVpfYprw8L\";}'
+    'email' => 'admin@mail.ru'
+    'password' => 'dde464252a875322659d412d3b5411e9'
+]
+
+$_SESSION = [
+    'errors' => null
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\xampp\\htdocs\\StudentSocialNetwork_Client\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '14676'
+    'SERVER_SOFTWARE' => 'PHP 7.2.5 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/album/loadphoto'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\xampp\\htdocs\\StudentSocialNetwork_Client\\web\\index.php'
+    'PATH_INFO' => '/album/loadphoto'
+    'PHP_SELF' => '/index.php/album/loadphoto'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '4709125'
+    'HTTP_CONTENT_LENGTH' => '4709125'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundary7zgD9oHBCguW5HNV'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundary7zgD9oHBCguW5HNV'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost:8080/album/addphoto'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=qfquirq1j882447kpcapqar3eo; _csrf=401dc1514f1de110ac80faa5a90608ba2f9e12a4c25fc718dbdecd2387cce743a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22H7fSr9eLvEQAoZaTvIVDaGoVpfYprw8L%22%3B%7D; email=admin%40mail.ru; password=dde464252a875322659d412d3b5411e9'
+    'REQUEST_TIME_FLOAT' => 1562755522.076
+    'REQUEST_TIME' => 1562755522
+]

@@ -85,7 +85,7 @@ class Utils
     // Проверить на допустимость загружаемой картинки
     public static function checkFileImage($filename)
     {
-        $allowed = array(self::ALLOW_IMAGE_TYPES);
+        $allowed = self::ALLOW_IMAGE_TYPES;
         $ext = pathinfo($filename, PATHINFO_EXTENSION);
         if (!in_array($ext, $allowed)) {
             return false;
