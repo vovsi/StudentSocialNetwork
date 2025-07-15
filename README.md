@@ -58,7 +58,7 @@ The project includes:
 
 *Above: Chat page*
 
-*ALL SCREENSHOTS IN FILE: Презентация.pptx*
+*ALL SCREENSHOTS IN FILE: [see Presentation](./Презентация.pptx)*
 
 ![Database Diagram](./DataBase/student_social_network.png)
 
